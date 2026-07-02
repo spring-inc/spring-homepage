@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>事業紹介｜株式会社SPRING</title>
+  <meta name="description" content="株式会社SPRINGの各事業（RPO・採用コンサルティング・人材紹介）の支援内容・支援の流れ・実績をご紹介します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{
+  --blue:#1f66b8; --blue-deep:#123a73; --blue-bright:#2b91d8; --blue-soft:#cfe1f4; --blue-tint:#eef4fb;
+  --green:#57ad46; --ink:#23303f; --ink-soft:#5f6b7a; --cream:#f7fafd; --cream-2:#eef3f9;
+  --line:#e2e9f1; --white:#fff; --radius:16px;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --deco:"Cormorant Garamond",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.container{width:min(92%,1060px);margin-inline:auto;}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(247,250,253,.92);backdrop-filter:blur(12px);box-shadow:0 6px 22px -18px rgba(18,58,115,.55);}
+.header-inner{width:min(94%,1240px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:40px;height:40px;flex:none;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text strong{font-family:var(--deco);font-size:24px;font-weight:700;letter-spacing:.1em;color:var(--blue-deep);}
+.logo-text em{font-style:normal;font-size:9.5px;letter-spacing:.2em;color:var(--ink-soft);}
+.nav{display:flex;align-items:center;gap:24px;}
+.nav a{font-size:14px;font-weight:500;color:var(--ink);transition:color .2s;}
+.nav a:hover{color:var(--blue);}
+.nav a.current{color:var(--blue);font-weight:700;}
+.nav-home{display:inline-flex;align-items:center;gap:6px;background:var(--blue-deep);color:#fff !important;padding:9px 18px;border-radius:999px;font-weight:700;}
+.nav-home:hover{background:var(--blue);}
+@media(max-width:860px){.nav a:not(.nav-home){display:none;}}
+
+/* Hero */
+.svc-hero{position:relative;overflow:hidden;background:radial-gradient(1000px 520px at 84% -10%,var(--blue-tint),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:60px 0 62px;}
+.svc-hero .container{position:relative;}
+.crumb{font-size:12.5px;letter-spacing:.06em;color:var(--blue-soft);margin-bottom:20px;}
+.crumb a:hover{color:#fff;}
+.svc-no{font-family:var(--deco);font-size:60px;font-weight:700;line-height:.9;color:rgba(255,255,255,.16);}
+.svc-en{font-family:var(--deco);letter-spacing:.28em;text-transform:uppercase;color:var(--blue-soft);font-size:14px;margin-top:-14px;}
+.svc-hero h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,42px);font-weight:700;letter-spacing:.04em;margin:8px 0 14px;}
+.svc-tag{font-size:clamp(15px,2vw,18px);color:#fff;font-weight:500;}
+.svc-for{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--blue-deep);background:#fff;border-radius:999px;padding:6px 16px;}
+
+/* Switch pills */
+.svc-switch{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:-28px auto 0;position:relative;z-index:5;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px;box-shadow:0 18px 50px -30px rgba(18,58,115,.3);width:fit-content;max-width:100%;}
+.svc-switch a{font-size:13.5px;font-weight:700;color:var(--ink-soft);padding:9px 20px;border-radius:999px;transition:all .2s;white-space:nowrap;}
+.svc-switch a.active{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;}
+.svc-switch a:not(.active):hover{background:var(--blue-tint);color:var(--blue-deep);}
+
+/* Sections */
+.sec{padding:56px 0 0;}
+.sec-head{margin-bottom:26px;}
+.sec-head .en{font-family:var(--deco);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);}
+.sec-head h2{font-family:var(--serif);font-size:clamp(20px,3vw,27px);font-weight:700;color:var(--ink);letter-spacing:.04em;padding-bottom:12px;border-bottom:2px solid var(--blue);display:inline-block;margin-top:2px;}
+.lead{font-size:15.5px;color:#3d4757;max-width:820px;}
+
+.sample-note{background:#fff7e8;border:1px solid #f3d79a;color:#8a6417;border-radius:12px;padding:14px 18px;font-size:13px;margin:26px auto 0;max-width:1060px;}
+.sample-note strong{color:#7a5610;}
+
+/* problems */
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.prob{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px;border-top:3px solid var(--green);}
+.prob p{font-size:14px;color:#3d4757;}
+.prob p::before{content:"“";color:var(--blue-soft);font-family:var(--serif);font-size:22px;margin-right:2px;}
+
+/* supports */
+.sup-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.sup{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;box-shadow:0 16px 44px -32px rgba(18,58,115,.35);}
+.sup h3{font-family:var(--serif);font-size:17px;color:var(--blue-deep);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.sup h3 i{flex:none;width:28px;height:28px;border-radius:8px;background:var(--blue-tint);color:var(--blue-deep);display:grid;place-items:center;font-family:var(--deco);font-weight:700;font-size:14px;font-style:normal;}
+.sup p{font-size:14px;color:#4a5666;}
+
+/* flow */
+.flow{display:grid;gap:14px;counter-reset:step;max-width:900px;}
+.flow-item{display:grid;grid-template-columns:56px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;align-items:start;}
+.flow-item::before{counter-increment:step;content:"STEP " counter(step);display:grid;place-content:center;text-align:center;font-family:var(--deco);font-weight:700;font-size:11px;letter-spacing:.04em;color:#fff;background:linear-gradient(160deg,var(--blue),var(--blue-deep));border-radius:9px;padding:8px 4px;line-height:1.3;}
+.flow-item h3{font-size:15.5px;color:var(--ink);margin-bottom:3px;}
+.flow-item p{font-size:13.8px;color:#4a5666;}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.stat{background:linear-gradient(160deg,#fff,var(--cream-2));border:1px solid var(--line);border-radius:14px;padding:26px 18px;text-align:center;}
+.stat .num{font-family:var(--deco);font-weight:700;font-size:40px;color:var(--blue-deep);line-height:1;}
+.stat .num em{font-style:normal;font-size:18px;margin-left:2px;}
+.stat .label{font-size:12.5px;color:var(--ink-soft);margin-top:8px;}
+
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.case{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 16px 44px -32px rgba(18,58,115,.35);}
+.case .ch{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:.04em;}
+.case .cb{padding:20px 22px;}
+.case h3{font-size:15.5px;color:var(--ink);margin-bottom:8px;}
+.case p{font-size:13.5px;color:#4a5666;}
+
+/* CTA */
+.svc-cta{margin:60px 0 0;background:radial-gradient(700px 400px at 80% 0%,rgba(43,145,216,.5),transparent 60%),linear-gradient(160deg,#133056,#0d1f38);border-radius:22px;padding:44px clamp(24px,5vw,56px);color:#fff;text-align:center;}
+.svc-cta h2{font-family:var(--serif);font-size:clamp(20px,3vw,28px);margin-bottom:10px;}
+.svc-cta p{font-size:14.5px;color:rgba(255,255,255,.85);margin-bottom:24px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .25s ease,box-shadow .25s ease;}
+.cta-btn.primary{background:#fff;color:var(--blue-deep);}
+.cta-btn.ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff;}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px -16px rgba(0,0,0,.5);}
+.cta-sns{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);}
+.cta-sns-label{display:block;font-size:13.5px;color:rgba(255,255,255,.85);margin-bottom:14px;letter-spacing:.04em;}
+.cta-sns-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.sns-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;font-weight:700;font-size:14.5px;color:#fff;transition:transform .25s ease,box-shadow .25s ease;}
+.sns-btn svg{width:19px;height:19px;fill:currentColor;}
+.sns-btn.line{background:#06C755;}
+.sns-btn.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.sns-btn:hover{transform:translateY(-3px);box-shadow:0 16px 30px -14px rgba(0,0,0,.5);}
+
+/* career sub-brand badge */
+.career-badge{display:inline-flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:11px 20px;box-shadow:0 16px 40px -20px rgba(0,0,0,.55);margin-bottom:18px;}
+.career-badge .cb-mark{width:42px;height:42px;flex:none;}
+.career-badge .cb-word{display:flex;align-items:center;gap:9px;}
+.career-badge .cb-word b{font-family:var(--deco);font-size:26px;font-weight:700;color:var(--blue-deep);letter-spacing:.08em;line-height:1;}
+.career-badge .cb-tag{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;font-weight:700;font-size:14px;padding:4px 14px;border-radius:999px;letter-spacing:.06em;}
+
+/* other services */
+.other{padding:60px 0 0;}
+.other-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.other a{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.other a:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 18px 40px -24px rgba(18,58,115,.4);}
+.other .oi small{font-family:var(--deco);letter-spacing:.16em;color:var(--blue);text-transform:uppercase;font-size:11px;}
+.other .oi strong{display:block;font-family:var(--serif);font-size:17px;color:var(--ink);}
+.other .oarrow{color:var(--blue);font-size:20px;}
+
+/* Footer */
+.site-footer{background:#16233a;color:#cdd6e2;padding:44px 0 22px;margin-top:64px;}
+.foot-inner{width:min(92%,1060px);margin-inline:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;}
+.foot-inner a{color:#cfe1f4;font-size:13.5px;font-weight:700;}
+.foot-addr{font-size:12.5px;color:#93a1b5;width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;margin-top:6px;}
+.copyright{text-align:center;font-family:var(--deco);letter-spacing:.12em;font-size:12.5px;color:#7e8ba0;margin-top:20px;}
+
+@media(max-width:820px){
+  .prob-grid,.stats,.cases{grid-template-columns:1fr 1fr;}
+  .sup-grid,.other-grid{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .prob-grid,.stats,.cases{grid-template-columns:1fr;}
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand" aria-label="株式会社SPRING 採用コンサルティング">
+        <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="grn-h" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2f9e3f" /><stop offset="1" stop-color="#a6d63f" /></linearGradient>
+            <linearGradient id="blu-h" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#33b4e8" /><stop offset="0.55" stop-color="#1a63b5" /><stop offset="1" stop-color="#0c3576" /></linearGradient>
+            <radialGradient id="gld-h" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe463" /><stop offset="1" stop-color="#f39a12" /></radialGradient>
+          </defs>
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-h)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
+          <circle cx="63" cy="25" r="2.6" fill="#fff" opacity="0.55" />
+        </svg>
+        <span class="logo-text"><strong>SPRING</strong><em>採用コンサルティング</em></span>
+      </a>
+      <nav class="nav">
+        <a href="../index.html#works" class="current">事業紹介</a>
+        <a href="../index.html#company">会社情報</a>
+        <a href="../recruitment.html">有料職業紹介事業</a>
+        <a href="../index.html#contact" class="nav-home">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (populated by JS) -->
+  <section class="svc-hero">
+    <div class="container">
+      <p class="crumb"><a href="../index.html">HOME</a>　/　<a href="../index.html#works">事業紹介</a>　/　<span id="crumbName">事業紹介</span></p>
+      <div class="career-badge" id="svcBadge" hidden>
+        <svg class="cb-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-h)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
+        </svg>
+        <span class="cb-word"><b>SPRING</b><span class="cb-tag">キャリア</span></span>
+      </div>
+      <div class="svc-no" id="svcNo">01</div>
+      <div class="svc-en" id="svcEn">Service</div>
+      <h1 id="svcName">事業紹介</h1>
+      <p class="svc-tag" id="svcTag"></p>
+      <span class="svc-for" id="svcFor"></span>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="svc-switch">
+      <a href="rpo.html" data-id="rpo">RPO（採用代行）</a>
+      <a href="consulting.html" data-id="consulting">採用コンサルティング</a>
+      <a href="agent.html" data-id="agent">SPRING キャリア（人材紹介）</a>
+    </nav>
+
+    <!-- 概要 -->
+    <section class="sec">
+      <div class="sec-head"><span class="en">Overview</span><h2>サービス概要</h2></div>
+      <p class="lead" id="ovLead"></p>
+    </section>
+
+    <!-- 課題 -->
+    <section class="sec">
+      <div class="sec-head"><span class="en">Issues</span><h2>こんなお悩みに</h2></div>
+      <div class="prob-grid" id="probGrid"></div>
+    </section>
+
+    <!-- サポート内容 -->
+    <section class="sec">
+      <div class="sec-head"><span class="en">Support</span><h2>サポート内容</h2></div>
+      <div class="sup-grid" id="supGrid"></div>
+    </section>
+
+    <!-- 支援の流れ -->
+    <section class="sec">
+      <div class="sec-head"><span class="en">Flow</span><h2>支援の流れ</h2></div>
+      <div class="flow" id="flow"></div>
+    </section>
+
+    <!-- 支援事例 -->
+    <section class="sec">
+      <div class="sec-head"><span class="en">Case</span><h2 id="resultsTitle">支援事例</h2></div>
+      <div class="stats" id="stats"></div>
+      <div class="cases" id="cases" style="margin-top:20px;"></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="svc-cta">
+      <h2 id="ctaTitle">まずはお気軽にご相談ください</h2>
+      <p id="ctaText">貴社の採用課題・キャリアのご希望に合わせて、最適なプランをご提案します。</p>
+      <div class="cta-btns">
+        <a href="../index.html#contact" class="cta-btn primary" id="ctaPrimary">お問い合わせ</a>
+        <a href="../index.html#works" class="cta-btn ghost">他の事業を見る</a>
+      </div>
+      <div class="cta-sns" id="ctaSns" style="display:none;">
+        <span class="cta-sns-label">求職者の方は、公式SNSでもお気軽にご相談・情報収集いただけます</span>
+        <div class="cta-sns-btns">
+          <a href="#" class="sns-btn line" id="snsLine" target="_blank" rel="noopener" aria-label="公式LINEで相談">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2ZM8.4 12.63H6.66c-.25 0-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46.25 0 .46.2.46.46v2.55H8.4c.25 0 .46.2.46.46s-.2.46-.46.46Zm1.98-.46c0 .25-.2.46-.46.46s-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46s.46.2.46.46v3.47Zm4.02 0c0 .2-.13.37-.32.43a.5.5 0 0 1-.14.02c-.14 0-.28-.07-.37-.19l-1.78-2.42v2.16c0 .25-.2.46-.46.46s-.46-.2-.46-.46V8.7c0-.2.13-.37.32-.43.19-.06.4 0 .51.17l1.78 2.42V8.7c0-.25.2-.46.46-.46s.46.2.46.46v3.47Zm2.65-2.19c.25 0 .46.2.46.46s-.2.46-.46.46h-1.28v.82h1.28c.25 0 .46.2.46.46s-.2.46-.46.46h-1.74c-.25 0-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46h1.74c.25 0 .46.2.46.46s-.2.46-.46.46h-1.28v.82h1.28Z"/></svg>公式LINEで相談
+          </a>
+          <a href="#" class="sns-btn ig" id="snsIg" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 他サービス -->
+    <section class="other">
+      <div class="sec-head"><span class="en">Other Services</span><h2>その他の事業</h2></div>
+      <div class="other-grid" id="otherGrid"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="foot-inner">
+      <a href="../index.html">← トップページに戻る</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+      <p class="foot-addr">株式会社SPRING　〒531-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F</p>
+    </div>
+    <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+    var DATA = {
+      rpo: {
+        no: '01', en: 'RPO', name: 'RPO（採用代行）事業', forWho: 'For 企業のご担当者様',
+        tag: '現場に入り込み、採用実務を「実行」で加速させる。',
+        lead: '母集団形成から内定承諾までの採用プロセスを、設計から実務まで臨機応変に代行します。スカウト送信・一次面接の代行・日程調整・エージェントコントロールなど、貴社の一員として手を動かし、選考スピードと歩留まりを高めます。',
+        problems: [
+          '採用人数が急増し、社内リソースが足りない。',
+          'スカウトの返信率が上がらず、母集団が作れない。',
+          '面接や日程調整、エージェント対応に追われ、選考が進まない。'
+        ],
+        supports: [
+          ['母集団形成・スカウト実務', '各媒体・スカウトサービスを横断して母集団を構築し、返信率を高める文面でターゲットへアプローチします。'],
+          ['一次面接・候補者対応の代行', '一次面接や候補者とのやり取りを代行し、選考を止めずスピーディに進めます。'],
+          ['日程調整・エージェントコントロール', '面接調整や人材紹介会社との連携・進捗管理を巻き取り、現場の負担を軽減します。'],
+          ['内定承諾までの伴走', '条件面の調整やフォローまで対応し、内定承諾率・歩留まりの改善につなげます。']
+        ],
+        flow: [
+          ['ヒアリング', '採用目標・課題・体制、これまでの選考状況を丁寧に把握します。'],
+          ['提案', '課題に合わせて、代行範囲と運用プランをご提案します。'],
+          ['合意', '役割分担・進め方・ゴールを握り、実行体制を確定します。'],
+          ['実装', '母集団形成〜面接代行〜調整まで実務を推進。※ニーズに合わせ臨機応変に対応します。']
+        ],
+        stats: [],
+        cases: [
+          ['人材ベンチャー企業','中途採用の一次面接代行・エージェントコントロール','中途採用の一次面接を代行し、エージェントコントロールを実施。採用リソースを確保したことで、人事担当が本来注力すべき業務に集中できる体制に。エージェントへのフィードバックも改善して良好な関係を築き、紹介数の増加につなげました。'],
+          ['大手SES企業','新卒採用リクルーターを一気通貫で代行','説明会・インターン運営から一次面接、カジュアル面談、内定後面談、クロージング、入社フォローまで担当。厳しい採用市場でも採用予算を達成しました。技術職に加え総合職採用もエージェント開拓から実施し、2年連続で採用目標を達成。従来より高い学歴層の候補者獲得にも成功しました。'],
+          ['不動産ベンチャー企業','新卒一次面接・スカウト改善で採用数を昨年比倍増','日本トップクラスのスピードで拡大するベンチャー企業にて、新卒採用の一次面接を担当。社内システムが未整備の中で構築を助言し、スカウトの配信・内容の改善、定例MTGでの報告内容の設計も実施。月約150名の面接で優秀層の惹きつけを強化しつつリソース不足も改善し、採用基準・合否判断の基準を言語化。昨年比で倍増となる採用数の達成に貢献しました。']
+        ],
+        cta: ['採用実務の負担、まるごとお任せください','貴社の状況に合わせて代行範囲を柔軟にご提案します。']
+      },
+      consulting: {
+        no: '02', en: 'Consulting', name: '採用コンサルティング', forWho: 'For 企業のご担当者様',
+        tag: '採用の「型」を設計し、自走できる組織へアップデートする。',
+        lead: '母集団形成から内定承諾までの採用プロセス全体を「設計」し、採用ブランディング・面接手法・選考フローを仕組み化します。外部に頼り切らず自走できる強い採用基盤づくりを、臨機応変に伴走支援します。（RPOが実務の代行であるのに対し、コンサルティングは仕組みづくり・改善提案が中心です。）',
+        problems: [
+          '採用のミスマッチを減らしたい。',
+          '自社の魅力が言語化できず、採用競合に負けてしまう。',
+          '場当たり的な採用から脱し、再現性のある仕組みにしたい。'
+        ],
+        supports: [
+          ['採用ブランディング設計', '「選ばれる理由」を言語化し、候補者に響く訴求メッセージ・採用コンセプトを設計します。'],
+          ['面接設計・面接官トレーニング', '面接の実施方法や評価基準を型化し、面接官の目線を統一・育成します。'],
+          ['選考フロー／プロセス設計', '母集団形成から内定承諾までの導線を設計し、歩留まりを最適化します。'],
+          ['エージェント活用設計', '人材紹介会社の使い方・連携方針を設計し、外部リソースの成果を最大化します。']
+        ],
+        flow: [
+          ['ヒアリング', '採用データと課題を診断し、ボトルネックを特定します。'],
+          ['提案', '戦略・改善プランと、仕組み化の設計をご提案します。'],
+          ['合意', '施策の優先順位・体制・ゴールを合意します。'],
+          ['実装', '設計した仕組みの導入・定着まで伴走。※ニーズに合わせ臨機応変に対応します。']
+        ],
+        stats: [],
+        cases: [
+          ['人材ベンチャー企業','週次MTGで採用ブランディング・面接手法を改善','週次の定例MTGに参加し、採用ブランディングや面接の実施方法の改善、候補者の惹きつけ強化を設計・支援。実務のリソースを確保したことで、人事担当がブランディングなど従来手が回らなかった領域にも着手できる体制づくりに貢献しました。'],
+          ['ITコンサルティング企業','面接官の育成と選考オペレーションの仕組み化','急成長企業にて、インターン前の1対5グループ面接で見極めを行い、必要参加数を確保。社内共有システムを構築し、新人採用担当の面接指導も担当しました。繁忙期には月約300名規模の面接に対応し、面接官のリソース不足と候補者の取りこぼしを大きく改善しました。'],
+          ['中小IT企業','母集団強化のコンサル＆実務で応募数を倍以上に','中途採用の母集団強化に向け、エージェント開拓や新規媒体の選定から実行。1ヶ月で応募数を倍以上に増やし、コンスタントに応募を集める仕組みを構築しました。定例MTGでは数字を分析して採用計画の立案・改善を提案し、採用単価を抑えた採用に貢献。中途に加え新卒採用の立ち上げも支援し、初年度ながら早期に採用目標数を達成しました。']
+        ],
+        cta: ['採用の“土台”から一緒に作りましょう','戦略設計から仕組みの内製化まで伴走します。']
+      },
+      agent: {
+        no: '03', en: 'SPRING Career', name: 'SPRING キャリア（人材紹介）', forWho: 'For 求職者の方',
+        tag: '現役人事がサポートし、理想のキャリアの実現へ導く。',
+        lead: '「SPRING キャリア」は、株式会社SPRINGが運営する人材紹介サービスです。転職ありきではありません。現役人事の視点で、中長期的なキャリアを見据えてご支援します。取扱求人は10万件以上、最短で面談から2週間以内の内定実現も可能です。とくに20代の営業職の転職支援に強みがあり（営業職以外の職種も支援可能です）、未経験職への転職やキャリアアップも実現しています。現職に残ることが最適と判断される場合には、あえて転職をおすすめしないこともあります。',
+        resultsTitle: 'SPRING キャリアの特長',
+        problems: [
+          '自分に合うキャリア・企業が分からない。',
+          '未経験の職種に挑戦したい／キャリアアップしたい。',
+          '転職すべきか、現職に残るべきか迷っている。'
+        ],
+        supports: [
+          ['現役人事によるキャリアカウンセリング', '現役人事の視点で、あなたに本当に合う選択肢を一緒に考えます。転職ありきではありません。'],
+          ['10万件以上からの求人紹介', '豊富な求人の中から、ご希望と適性に合う求人を厳選してご提案します。'],
+          ['応募書類の作成・面接対策', '企業へのご推薦にあたり、応募書類の作成から面接対策まで伴走します。'],
+          ['条件交渉・入社まで伴走', '内定後の条件交渉から入社まで、安心して進められるようサポートします。']
+        ],
+        flow: [
+          ['初回面談', 'ご経歴・ご希望を丁寧にヒアリングします（ご登録・ご相談は無料）。'],
+          ['求人のご紹介・ご推薦', '最適な求人をご紹介し、応募書類の作成をサポートのうえ企業へご推薦します。'],
+          ['面接対策', '選考通過に向けて面接対策を実施し、あなたの魅力を最大限にお伝えします。'],
+          ['内定・条件交渉・入社', '内定後の条件交渉から入社まで伴走。※最短で面談から2週間以内の内定実現も可能です。']
+        ],
+        stats: [['10万','件+','取扱求人数'],['2','週間〜','面談から内定まで（最短）'],['20代','','営業職に特化 ※他職種も可'],['0','円','求職者の手数料']],
+        cases: [],
+        cta: ['まずはお気軽にキャリアのご相談を','転職すべきか迷う段階でも歓迎です。現役人事があなたの理想のキャリアへ伴走します。']
+      }
+    };
+    var ORDER = ['rpo','consulting','agent'];
+
+    function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+    function render(id){
+      var d = DATA[id] || DATA.rpo;
+      document.title = d.name + '｜株式会社SPRING';
+      document.getElementById('crumbName').textContent = d.name;
+      document.getElementById('svcNo').textContent = d.no;
+      document.getElementById('svcEn').textContent = d.en;
+      document.getElementById('svcName').textContent = d.name;
+      document.getElementById('svcTag').textContent = d.tag;
+      document.getElementById('svcFor').textContent = d.forWho;
+      document.getElementById('ovLead').textContent = d.lead;
+      document.getElementById('ctaTitle').textContent = d.cta[0];
+      document.getElementById('ctaText').textContent = d.cta[1];
+
+      var isAgent = (id === 'agent');
+      document.getElementById('svcBadge').hidden = !isAgent;
+      document.getElementById('svcNo').style.display = isAgent ? 'none' : '';
+      document.getElementById('ctaSns').style.display = isAgent ? '' : 'none';
+      var ctaPrimary = document.getElementById('ctaPrimary');
+      ctaPrimary.href = isAgent ? '../index.html#contact-seeker' : '../index.html#contact';
+      ctaPrimary.textContent = isAgent ? '求職者の方の相談はこちら' : 'お問い合わせ';
+
+      document.getElementById('probGrid').innerHTML =
+        d.problems.map(function(p){return '<div class="prob"><p>'+esc(p)+'</p></div>';}).join('');
+
+      document.getElementById('supGrid').innerHTML =
+        d.supports.map(function(s,i){return '<div class="sup"><h3><i>'+(i+1)+'</i>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>';}).join('');
+
+      document.getElementById('flow').innerHTML =
+        d.flow.map(function(f){return '<div class="flow-item"><div><h3>'+esc(f[0])+'</h3><p>'+esc(f[1])+'</p></div></div>';}).join('');
+
+      var statsEl = document.getElementById('stats');
+      if (d.stats && d.stats.length) {
+        statsEl.style.display = '';
+        statsEl.innerHTML = d.stats.map(function(s){return '<div class="stat"><div class="num">'+esc(s[0]||'—')+'<em>'+esc(s[1])+'</em></div><div class="label">'+esc(s[2])+'</div></div>';}).join('');
+      } else {
+        statsEl.style.display = 'none';
+        statsEl.innerHTML = '';
+      }
+
+      document.getElementById('resultsTitle').textContent = d.resultsTitle || '支援事例';
+      var casesEl = document.getElementById('cases');
+      if (d.cases && d.cases.length) {
+        casesEl.style.display = '';
+        casesEl.innerHTML = d.cases.map(function(c){return '<div class="case"><div class="ch">'+esc(c[0])+'</div><div class="cb"><h3>'+esc(c[1])+'</h3><p>'+esc(c[2])+'</p></div></div>';}).join('');
+      } else {
+        casesEl.style.display = 'none';
+        casesEl.innerHTML = '';
+      }
+
+      var sw = document.querySelectorAll('.svc-switch a');
+      sw.forEach(function(a){a.classList.toggle('active', a.dataset.id===id);});
+
+      var others = ORDER.filter(function(x){return x!==id;});
+      document.getElementById('otherGrid').innerHTML = others.map(function(x){
+        var o=DATA[x];
+        return '<a href="'+x+'.html"><span class="oi"><small>'+o.en+'</small><strong>'+esc(o.name)+'</strong></span><span class="oarrow">→</span></a>';
+      }).join('');
+
+      window.scrollTo({top:0});
+    }
+
+    // ▼▼ SPRING キャリア 公式SNSのURLをここに設定してください ▼▼
+    var SNS = {
+      line: '',        // 例: 'https://lin.ee/xxxxxxx'
+      instagram: ''    // 例: 'https://www.instagram.com/spring_career/'
+    };
+    (function(){
+      var l = document.getElementById('snsLine'), i = document.getElementById('snsIg');
+      if (l && SNS.line) l.href = SNS.line;
+      if (i && SNS.instagram) i.href = SNS.instagram;
+    })();
+
+    function currentId(){
+      var h = (location.hash || '').replace('#','');
+      return DATA[h] ? h : 'rpo';
+    }
+    render('rpo');
+    window.addEventListener('hashchange', function(){ render('rpo'); });
+  })();
+  </script>
+</body>
+</html>
