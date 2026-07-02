@@ -520,12 +520,14 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 .footer-cta {
   grid-column: 1 / -1;
+  justify-self: center;
   display: inline-flex;
   align-items: baseline;
   gap: 8px;
   color: #93a1b5;
   font-size: 11.5px;
   line-height: 1.6;
+  text-align: center;
   transition: color .2s ease;
 }
 .footer-cta:hover { color: var(--blue-soft); }
@@ -679,8 +681,10 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Keyframes ---------- */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 
-/* ---------- Sakura petals ---------- */
-.sakura { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 60; }
+/* ---------- Sakura petals (hero only) ---------- */
+.sakura { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+.hero .hero-inner { z-index: 2; }
+.hero .hero-scroll { z-index: 2; }
 .petal {
   position: absolute; top: -8%;
   background: linear-gradient(135deg, #fbd3df 0%, #f3a7c1 60%, #ec8fb0 100%);
@@ -1233,24 +1237,26 @@ a { color: inherit; text-decoration: none; }
       });
     }
 
-    /* ---- Sakura petals（桜が舞う演出） ---- */
+    /* ---- Sakura petals（桜が舞う演出・ヒーロー内のみ） ---- */
     (function () {
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var hero = document.getElementById('hero');
+      if (!hero) return;
       var box = document.createElement('div');
       box.className = 'sakura';
       box.setAttribute('aria-hidden', 'true');
-      document.body.appendChild(box);
-      var count = window.innerWidth < 640 ? 10 : 16;
+      hero.appendChild(box);
+      var count = window.innerWidth < 640 ? 5 : 8;
       for (var i = 0; i < count; i++) {
         var p = document.createElement('span');
         p.className = 'petal';
-        var size = 8 + Math.random() * 10;
-        var dur = 9 + Math.random() * 9;
-        p.style.left = (Math.random() * 100) + 'vw';
+        var size = 16 + Math.random() * 14;
+        var dur = 10 + Math.random() * 9;
+        p.style.left = (Math.random() * 100) + '%';
         p.style.width = size + 'px';
         p.style.height = (size * 0.82) + 'px';
-        p.style.opacity = (0.5 + Math.random() * 0.4).toFixed(2);
-        p.style.setProperty('--sway', (Math.random() * 120 - 60).toFixed(0) + 'px');
+        p.style.opacity = (0.55 + Math.random() * 0.4).toFixed(2);
+        p.style.setProperty('--sway', (Math.random() * 140 - 70).toFixed(0) + 'px');
         p.style.animationDuration = dur.toFixed(1) + 's';
         p.style.animationDelay = (-Math.random() * dur).toFixed(1) + 's';
         box.appendChild(p);
