@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>有料職業紹介事業に関する情報・各種規程｜株式会社SPRING</title>
+  <meta name="description" content="株式会社SPRINGの有料職業紹介事業に関する情報（許可番号 27-ユ-305271）、業務の運営に関する規程、個人情報適正管理規程を掲載しています。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{
+  --blue:#1f66b8; --blue-deep:#123a73; --blue-bright:#2b91d8; --blue-soft:#cfe1f4; --blue-tint:#eef4fb;
+  --green:#57ad46; --ink:#23303f; --ink-soft:#5f6b7a; --cream:#f7fafd; --cream-2:#eef3f9;
+  --line:#e2e9f1; --white:#fff; --radius:16px;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --deco:"Cormorant Garamond",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.container{width:min(92%,1040px);margin-inline:auto;}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(247,250,253,.92);backdrop-filter:blur(12px);box-shadow:0 6px 22px -18px rgba(18,58,115,.55);}
+.header-inner{width:min(94%,1240px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:40px;height:40px;flex:none;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text strong{font-family:var(--deco);font-size:24px;font-weight:700;letter-spacing:.1em;color:var(--blue-deep);}
+.logo-text em{font-style:normal;font-size:9.5px;letter-spacing:.2em;color:var(--ink-soft);}
+.nav{display:flex;align-items:center;gap:26px;}
+.nav a{font-size:14px;font-weight:500;color:var(--ink);transition:color .2s;}
+.nav a:hover{color:var(--blue);}
+.nav a.current{color:var(--blue);font-weight:700;}
+.nav-home{display:inline-flex;align-items:center;gap:6px;background:var(--blue-deep);color:#fff !important;padding:9px 18px;border-radius:999px;font-weight:700;}
+.nav-home:hover{background:var(--blue);}
+@media(max-width:820px){.nav{display:none;}}
+
+/* Hero band */
+.subhero{position:relative;overflow:hidden;background:radial-gradient(1000px 500px at 82% -10%,var(--blue-tint),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:64px 0 56px;}
+.subhero .container{position:relative;}
+.crumb{font-size:12.5px;letter-spacing:.06em;color:var(--blue-soft);margin-bottom:16px;}
+.crumb a:hover{color:#fff;}
+.subhero .en{font-family:var(--deco);letter-spacing:.3em;text-transform:uppercase;color:var(--blue-soft);font-size:15px;}
+.subhero h1{font-family:var(--serif);font-size:clamp(24px,4.4vw,38px);font-weight:700;letter-spacing:.05em;margin:6px 0 10px;}
+.subhero p{font-size:14.5px;color:rgba(255,255,255,.82);}
+
+/* TOC */
+.toc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 18px 50px -30px rgba(18,58,115,.3);margin:-34px auto 48px;padding:20px 24px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;position:relative;z-index:5;}
+.toc strong{font-size:13px;color:var(--ink-soft);letter-spacing:.08em;margin-right:6px;}
+.toc a{font-size:13.5px;font-weight:700;color:var(--blue-deep);background:var(--blue-tint);border:1px solid var(--blue-soft);border-radius:999px;padding:7px 16px;transition:all .2s;}
+.toc a:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* Sections */
+.block{padding:0 0 60px;}
+.block-head{margin-bottom:26px;}
+.block-head .en{font-family:var(--deco);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);}
+.block-head h2{font-family:var(--serif);font-size:clamp(21px,3vw,28px);font-weight:700;color:var(--ink);letter-spacing:.04em;padding-bottom:12px;border-bottom:2px solid var(--blue);display:inline-block;margin-top:2px;}
+
+/* Business info */
+.license-card{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;border-radius:var(--radius);padding:26px 28px;text-align:center;box-shadow:0 18px 44px -22px rgba(18,58,115,.7);margin-bottom:26px;}
+.license-card span{display:block;font-size:13px;letter-spacing:.16em;color:var(--blue-soft);margin-bottom:6px;}
+.license-card strong{font-family:var(--deco);font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:.08em;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.info-item{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:22px 24px;}
+.info-item h3{font-family:var(--serif);font-size:17px;color:var(--blue-deep);margin-bottom:10px;}
+.info-item p{font-size:14px;color:#4a5666;}
+.info-item p strong{color:var(--blue-deep);font-weight:700;}
+.refund{list-style:none;margin-top:12px;display:grid;gap:7px;}
+.refund li{display:flex;justify-content:space-between;gap:12px;background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;}
+.refund em{font-style:normal;font-weight:700;color:var(--blue);white-space:nowrap;}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr;}}
+
+/* Legal document */
+.doc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 18px 50px -34px rgba(18,58,115,.3);padding:44px clamp(22px,5vw,56px);}
+.doc-head{text-align:center;margin-bottom:30px;}
+.doc-head h3{font-family:var(--serif);font-size:23px;font-weight:700;letter-spacing:.24em;color:var(--blue-deep);}
+.doc-head .meta{font-size:12.5px;color:var(--ink-soft);letter-spacing:.08em;margin-top:8px;}
+.doc-lead{font-size:14px;margin-bottom:24px;}
+.art{margin-bottom:22px;}
+.art h4{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--blue-deep);border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:10px;letter-spacing:.04em;}
+.art ol{list-style:none;counter-reset:item;display:grid;gap:8px;}
+.art ol li{display:flex;gap:10px;font-size:13.8px;color:#3d4757;}
+.art ol li::before{counter-increment:item;content:counter(item);flex:none;width:20px;height:20px;margin-top:3px;background:var(--blue-tint);color:var(--blue-deep);border-radius:5px;font-size:11px;font-weight:700;display:grid;place-items:center;}
+.art .plain{font-size:13.8px;color:#3d4757;}
+.subitems{list-style:none;margin:8px 0 2px;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.subitems li{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;font-size:13px;border-bottom:1px solid var(--line);}
+.subitems li:last-child{border-bottom:none;}
+.subitems strong{color:var(--blue);white-space:nowrap;}
+.doc-sign{margin-top:36px;padding-top:20px;border-top:2px solid var(--blue);text-align:right;font-size:13.5px;line-height:2;}
+.doc-sign .co{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--blue-deep);letter-spacing:.05em;}
+.printbar{display:flex;justify-content:flex-end;margin-bottom:14px;}
+.printbar button{font-family:inherit;font-size:13px;font-weight:700;color:var(--blue-deep);background:#fff;border:1px solid var(--blue-soft);border-radius:8px;padding:9px 18px;cursor:pointer;transition:all .2s;}
+.printbar button:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* Footer */
+.site-footer{background:#16233a;color:#cdd6e2;padding:44px 0 22px;margin-top:10px;}
+.foot-inner{width:min(92%,1040px);margin-inline:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;}
+.foot-inner a{color:#cfe1f4;font-size:13.5px;font-weight:700;}
+.foot-addr{font-size:12.5px;color:#93a1b5;width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;margin-top:6px;}
+.copyright{text-align:center;font-family:var(--deco);letter-spacing:.12em;font-size:12.5px;color:#7e8ba0;margin-top:20px;}
+
+@media print{
+  .site-header,.subhero,.toc,.printbar,.site-footer,.block-head .en{display:none !important;}
+  body{background:#fff;font-size:12px;}
+  .block{padding:0 0 12px;}
+  .doc{box-shadow:none;border:none;padding:0;page-break-before:always;}
+  .info-item,.license-card{box-shadow:none;}
+  .art{page-break-inside:avoid;}
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="株式会社SPRING 採用コンサルティング">
+        <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="grn-h" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2f9e3f" /><stop offset="1" stop-color="#a6d63f" /></linearGradient>
+            <linearGradient id="blu-h" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#33b4e8" /><stop offset="0.55" stop-color="#1a63b5" /><stop offset="1" stop-color="#0c3576" /></linearGradient>
+            <radialGradient id="gld-h" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe463" /><stop offset="1" stop-color="#f39a12" /></radialGradient>
+          </defs>
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-h)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
+          <circle cx="63" cy="25" r="2.6" fill="#fff" opacity="0.55" />
+        </svg>
+        <span class="logo-text"><strong>SPRING</strong><em>採用コンサルティング</em></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#works">私たちの仕事</a>
+        <a href="index.html#company">会社情報</a>
+        <a href="recruitment.html" class="current">有料職業紹介事業</a>
+        <a href="index.html#contact" class="nav-home">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="subhero">
+    <div class="container">
+      <p class="crumb"><a href="index.html">HOME</a>　/　有料職業紹介事業に関する情報</p>
+      <span class="en">Licensed Business</span>
+      <h1>有料職業紹介事業に関する情報</h1>
+      <p>職業安定法に基づき、当社の有料職業紹介事業に関する情報および各種規程を公開しています。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="toc">
+      <strong>目次</strong>
+      <a href="#business">事業情報</a>
+      <a href="#kitei">業務の運営に関する規程</a>
+      <a href="#privacy">個人情報適正管理規程</a>
+    </nav>
+
+    <!-- 1. Business info -->
+    <section class="block" id="business">
+      <div class="block-head">
+        <span class="en">Business Information</span>
+        <h2>事業情報</h2>
+      </div>
+
+      <div class="license-card">
+        <span>有料職業紹介事業 許可番号</span>
+        <strong>27-ユ-305271</strong>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>紹介手数料</h3>
+          <p>当社は届出制手数料に基づき、紹介成立時に<strong>理論年収の50％を上限</strong>として紹介手数料を申し受けます。なお、個別契約により異なる場合があります。</p>
+        </div>
+        <div class="info-item">
+          <h3>求職者手数料</h3>
+          <p>求職者の皆様から手数料は<strong>いただきません（無料）</strong>。</p>
+        </div>
+        <div class="info-item">
+          <h3>返戻金制度</h3>
+          <p>被採用者の自己都合により退職に至った場合、以下のとおり返金いたします。</p>
+          <ul class="refund">
+            <li><span>入社後 1ヵ月未満で退職</span><em>手数料の 80%</em></li>
+            <li><span>入社後 3ヵ月未満で退職</span><em>手数料の 50%</em></li>
+            <li><span>入社後 6ヵ月未満で退職</span><em>手数料の 10%</em></li>
+          </ul>
+        </div>
+        <div class="info-item">
+          <h3>取扱職種・地域／責任者</h3>
+          <p>取扱職種の範囲等は<strong>国内における全職種</strong>です。<br />
+          職業紹介責任者：<strong>吉本 春悟</strong><br />
+          苦情・お問い合わせ窓口：<a href="index.html#contact" style="color:var(--blue);font-weight:700;">お問い合わせフォーム</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 業務の運営に関する規程 -->
+    <section class="block" id="kitei">
+      <div class="block-head">
+        <span class="en">Operation Rules</span>
+        <h2>業務の運営に関する規程</h2>
+      </div>
+
+      <div class="printbar"><button onclick="window.print()">印刷 / PDF保存</button></div>
+
+      <article class="doc">
+        <div class="doc-head">
+          <h3>業務の運営に関する規程</h3>
+          <p class="meta">事業所名　株式会社SPRING　／　有料職業紹介事業 許可番号 27-ユ-305271</p>
+        </div>
+
+        <div class="art">
+          <h4>第1　求人</h4>
+          <ol>
+            <li>本所は、取扱職種の範囲等に関する限り、いかなる求人の申し込みについてもこれを受理します。ただし、その申込みの内容が法令に違反したり、賃金、労働時間等の労働条件が通常の労働条件と比べて著しく不適当である場合、一定の労働関係法令（労働基準法及び職業安定法等）違反のある場合及び暴力団員などによる求人である場合には受理しません。</li>
+            <li>求人の申込みは、求人者又はその代理人が直接来所されて、所定の求人票により、お申込みください。直接来所できないときは、郵便、電話、ファクシミリ又は電子メール等でも差し支えありません。</li>
+            <li>求人申込みの際には、業務内容、賃金、労働時間、その他の労働条件をあらかじめ書面の交付、ファクシミリの利用又は電子メール等により明示してください。ただし、紹介の実施について緊急の必要があるためあらかじめ書面の交付、ファクシミリの利用又は電子メール等による明示ができないときは、当該明示すべき事項をあらかじめこれらの方法以外の方法により明示してください。</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第2　求職</h4>
+          <ol>
+            <li>本所は、取扱職種の範囲等に関する限り、いかなる求職の申込みについてもこれを受理します。ただし、その申込みの内容が法令に違反する場合には受理しません。</li>
+            <li>求職申込みは、本人が直接来所されて、所定の求職票によりお申込みください。</li>
+            <li>常に、日雇的又は臨時的な労働に従事することを希望される方は、本所に特別の登録をしておき、別に定める登録証の提示によって、求職申込みの手続きを省略致します。</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第3　紹介</h4>
+          <ol>
+            <li>求職の方には、職業安定法第2条にも規定される職業選択の自由の趣旨を踏まえ、その御希望と能力に応ずる職業に速やかに就くことができるよう極力お世話致します。</li>
+            <li>求人の方には、その御希望に適合する求職者を極力お世話致します。</li>
+            <li>紹介に際しては、求職の方に、紹介において従事することとなる業務の内容、賃金、労働時間その他の労働条件をあらかじめ書面の交付又は希望される場合にはファクシミリの利用若しくは電子メール等により明示します。ただし、紹介の実施について緊急の必要があるためあらかじめ書面の交付、ファクシミリの利用又は電子メール等による明示ができないときは、あらかじめそれらの方法以外の方法により明示を行います。</li>
+            <li>求職の方を求人者に紹介する場合には、紹介状を発行しますから、その紹介状を持参して求人者へ行っていただきます。</li>
+            <li>いったん求人、求職の申込みを受けた以上、責任を持って紹介の労をとります。</li>
+            <li>本所は、労働争議に対する中立の立場をとるため、同盟罷業又は作業閉鎖の行われている間は求人者に、紹介を致しません。</li>
+            <li>就職が決定しましたら求人された方から別表の手数料表に基づき、紹介手数料を申し受けます。</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第4　その他</h4>
+          <ol>
+            <li>本所は、職業安定機関及びその他の職業紹介事業者等と連携を図りつつ、当該事業に係る求職者等からの苦情があった場合は、迅速、適切に対応いたします。</li>
+            <li>本所の行った職業紹介の結果については、求人者、求職者両方から本所に対して、その報告をしてください。また、本所の職業紹介により期間の定めのない労働契約を締結した求職者が就職から6箇月以内に離職（解雇された場合を除く。）したか否かについて、求人者から本所に対して報告してください。</li>
+            <li>本所は、求職者又は求人者から知り得た個人的な情報は個人情報適正管理規程に基づき、適正に取り扱います。</li>
+            <li>本所が広告等により求人等に関する情報を提供するときは、当該情報について虚偽の表示又は誤解を生じさせる表示を行いません。また、当該情報について正確かつ最新の内容に保つため、求人者、求職者等から当該情報について提供の中止や内容の訂正の依頼があった場合や、本所が当該情報が正確、最新でないことを確認した場合は、遅滞なく対応するとともに、求人者又は求職者に対して定期的に当該情報が最新かどうか確認する又は当該情報の時点を明らかにする措置を講じます。</li>
+            <li>本所は、求職者又は求人者に対し、その申込みの受理、面接、指導、紹介等の業務について、人種、国籍、信条、性別、社会的身分、門地、従前の職業、労働組合の組合員であること等を理由として差別的な取扱いは一切致しません。</li>
+            <li>本所の取扱職種の範囲等は、国内における全職種です。</li>
+            <li>本所の業務の運営に関する規定は、以上のとおりでありますが、本所の業務は、すべて職業安定法関係法令及び通達に基づいて運営されますので、ご不審の点は係員に詳しくおたずねください。</li>
+          </ol>
+        </div>
+
+        <div class="doc-sign">
+          <p>2026年3月9日</p>
+          <p class="co">株式会社SPRING</p>
+          <p>代表者　吉本　春悟</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3. 個人情報適正管理規程 -->
+    <section class="block" id="privacy">
+      <div class="block-head">
+        <span class="en">Privacy Management</span>
+        <h2>個人情報適正管理規程</h2>
+      </div>
+
+      <div class="printbar"><button onclick="window.print()">印刷 / PDF保存</button></div>
+
+      <article class="doc">
+        <div class="doc-head">
+          <h3>個人情報適正管理規程</h3>
+          <p class="meta">株式会社SPRING</p>
+        </div>
+
+        <p class="doc-lead">株式会社SPRING（以下「本所」という。）は、有料職業紹介事業の業務に関し保管し、又は使用する求人者、求職者その他の個人情報（以下「個人情報」という。）を、次に定めるところにより適正に管理する。</p>
+
+        <div class="art">
+          <h4>第1条（個人情報の収集、保管及び使用）</h4>
+          <ol>
+            <li>本所は、個人情報を収集する際には、業務の目的の達成に必要な範囲内で、本人から直接収集し、又は本人の同意の下で本人以外の者から収集する等、適法かつ公正な手段によって行う。</li>
+            <li>本所は、次に掲げる個人情報を収集しない。ただし、特別な職業上の必要性が存在することその他業務の目的の達成に必要不可欠であって、本人の同意がある場合その他収集が認められる場合はこの限りでない。
+              <ul class="subitems">
+                <li><span>① 人種、民族、社会的身分、門地、本籍地、出生地その他社会的差別の原因となるおそれのある事項</span></li>
+                <li><span>② 思想及び信条</span></li>
+                <li><span>③ 労働組合への加入状況</span></li>
+              </ul>
+            </li>
+            <li>本所は、個人情報を収集、保管又は使用するに当たっては、その利用の目的を明らかにし、当該目的の範囲内でこれを行う。ただし、本人の同意がある場合その他正当な事由がある場合はこの限りでない。</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第2条（個人情報の管理）</h4>
+          <p class="plain">本所は、その保管又は使用に係る個人情報に関し、次に掲げる事項に係る適切な措置を講ずるとともに、求職者等本人からの求めに応じ、当該措置の内容を説明する。</p>
+          <ol>
+            <li>個人情報を、その利用の目的に応じ必要な範囲において、正確かつ最新のものに保つための措置</li>
+            <li>個人情報の紛失、破壊、改ざん及び漏えい等の危険に対する、技術的及び組織的な安全管理措置</li>
+            <li>収集目的に照らして保管する必要がなくなった個人情報を、破棄又は削除するための措置</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第3条（個人情報を取り扱う者の範囲）</h4>
+          <p class="plain">本所において個人情報を取り扱う者の範囲は、代表者、個人情報適正管理の責任者及び職業紹介の業務に従事する者のうち、業務の遂行上必要な者に限る。</p>
+        </div>
+
+        <div class="art">
+          <h4>第4条（個人情報適正管理の責任者）</h4>
+          <p class="plain">本所は、個人情報を適正に管理するための責任者（個人情報適正管理の責任者）として、次の者を選任する。</p>
+          <ul class="subitems">
+            <li><span>個人情報適正管理の責任者</span><strong>吉本 春悟</strong></li>
+          </ul>
+        </div>
+
+        <div class="art">
+          <h4>第5条（個人情報の開示又は訂正）</h4>
+          <ol>
+            <li>本所は、本人が、その個人情報について開示又は訂正（削除を含む。以下同じ。）を請求したときは、本人であることを確認した上で、遅滞なくこれに応じる。</li>
+            <li>本所は、本人が個人情報の開示又は訂正の求めをしたことを理由として、当該本人に対して不利益な取扱いをしてはならない。</li>
+          </ol>
+        </div>
+
+        <div class="art">
+          <h4>第6条（個人情報に関する苦情の処理）</h4>
+          <p class="plain">本所は、個人情報の取扱いに係る求職者等からの苦情に対して、迅速かつ適切に対応する。苦情の処理に当たる者は、個人情報適正管理の責任者とする。</p>
+        </div>
+
+        <div class="art">
+          <h4>第7条（従業者に対する教育）</h4>
+          <p class="plain">本所は、個人情報を取り扱う従業者に対し、個人情報の適正な管理に関し必要な教育及び研修を行う。</p>
+        </div>
+
+        <div class="art">
+          <h4>第8条（規程の改廃）</h4>
+          <p class="plain">この規程の改廃は、代表者が行う。</p>
+        </div>
+
+        <div class="doc-sign">
+          <p>2026年3月9日　制定</p>
+          <p class="co">株式会社SPRING</p>
+          <p>代表者　吉本　春悟</p>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="foot-inner">
+      <a href="index.html">← トップページに戻る</a>
+      <a href="index.html#contact">お問い合わせ</a>
+      <p class="foot-addr">株式会社SPRING　〒531-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F　／　有料職業紹介事業 許可番号 27-ユ-305271</p>
+    </div>
+    <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

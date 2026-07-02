@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社SPRING｜採用コンサルティング</title>
+  <meta name="description" content="株式会社SPRINGは、人と企業の最適なマッチングを実現し、企業の成長と求職者のキャリア実現を支援する採用コンサルティング会社です。RPO（採用代行）・採用コンサルティング・人材紹介を提供しています。" />
+  <meta property="og:title" content="株式会社SPRING 採用コンサルティング" />
+  <meta property="og:description" content="株式会社SPRINGが最適な人と企業のマッチングを実現し成長を支援" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+/* ============================================================
+   株式会社SPRING — Recruitment Consulting
+   Blue / trust themed corporate site
+   ============================================================ */
+
+:root {
+  --blue:        #1f66b8;
+  --blue-deep:   #123a73;
+  --blue-bright: #2b91d8;
+  --blue-soft:   #cfe1f4;
+  --blue-tint:   #eef4fb;
+  --green:       #57ad46;
+  --green-soft:  #d5ecca;
+  --gold:        #f5a623;
+  --ink:         #23303f;
+  --ink-soft:    #5f6b7a;
+  --cream:       #f7fafd;
+  --cream-2:     #eef3f9;
+  --line:        #e2e9f1;
+  --white:       #ffffff;
+  --shadow:      0 18px 50px -24px rgba(18, 58, 115, .30);
+  --radius:      18px;
+  --serif: "Noto Serif JP", serif;
+  --sans:  "Noto Sans JP", sans-serif;
+  --deco:  "Cormorant Garamond", serif;
+  --maxw: 1120px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.9;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container { width: min(90%, var(--maxw)); margin-inline: auto; }
+
+.sp-only { display: none; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  padding: 15px 34px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .04em;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+  color: #fff;
+  box-shadow: 0 12px 26px -12px rgba(18, 58, 115, .85);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -14px rgba(18, 58, 115, .95); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: rgba(31,102,184,.35); }
+.btn-ghost:hover { background: #fff; border-color: var(--blue); color: var(--blue-deep); transform: translateY(-3px); }
+.btn-lg { padding: 18px 56px; font-size: 16px; }
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
+  padding: 14px 0;
+}
+.site-header.scrolled {
+  background: rgba(247, 250, 253, .92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 22px -18px rgba(18,58,115,.55);
+  padding: 8px 0;
+}
+.header-inner {
+  width: min(94%, 1240px);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo-mark { width: 42px; height: 42px; flex: none; overflow: visible; transition: transform .35s ease; }
+.site-header.scrolled .logo-mark { width: 38px; height: 38px; }
+.brand:hover .logo-mark { transform: translateY(-2px) scale(1.05); }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-text strong { font-family: var(--deco); font-size: 26px; font-weight: 700; letter-spacing: .1em; color: var(--blue-deep); }
+.logo-text em { font-style: normal; font-size: 10px; letter-spacing: .2em; color: var(--ink-soft); }
+
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 4px 0;
+}
+.nav a:not(.nav-cta)::after {
+  content: "";
+  position: absolute; left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: var(--blue);
+  transition: width .3s ease;
+}
+.nav a:not(.nav-cta):hover::after { width: 100%; }
+.nav .nav-cta {
+  background: var(--blue-deep);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background .25s ease, transform .25s ease;
+}
+.nav .nav-cta:hover { background: var(--blue); transform: translateY(-2px); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: none; border: none;
+  cursor: pointer;
+  justify-content: center; align-items: center;
+}
+.nav-toggle span {
+  display: block; width: 24px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 700px at 80% 8%, var(--blue-tint) 0%, transparent 55%),
+    radial-gradient(900px 600px at 6% 94%, #e8f4ea 0%, transparent 55%),
+    linear-gradient(180deg, #fff 0%, var(--cream) 100%);
+}
+.hero-petals {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle, var(--blue-soft) 60%, transparent 62%),
+    radial-gradient(circle, var(--green-soft) 60%, transparent 62%),
+    radial-gradient(circle, var(--blue-soft) 60%, transparent 62%),
+    radial-gradient(circle, var(--blue-tint) 60%, transparent 62%);
+  background-size: 14px 14px, 10px 10px, 8px 8px, 20px 20px;
+  background-position: 12% 22%, 82% 30%, 68% 72%, 24% 78%;
+  background-repeat: no-repeat;
+  opacity: .8;
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  width: min(90%, var(--maxw));
+  margin-inline: auto;
+  padding-top: 90px;
+}
+.hero-eyebrow {
+  font-family: var(--deco);
+  font-size: 18px;
+  letter-spacing: .35em;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp .9s .1s forwards;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(30px, 6vw, 62px);
+  line-height: 1.5;
+  letter-spacing: .02em;
+  color: var(--ink);
+  margin-bottom: 30px;
+}
+.hero-title span {
+  background: linear-gradient(120deg, var(--blue-deep), var(--blue-bright));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-title, .hero-lead, .hero-actions { opacity: 0; animation: fadeUp 1s forwards; }
+.hero-title { animation-delay: .25s; }
+.hero-lead { animation-delay: .45s; }
+.hero-actions { animation-delay: .6s; }
+.hero-lead {
+  font-size: clamp(15px, 2vw, 19px);
+  color: var(--ink-soft);
+  margin-bottom: 42px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero-scroll {
+  position: absolute; left: 50%; bottom: 26px;
+  transform: translateX(-50%);
+  font-family: var(--deco);
+  font-size: 12px; letter-spacing: .25em;
+  color: var(--ink-soft);
+  display: flex; flex-direction: column; align-items: center; gap: 40px;
+}
+.hero-scroll span {
+  width: 1px; height: 46px;
+  background: linear-gradient(var(--blue), transparent);
+  position: relative; overflow: hidden;
+}
+.hero-scroll span::after {
+  content: ""; position: absolute; top: -50%; left: 0;
+  width: 100%; height: 50%; background: var(--blue-deep);
+  animation: scrollLine 1.8s infinite;
+}
+@keyframes scrollLine { 0% { top: -50%; } 100% { top: 100%; } }
+
+/* ============================================================
+   Section commons
+   ============================================================ */
+.section { padding: clamp(70px, 10vw, 130px) 0; position: relative; }
+.section-head { text-align: center; margin-bottom: 60px; }
+.section-en {
+  display: block;
+  font-family: var(--deco);
+  font-size: 15px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: .06em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 18px;
+}
+.section-title::after {
+  content: ""; position: absolute; left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 46px; height: 3px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+}
+.section-sub { margin-top: 22px; color: var(--ink-soft); font-size: 15px; }
+.section-head--light .section-title,
+.section-head--light .section-sub { color: #fff; }
+.section-head--light .section-en { color: var(--blue-soft); }
+
+/* ---------- Reveal animation ---------- */
+.reveal { opacity: 0; transform: translateY(34px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-eyebrow, .hero-title, .hero-lead, .hero-actions { animation: none !important; opacity: 1 !important; }
+}
+
+/* ============================================================
+   Message
+   ============================================================ */
+.message { background: var(--white); }
+.message-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .85fr;
+  gap: 56px;
+  align-items: center;
+}
+.message-catch {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 30px;
+}
+.message-body p { color: #4a5666; margin-bottom: 18px; }
+.message-sign {
+  font-family: var(--serif);
+  font-size: 19px;
+  text-align: right;
+  margin-top: 28px;
+  color: var(--ink);
+}
+.message-visual { display: flex; justify-content: center; }
+
+/* Representative photo */
+.rep-photo {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, var(--blue-tint), var(--cream-2));
+}
+.rep-photo::after {
+  content: "";
+  position: absolute; left: -18px; bottom: -18px;
+  width: 90px; height: 90px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--green), var(--blue));
+  opacity: .18;
+}
+.rep-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
+.rep-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 40px 22px 20px;
+  background: linear-gradient(transparent, rgba(18,41,73,.82));
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: .04em;
+}
+.rep-photo figcaption span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  color: var(--blue-soft);
+  margin-bottom: 4px;
+}
+/* Fallback bloom card when photo is missing */
+.rep-photo.is-missing { aspect-ratio: 4 / 5; display: grid; place-items: center; }
+.rep-photo.is-missing img, .rep-photo.is-missing figcaption { display: none; }
+.rep-photo.is-missing::before {
+  content: "";
+  width: 120px; height: 120px;
+  background: radial-gradient(circle at 40% 35%, var(--blue-bright), var(--blue-deep));
+  border-radius: 50% 50% 50% 8px;
+  transform: rotate(-8deg);
+  box-shadow: 0 12px 30px -12px rgba(18,58,115,.6);
+}
+
+/* ============================================================
+   Works
+   ============================================================ */
+.works { background: linear-gradient(180deg, var(--cream) 0%, var(--blue-tint) 100%); }
+.works-list { display: flex; flex-direction: column; gap: 34px; }
+.work-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.work-card:hover { transform: translateY(-6px); box-shadow: 0 26px 60px -26px rgba(18,58,115,.45); }
+.work-index {
+  display: grid; place-items: center;
+  background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
+  position: relative;
+}
+.work-index::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 55%);
+}
+.work-index span {
+  font-family: var(--deco);
+  font-size: 62px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+}
+.work-content { padding: 38px 42px; }
+.work-title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.work-lead {
+  color: var(--blue-deep);
+  font-weight: 600;
+  font-size: 15.5px;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px dashed var(--blue-soft);
+}
+.work-detail { display: grid; gap: 16px; }
+.work-detail > div { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: start; }
+.work-detail dt {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #fff;
+  background: var(--green);
+  padding: 5px 4px;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 1.5;
+  height: fit-content;
+}
+.work-detail dd { color: #4a5666; font-size: 15px; }
+.work-more {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 24px;
+  font-weight: 700; font-size: 14.5px; color: var(--blue-deep);
+  padding: 11px 22px; border-radius: 999px;
+  border: 1.5px solid var(--blue-soft); background: var(--blue-tint);
+  transition: transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+}
+.work-more span { transition: transform .25s ease; }
+.work-more:hover { background: var(--blue); color: #fff; border-color: var(--blue); transform: translateY(-2px); }
+.work-more:hover span { transform: translateX(4px); }
+
+/* ============================================================
+   Info / News
+   ============================================================ */
+.info { background: var(--white); }
+.news-list { max-width: 820px; margin-inline: auto; border-top: 1px solid var(--line); }
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 8px;
+  border-bottom: 1px solid var(--line);
+  transition: background .25s ease;
+}
+.news-item:hover { background: var(--blue-tint); }
+.news-item time { font-family: var(--deco); font-size: 16px; color: var(--ink-soft); letter-spacing: .05em; white-space: nowrap; }
+.news-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue-deep);
+  background: var(--blue-tint);
+  border: 1px solid var(--blue-soft);
+  padding: 3px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.news-item p { font-size: 15px; color: var(--ink); }
+
+/* ============================================================
+   Company
+   ============================================================ */
+.company { background: linear-gradient(180deg, var(--blue-tint) 0%, var(--cream) 100%); }
+.company-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.company-catch {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+.company-catch::before {
+  content: "";
+  display: inline-block;
+  width: 34px; height: 3px;
+  background: var(--blue);
+  vertical-align: middle;
+  margin-right: 14px;
+}
+.company-lead p { color: #4a5666; margin-bottom: 18px; }
+
+.company-table {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.company-table dl { display: flex; flex-direction: column; }
+.company-table dl > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.company-table dl > div:last-child { border-bottom: none; }
+.company-table dt {
+  background: var(--cream-2);
+  padding: 20px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+  display: flex; align-items: center;
+}
+.company-table dd { padding: 20px 22px; font-size: 15px; color: #4a5666; }
+
+/* ============================================================
+   Footer CTA (link to licensed-business page)
+   ============================================================ */
+.footer-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 6px 16px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 20px 26px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.footer-cta:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -22px rgba(0,0,0,.6); }
+.footer-cta .fc-main { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: .02em; }
+.footer-cta .fc-sub { font-size: 12px; color: var(--blue-soft); flex: 1 1 auto; }
+.footer-cta .fc-arrow { font-size: 20px; color: #fff; margin-left: auto; }
+
+/* ============================================================
+   Contact
+   ============================================================ */
+.contact {
+  background:
+    radial-gradient(900px 500px at 85% 0%, rgba(43,145,216,.55), transparent 60%),
+    radial-gradient(700px 500px at 10% 100%, rgba(87,173,70,.28), transparent 60%),
+    linear-gradient(160deg, #133056 0%, #0d1f38 100%);
+  color: #fff;
+}
+.who-toggle {
+  display: flex; gap: 6px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  padding: 6px;
+  margin-bottom: 28px;
+}
+.who-btn {
+  flex: 1; padding: 13px 10px;
+  border: none; border-radius: 999px;
+  background: transparent; color: rgba(255,255,255,.78);
+  font-family: inherit; font-weight: 700; font-size: 14.5px;
+  cursor: pointer; transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+.who-btn.active { background: #fff; color: var(--blue-deep); box-shadow: 0 8px 18px -8px rgba(0,0,0,.45); }
+.contact-form.is-seeker [data-role="company"] { display: none; }
+.contact-form {
+  max-width: 720px;
+  margin-inline: auto;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  padding: 46px clamp(24px, 5vw, 52px);
+}
+.form-row { margin-bottom: 24px; }
+.form-row label {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; font-weight: 700;
+  margin-bottom: 10px; color: #fff;
+}
+.req {
+  font-size: 10.5px;
+  background: var(--blue-bright);
+  color: #fff;
+  padding: 2px 9px;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 11px;
+  border: 1.5px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.96);
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.form-row textarea { resize: vertical; }
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--blue-bright);
+  box-shadow: 0 0 0 4px rgba(43,145,216,.35);
+}
+.form-note { font-size: 12.5px; color: rgba(255,255,255,.72); margin-bottom: 26px; }
+.form-submit { text-align: center; }
+.form-result { text-align: center; margin-top: 18px; font-weight: 700; min-height: 1.4em; }
+.form-result.ok { color: #a9e6b0; }
+.form-result.ng { color: #ffc9c9; }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer { background: #16233a; color: #cdd6e2; padding: 56px 0 22px; }
+.footer-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px 50px;
+  align-items: center;
+}
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand .logo-mark { width: 50px; height: 50px; flex: none; }
+.footer-brand-text strong { display: block; font-family: var(--deco); font-size: 23px; font-weight: 600; color: #fff; letter-spacing: .16em; }
+.footer-brand-text span { font-size: 11px; letter-spacing: .16em; color: #93a1b5; }
+.footer-nav { display: flex; gap: 26px; flex-wrap: wrap; justify-content: flex-end; }
+.footer-nav a { font-size: 13.5px; color: #c2cad8; transition: color .2s ease; }
+.footer-nav a:hover { color: var(--blue-soft); }
+.footer-address { grid-column: 1 / -1; font-size: 13px; color: #93a1b5; border-top: 1px solid rgba(255,255,255,.1); padding-top: 22px; }
+.copyright {
+  text-align: center;
+  font-family: var(--deco);
+  letter-spacing: .12em;
+  font-size: 12.5px;
+  color: #7e8ba0;
+  margin-top: 24px;
+}
+
+/* ---------- To top ---------- */
+/* Floating contact button (bottom-right) */
+.float-contact {
+  position: fixed; right: 24px; bottom: 24px;
+  z-index: 95;
+  display: inline-flex; align-items: center; gap: 9px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+  color: #fff; font-weight: 700; font-size: 14px; letter-spacing: .04em;
+  padding: 14px 22px; border-radius: 999px;
+  box-shadow: 0 14px 34px -12px rgba(18,58,115,.8);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.float-contact::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(31,102,184,.5);
+  animation: fcPulse 2.6s ease-out infinite;
+}
+@keyframes fcPulse { 0% { box-shadow: 0 0 0 0 rgba(31,102,184,.5); } 70%,100% { box-shadow: 0 0 0 16px rgba(31,102,184,0); } }
+.float-contact:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -14px rgba(18,58,115,.95); }
+.float-contact svg { width: 18px; height: 18px; fill: #fff; position: relative; }
+.float-contact span { position: relative; }
+
+.to-top {
+  position: fixed; right: 28px; bottom: 88px;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  background: #fff; color: var(--blue-deep);
+  border: 1px solid var(--blue-soft);
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0 10px 26px -12px rgba(18,58,115,.5);
+  opacity: 0; visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .3s ease, transform .3s ease, background .25s ease, color .25s ease;
+  z-index: 94;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--blue-deep); color: #fff; }
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 900px) {
+  .message-grid, .company-grid { grid-template-columns: 1fr; gap: 40px; }
+  .message-visual { order: -1; }
+  .rep-photo { max-width: 320px; }
+}
+
+@media (max-width: 760px) {
+  .sp-only { display: inline; }
+  .nav-toggle { display: flex; }
+  .float-contact { right: 16px; bottom: 16px; padding: 12px 18px; font-size: 13px; }
+  .to-top { right: 20px; bottom: 74px; }
+  /* スマホでは位置移動をなくしフェードのみに（アニメーションのズレ防止） */
+  .reveal { transform: none; transition: opacity .6s ease; }
+  .nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(78%, 320px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    background: var(--cream);
+    padding: 40px 34px;
+    box-shadow: -10px 0 40px -20px rgba(0,0,0,.4);
+    transform: translateX(100%);
+    transition: transform .35s ease;
+  }
+  .nav.open { transform: none; }
+  .nav a { font-size: 17px; padding: 12px 0; width: 100%; }
+  .nav .nav-cta { margin-top: 12px; }
+
+  .work-card { grid-template-columns: 1fr; }
+  .work-index { padding: 16px 0; }
+  .work-index span { font-size: 40px; }
+  .work-content { padding: 28px 24px; }
+  .work-detail > div { grid-template-columns: 1fr; gap: 8px; }
+  .work-detail dt { justify-self: start; padding: 5px 14px; }
+  .work-detail dt br { display: none; }
+
+  .news-item { flex-wrap: wrap; gap: 8px 16px; }
+  .news-item p { width: 100%; }
+
+  .company-table dl > div { grid-template-columns: 110px 1fr; }
+  .company-table dt, .company-table dd { padding: 16px; }
+
+  .footer-cta .fc-arrow { margin-left: 0; }
+
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-brand { justify-content: center; }
+  .footer-nav { justify-content: center; }
+  .footer-address { text-align: center; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="株式会社SPRING 採用コンサルティング">
+        <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="grn-h" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2f9e3f" /><stop offset="1" stop-color="#a6d63f" /></linearGradient>
+            <linearGradient id="blu-h" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#33b4e8" /><stop offset="0.55" stop-color="#1a63b5" /><stop offset="1" stop-color="#0c3576" /></linearGradient>
+            <radialGradient id="gld-h" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe463" /><stop offset="1" stop-color="#f39a12" /></radialGradient>
+          </defs>
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-h)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
+          <circle cx="63" cy="25" r="2.6" fill="#fff" opacity="0.55" />
+        </svg>
+        <span class="logo-text">
+          <strong>SPRING</strong>
+          <em>採用コンサルティング</em>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#message">ご挨拶</a>
+        <a href="#works">私たちの仕事</a>
+        <a href="#info">お知らせ</a>
+        <a href="#company">会社情報</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-petals" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Recruitment Consulting</p>
+      <h1 class="hero-title">
+        いい出会いは、<br />いい組織を作る。<br />
+        <span>いい組織は、人を輝かせる。</span>
+      </h1>
+      <p class="hero-lead">
+        人と企業の最適なマッチングを実現し、<br class="sp-only" />社会に新たな価値を創造する。
+      </p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">サービスを見る</a>
+        <a href="service.html#agent" class="btn btn-ghost">求職者の方はこちら</a>
+      </div>
+    </div>
+    <a href="#message" class="hero-scroll" aria-label="下へスクロール"><span></span>Scroll</a>
+  </section>
+
+  <!-- ===== Message ===== -->
+  <section class="section message" id="message">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Message</span>
+        <h2 class="section-title">ご挨拶</h2>
+      </div>
+
+      <div class="message-grid">
+        <div class="message-body reveal">
+          <p class="message-catch">いい出会いは、いい組織を作る。<br />いい組織は、人を輝かせる。</p>
+          <p>株式会社SPRINGのウェブサイトをご覧いただき、誠にありがとうございます。</p>
+          <p>私たちは、人と企業の最適なマッチングを実現することで、社会に新たな価値を創造することを使命としています。採用市場において、企業様の成長を支援し、求職者の方々のキャリア実現をサポートすることが、私たちの喜びです。</p>
+          <p>「SPRING」という社名には、新しい季節の始まり、成長、そして希望という意味が込められています。桜の花が咲くように、一人ひとりの才能が開花し、企業様の発展につながる。そんな未来を創造していきたいと考えています。</p>
+          <p>採用支援のプロフェッショナルとして、常に最新のトレンドを把握し、お客様一社一社に最適なソリューションを提供してまいります。</p>
+          <p class="message-sign">代表取締役　吉本 春悟</p>
+        </div>
+        <div class="message-visual reveal">
+          <figure class="rep-photo">
+            <img src="images/rep.jpg" alt="株式会社SPRING 代表取締役 吉本春悟"
+                 onerror="this.closest('.rep-photo').classList.add('is-missing');" />
+            <figcaption><span>REPRESENTATIVE DIRECTOR</span>代表取締役　吉本 春悟</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Works ===== -->
+  <section class="section works" id="works">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Our Works</span>
+        <h2 class="section-title">私たちの仕事</h2>
+        <p class="section-sub">採用の「実行」から「戦略」、そして「出会い」まで。<br class="sp-only" />企業の採用課題を、3つのサービスで包括的に支援します。</p>
+      </div>
+
+      <div class="works-list">
+        <!-- 01 -->
+        <article class="work-card reveal">
+          <div class="work-index"><span>01</span></div>
+          <div class="work-content">
+            <h3 class="work-title">RPO（採用代行）事業</h3>
+            <p class="work-lead">現場の負担をなくし、採用のプロが実行を加速させる</p>
+            <dl class="work-detail">
+              <div>
+                <dt>概要</dt>
+                <dd>採用実務（母集団形成・スカウト送信・日程調整など）を、貴社の一員として代行します。</dd>
+              </div>
+              <div>
+                <dt>提供価値</dt>
+                <dd>「忙しくて手が回らない」を解消し、プロのノウハウで選考スピードと歩留まりを劇的に改善。人事の皆様が「候補者と向き合う時間」を創出します。</dd>
+              </div>
+              <div>
+                <dt>こんな企業様に</dt>
+                <dd>採用人数が急増しリソースが足りない／スカウトの返信率が上がらず困っている。</dd>
+              </div>
+            </dl>
+            <a href="service.html#rpo" class="work-more">実績・サポート内容を見る<span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="work-card reveal">
+          <div class="work-index"><span>02</span></div>
+          <div class="work-content">
+            <h3 class="work-title">採用コンサルティング</h3>
+            <p class="work-lead">理想の出会いを設計し、自走できる組織へアップデートする</p>
+            <dl class="work-detail">
+              <div>
+                <dt>概要</dt>
+                <dd>採用戦略の立案から、ペルソナ設計、選考フローの構築、面接官トレーニングまで、採用力の根幹を強化します。</dd>
+              </div>
+              <div>
+                <dt>提供価値</dt>
+                <dd>一過性の採用で終わらせない「選ばれる理由」を言語化。才能が輝くための土壌（組織環境）を整え、外部に頼り切らない強い採用基盤を築きます。</dd>
+              </div>
+              <div>
+                <dt>こんな企業様に</dt>
+                <dd>採用のミスマッチを減らしたい／自社の魅力が言語化できておらず採用競合に負けてしまう。</dd>
+              </div>
+            </dl>
+            <a href="service.html#consulting" class="work-more">実績・サポート内容を見る<span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="work-card reveal">
+          <div class="work-index"><span>03</span></div>
+          <div class="work-content">
+            <h3 class="work-title">人材紹介事業「SPRING キャリア」</h3>
+            <p class="work-lead">「人材紹介 × 採用支援」企業の採用成功と求職者のキャリア実現を両立するパートナー</p>
+            <dl class="work-detail">
+              <div>
+                <dt>求職者に寄り添った<br />キャリア支援</dt>
+                <dd>転職ありきではなく、中長期的なキャリア形成を見据えたアドバイスを行います。</dd>
+              </div>
+              <div>
+                <dt>企業理解に基づく<br />マッチング</dt>
+                <dd>求人票だけでは分からない企業の魅力や課題を深く理解し、双方にとって最適な出会いを創出します。</dd>
+              </div>
+              <div>
+                <dt>選考から入社後まで<br />サポート</dt>
+                <dd>応募書類の添削、面接対策、条件交渉、入社後フォローまで伴走します。</dd>
+              </div>
+            </dl>
+            <a href="service.html#agent" class="work-more">実績・サポート内容を見る<span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Info / News ===== -->
+  <section class="section info" id="info">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">News</span>
+        <h2 class="section-title">お知らせ</h2>
+      </div>
+
+      <ul class="news-list">
+        <li class="news-item reveal">
+          <time datetime="2026-02-13">2026.02.13</time>
+          <span class="news-tag">お知らせ</span>
+          <p>株式会社SPRINGを設立いたしました。</p>
+        </li>
+        <li class="news-item reveal">
+          <time datetime="2026-02-13">2026.02.13</time>
+          <span class="news-tag">サービス</span>
+          <p>RPO（採用代行）・採用コンサルティング・人材紹介の各サービスを開始しました。</p>
+        </li>
+        <li class="news-item reveal">
+          <time datetime="2026-02-13">2026.02.13</time>
+          <span class="news-tag">サイト</span>
+          <p>公式ウェブサイトを公開いたしました。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Company ===== -->
+  <section class="section company" id="company">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Company</span>
+        <h2 class="section-title">会社情報</h2>
+      </div>
+
+      <div class="company-grid">
+        <div class="company-lead reveal">
+          <p class="company-catch">パートナーとして共に創る</p>
+          <p>私たちは、人と企業の最適なマッチングを実現することで、社会に新たな価値を創造することを使命としています。採用市場において、企業様の成長を支援し、求職者の方々のキャリア実現をサポートすることが、私たちの喜びです。</p>
+          <p>「SPRING」という社名には、新しい季節の始まり、成長、そして希望という意味が込められています。桜の花が咲くように、一人ひとりの才能が開花し、企業様の発展につながる。そんな未来を創造していきたいと考えています。</p>
+        </div>
+
+        <div class="company-table reveal">
+          <dl>
+            <div><dt>会社名</dt><dd>株式会社SPRING</dd></div>
+            <div><dt>代表</dt><dd>代表取締役　吉本 春悟</dd></div>
+            <div><dt>創業</dt><dd>2026年02月13日</dd></div>
+            <div><dt>資本金</dt><dd>5,000,000円</dd></div>
+            <div><dt>事業内容</dt><dd>RPO（採用代行）事業／採用コンサルティング／人材紹介事業</dd></div>
+            <div><dt>許可番号</dt><dd>有料職業紹介事業　27-ユ-305271</dd></div>
+            <div><dt>所在地</dt><dd>〒531-0001<br />大阪府大阪市北区梅田2-6-20<br />パシフィックマークス西梅田 4F</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head section-head--light">
+        <span class="section-en">Contact</span>
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="section-sub">企業のご担当者様も、求職者の方も、こちらからお気軽にお問い合わせください。<br />2営業日以内にご返信させていただきます。</p>
+      </div>
+
+      <form class="contact-form reveal is-company" id="contactForm" novalidate>
+        <div class="who-toggle" role="group" aria-label="お問い合わせ区分">
+          <button type="button" class="who-btn active" data-who="company">企業のご担当者様</button>
+          <button type="button" class="who-btn" data-who="seeker">求職者の方</button>
+        </div>
+        <input type="hidden" id="cWho" name="who" value="企業のご担当者様" />
+
+        <div class="form-row" data-role="company">
+          <label for="cCompany">会社名<span class="req">必須</span></label>
+          <input type="text" id="cCompany" name="company" placeholder="株式会社〇〇" />
+        </div>
+        <div class="form-row">
+          <label for="cName">お名前<span class="req">必須</span></label>
+          <input type="text" id="cName" name="name" placeholder="山田 太郎" required />
+        </div>
+        <div class="form-row">
+          <label for="cEmail">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="cEmail" name="email" placeholder="example@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="cTel">電話番号</label>
+          <input type="tel" id="cTel" name="tel" placeholder="090-0000-0000" />
+        </div>
+        <div class="form-row">
+          <label for="cType">お問い合わせ種別</label>
+          <select id="cType" name="type">
+            <option value="">選択してください</option>
+            <option>RPO（採用代行）について</option>
+            <option>採用コンサルティングについて</option>
+            <option>人材紹介（採用したい）について</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="cMessage">お問い合わせ内容<span class="req">必須</span></label>
+          <textarea id="cMessage" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+        </div>
+        <p class="form-note">※「送信する」を押すとメールソフトが起動し、<strong style="color:#fff;">info@spring-career.com</strong> 宛のメールが作成されます。内容をご確認のうえ送信してください。ご入力いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</p>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-lg">送信する</button>
+        </div>
+        <p class="form-result" id="formResult" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="grn-f" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3ab048" /><stop offset="1" stop-color="#b6e24f" /></linearGradient>
+            <linearGradient id="blu-f" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#4ec3f0" /><stop offset="0.55" stop-color="#2a7ccb" /><stop offset="1" stop-color="#1a5299" /></linearGradient>
+            <radialGradient id="gld-f" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe463" /><stop offset="1" stop-color="#f39a12" /></radialGradient>
+          </defs>
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-f)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#c8e86a" opacity="0.8" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-f)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-f)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-f)" />
+          <circle cx="63" cy="25" r="2.6" fill="#fff" opacity="0.55" />
+        </svg>
+        <div class="footer-brand-text">
+          <strong>株式会社SPRING</strong>
+          <span>採用コンサルティング</span>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#message">ご挨拶</a>
+        <a href="#works">私たちの仕事</a>
+        <a href="#info">お知らせ</a>
+        <a href="#company">会社情報</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <a href="recruitment.html" class="footer-cta">
+        <span class="fc-main">有料職業紹介事業に関する情報・各種規程</span>
+        <span class="fc-sub">許可番号 27-ユ-305271／業務運営規程・個人情報適正管理規程はこちら</span>
+        <span class="fc-arrow" aria-hidden="true">→</span>
+      </a>
+      <p class="footer-address">〒531-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F</p>
+    </div>
+    <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
+  </footer>
+
+  <a href="#contact" class="float-contact" aria-label="お問い合わせ">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm.4 2 7.6 5.3L19.6 6H4.4ZM20 7.9l-8 5.6-8-5.6V18h16V7.9Z"/></svg>
+    <span>お問い合わせ</span>
+  </a>
+
+  <a href="#hero" class="to-top" id="toTop" aria-label="ページ上部へ戻る">↑</a>
+
+  <script>
+  /* ============================================================
+     株式会社SPRING — main.js
+     ============================================================ */
+  (function () {
+    'use strict';
+
+    const header    = document.getElementById('siteHeader');
+    const nav        = document.getElementById('nav');
+    const navToggle  = document.getElementById('navToggle');
+    const toTop      = document.getElementById('toTop');
+
+    /* ---- Header state on scroll ---- */
+    function onScroll() {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 40);
+      toTop.classList.toggle('show', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---- Mobile nav toggle ---- */
+    function closeNav() {
+      nav.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeNav);
+    });
+
+    /* ---- Reveal on scroll ---- */
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('visible'); });
+    }
+
+    /* ---- Contact form (企業／求職者 切替 + mailto) ---- */
+    const form   = document.getElementById('contactForm');
+    const result = document.getElementById('formResult');
+    if (form) {
+      const whoInput   = document.getElementById('cWho');
+      const whoBtns    = form.querySelectorAll('.who-btn');
+      const typeSelect = document.getElementById('cType');
+      const messageEl  = document.getElementById('cMessage');
+
+      const presets = {
+        company: {
+          who: '企業のご担当者様',
+          types: ['RPO（採用代行）について', '採用コンサルティングについて', '人材紹介（採用したい）について', 'その他'],
+          placeholder: '採用のご状況やご相談内容をご記入ください。'
+        },
+        seeker: {
+          who: '求職者の方',
+          types: ['求人のご紹介について', '転職・キャリアのご相談', 'ご登録について', 'その他'],
+          placeholder: 'ご希望の職種・働き方や、キャリアのお悩みなどをご記入ください。'
+        }
+      };
+
+      function applyMode(mode) {
+        const p = presets[mode];
+        whoInput.value = p.who;
+        form.classList.toggle('is-company', mode === 'company');
+        form.classList.toggle('is-seeker', mode === 'seeker');
+        whoBtns.forEach(function (b) { b.classList.toggle('active', b.dataset.who === mode); });
+        typeSelect.innerHTML = '<option value="">選択してください</option>'
+          + p.types.map(function (t) { return '<option>' + t + '</option>'; }).join('');
+        messageEl.placeholder = p.placeholder;
+      }
+      whoBtns.forEach(function (b) {
+        b.addEventListener('click', function () { applyMode(b.dataset.who); });
+      });
+
+      // 求職者向けリンク（#contact-seeker）から来た場合は求職者タブを選択してスクロール
+      function handleSeekerHash() {
+        if (location.hash === '#contact-seeker') {
+          applyMode('seeker');
+          var sec = document.getElementById('contact');
+          if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
+        }
+      }
+      handleSeekerHash();
+      window.addEventListener('hashchange', handleSeekerHash);
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const isCompany = form.classList.contains('is-company');
+        const who     = whoInput.value;
+        const name    = form.name.value.trim();
+        const email   = form.email.value.trim();
+        const tel     = form.tel.value.trim();
+        const company = form.company.value.trim();
+        const type    = form.type.value;
+        const message = form.message.value.trim();
+        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!name || !email || !message || (isCompany && !company)) {
+          result.textContent = '必須項目をご入力ください。';
+          result.className = 'form-result ng';
+          return;
+        }
+        if (!emailOk) {
+          result.textContent = 'メールアドレスの形式をご確認ください。';
+          result.className = 'form-result ng';
+          return;
+        }
+
+        const subject = '【' + who + '】お問い合わせ' + (type ? '（' + type + '）' : '') + ' ' + name + ' 様';
+        const lines = ['お問い合わせ区分：' + who];
+        if (isCompany) { lines.push('会社名：' + company); }
+        lines.push(
+          'お名前：' + name,
+          'メールアドレス：' + email,
+          '電話番号：' + (tel || '（未記入）'),
+          'お問い合わせ種別：' + (type || '（未選択）'),
+          '',
+          'お問い合わせ内容：',
+          message,
+          '',
+          '――――――――――',
+          '※本メールは株式会社SPRING ウェブサイトのお問い合わせフォームから作成されました。'
+        );
+        const mailto = 'mailto:info@spring-career.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(lines.join('\r\n'));
+        window.location.href = mailto;
+        result.textContent = 'メールソフトが起動します。内容をご確認のうえ送信してください。';
+        result.className = 'form-result ok';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
