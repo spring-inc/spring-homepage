@@ -143,6 +143,27 @@ a { color: inherit; text-decoration: none; }
 }
 .nav .nav-cta:hover { background: var(--blue); transform: translateY(-2px); }
 
+/* dropdown */
+.nav-dropdown { position: relative; display: flex; align-items: center; }
+.ddlink { display: inline-flex; align-items: center; gap: 5px; }
+.caret { font-size: 10px; transition: transform .25s ease; }
+.nav-dropdown:hover .caret { transform: rotate(180deg); }
+.dropdown-menu {
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 20px 46px -22px rgba(18,58,115,.45);
+  padding: 8px; min-width: 250px;
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden; transition: opacity .22s ease, transform .22s ease;
+  z-index: 120;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(6px); }
+.dropdown-menu a { padding: 11px 14px; border-radius: 8px; font-size: 13.5px; font-weight: 500; color: var(--ink); white-space: nowrap; }
+.dropdown-menu a::after { display: none !important; }
+.dropdown-menu a:hover { background: var(--blue-tint); color: var(--blue-deep); }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -736,6 +757,16 @@ a { color: inherit; text-decoration: none; }
   .nav.open { transform: none; }
   .nav a { font-size: 17px; padding: 12px 0; width: 100%; }
   .nav .nav-cta { margin-top: 12px; }
+  /* モバイルはドロップダウンを展開表示 */
+  .nav-dropdown { flex-direction: column; align-items: flex-start; width: 100%; }
+  .ddlink { width: 100%; }
+  .caret { display: none; }
+  .dropdown-menu {
+    position: static; transform: none; opacity: 1; visibility: visible;
+    box-shadow: none; border: none; background: transparent;
+    padding: 0 0 6px 14px; min-width: 0; gap: 0;
+  }
+  .dropdown-menu a { font-size: 14.5px; padding: 9px 0; color: var(--ink-soft); }
 
   .work-card { grid-template-columns: 1fr; }
   .work-index { padding: 16px 0; }
@@ -787,7 +818,14 @@ a { color: inherit; text-decoration: none; }
 
       <nav class="nav" id="nav">
         <a href="#message">ご挨拶</a>
-        <a href="#works">私たちの仕事</a>
+        <div class="nav-dropdown">
+          <a href="#works" class="ddlink">事業紹介<span class="caret" aria-hidden="true">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="service.html#rpo">RPO（採用代行）事業</a>
+            <a href="service.html#consulting">採用コンサルティング</a>
+            <a href="service.html#agent">人材紹介事業「SPRING キャリア」</a>
+          </div>
+        </div>
         <a href="#info">お知らせ</a>
         <a href="#company">会社情報</a>
         <a href="#contact" class="nav-cta">お問い合わせ</a>
@@ -851,8 +889,8 @@ a { color: inherit; text-decoration: none; }
   <section class="section works" id="works">
     <div class="container">
       <div class="section-head">
-        <span class="section-en">Our Works</span>
-        <h2 class="section-title">私たちの仕事</h2>
+        <span class="section-en">Business</span>
+        <h2 class="section-title">事業紹介</h2>
         <p class="section-sub">採用の「実行」から「戦略」、そして「出会い」まで。<br class="sp-only" />企業の採用課題を、3つのサービスで包括的に支援します。</p>
       </div>
 
@@ -942,19 +980,24 @@ a { color: inherit; text-decoration: none; }
 
       <ul class="news-list">
         <li class="news-item reveal">
-          <time datetime="2026-02-13">2026.02.13</time>
-          <span class="news-tag">お知らせ</span>
-          <p>株式会社SPRINGを設立いたしました。</p>
-        </li>
-        <li class="news-item reveal">
-          <time datetime="2026-02-13">2026.02.13</time>
+          <time datetime="2026-06-01">2026.06.01</time>
           <span class="news-tag">サービス</span>
-          <p>RPO（採用代行）・採用コンサルティング・人材紹介の各サービスを開始しました。</p>
+          <p>人材紹介事業「SPRING キャリア」のサービスを開始しました。</p>
         </li>
         <li class="news-item reveal">
           <time datetime="2026-02-13">2026.02.13</time>
           <span class="news-tag">サイト</span>
           <p>公式ウェブサイトを公開いたしました。</p>
+        </li>
+        <li class="news-item reveal">
+          <time datetime="2026-02-13">2026.02.13</time>
+          <span class="news-tag">サービス</span>
+          <p>RPO（採用代行）・採用コンサルティングのサービスを開始しました。</p>
+        </li>
+        <li class="news-item reveal">
+          <time datetime="2026-02-13">2026.02.13</time>
+          <span class="news-tag">お知らせ</span>
+          <p>株式会社SPRINGを設立いたしました。</p>
         </li>
       </ul>
     </div>
@@ -1069,7 +1112,7 @@ a { color: inherit; text-decoration: none; }
       </div>
       <nav class="footer-nav">
         <a href="#message">ご挨拶</a>
-        <a href="#works">私たちの仕事</a>
+        <a href="#works">事業紹介</a>
         <a href="#info">お知らせ</a>
         <a href="#company">会社情報</a>
         <a href="#contact">お問い合わせ</a>
