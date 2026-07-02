@@ -520,20 +520,18 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 .footer-cta {
   grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 6px 16px;
-  flex-wrap: wrap;
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 14px;
-  padding: 20px 26px;
-  transition: transform .25s ease, box-shadow .25s ease;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: #93a1b5;
+  font-size: 11.5px;
+  line-height: 1.6;
+  transition: color .2s ease;
 }
-.footer-cta:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -22px rgba(0,0,0,.6); }
-.footer-cta .fc-main { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: .02em; }
-.footer-cta .fc-sub { font-size: 12px; color: var(--blue-soft); flex: 1 1 auto; }
-.footer-cta .fc-arrow { font-size: 20px; color: #fff; margin-left: auto; }
+.footer-cta:hover { color: var(--blue-soft); }
+.footer-cta .fc-main { font-weight: 500; }
+.footer-cta .fc-sub { color: #7e8ba0; }
+.footer-cta .fc-arrow { font-size: 12px; }
 
 /* ============================================================
    Contact
@@ -680,6 +678,26 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Keyframes ---------- */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Sakura petals ---------- */
+.sakura { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 60; }
+.petal {
+  position: absolute; top: -8%;
+  background: linear-gradient(135deg, #fbd3df 0%, #f3a7c1 60%, #ec8fb0 100%);
+  border-radius: 100% 0 100% 0;
+  will-change: transform, opacity;
+  animation-name: sakura-fall;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes sakura-fall {
+  0%   { transform: translate(0, -10vh) rotate(0deg);           opacity: 0; }
+  10%  { opacity: .85; }
+  50%  { transform: translate(var(--sway, 30px), 48vh) rotate(240deg); }
+  90%  { opacity: .8; }
+  100% { transform: translate(0, 112vh) rotate(540deg);         opacity: .15; }
+}
+@media (prefers-reduced-motion: reduce) { .sakura { display: none !important; } }
 
 /* ============================================================
    Responsive
@@ -1054,7 +1072,7 @@ a { color: inherit; text-decoration: none; }
       </nav>
       <a href="recruitment.html" class="footer-cta">
         <span class="fc-main">有料職業紹介事業に関する情報・各種規程</span>
-        <span class="fc-sub">許可番号 27-ユ-305271／業務運営規程・個人情報適正管理規程はこちら</span>
+        <span class="fc-sub">（許可番号 27-ユ-305271）</span>
         <span class="fc-arrow" aria-hidden="true">→</span>
       </a>
       <p class="footer-address">〒531-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F</p>
@@ -1214,6 +1232,30 @@ a { color: inherit; text-decoration: none; }
         result.className = 'form-result ok';
       });
     }
+
+    /* ---- Sakura petals（桜が舞う演出） ---- */
+    (function () {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var box = document.createElement('div');
+      box.className = 'sakura';
+      box.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(box);
+      var count = window.innerWidth < 640 ? 10 : 16;
+      for (var i = 0; i < count; i++) {
+        var p = document.createElement('span');
+        p.className = 'petal';
+        var size = 8 + Math.random() * 10;
+        var dur = 9 + Math.random() * 9;
+        p.style.left = (Math.random() * 100) + 'vw';
+        p.style.width = size + 'px';
+        p.style.height = (size * 0.82) + 'px';
+        p.style.opacity = (0.5 + Math.random() * 0.4).toFixed(2);
+        p.style.setProperty('--sway', (Math.random() * 120 - 60).toFixed(0) + 'px');
+        p.style.animationDuration = dur.toFixed(1) + 's';
+        p.style.animationDelay = (-Math.random() * dur).toFixed(1) + 's';
+        box.appendChild(p);
+      }
+    })();
   })();
   </script>
 </body>
