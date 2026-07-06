@@ -454,13 +454,13 @@ a{color:inherit;text-decoration:none;}
 
     // ▼▼ SPRING キャリア 公式SNSのURLをここに設定してください ▼▼
     var SNS = {
-      line: '',        // 例: 'https://lin.ee/xxxxxxx'
+      line: 'https://lin.ee/uAJswoU',
       instagram: ''    // 例: 'https://www.instagram.com/spring_career/'
     };
     (function(){
       var l = document.getElementById('snsLine'), i = document.getElementById('snsIg');
-      if (l && SNS.line) l.href = SNS.line;
-      if (i && SNS.instagram) i.href = SNS.instagram;
+      if (l) { if (SNS.line) { l.href = SNS.line; } else { l.style.display = 'none'; } }
+      if (i) { if (SNS.instagram) { i.href = SNS.instagram; } else { i.style.display = 'none'; } }
     })();
 
     function currentId(){
