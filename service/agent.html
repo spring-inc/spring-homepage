@@ -145,6 +145,35 @@ a{color:inherit;text-decoration:none;}
 .career-badge .cb-word b{font-family:var(--deco);font-size:26px;font-weight:700;color:var(--blue-deep);letter-spacing:.08em;line-height:1;}
 .career-badge .cb-tag{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;font-weight:700;font-size:14px;padding:4px 14px;border-radius:999px;letter-spacing:.06em;}
 
+/* entry (job seeker) */
+.entry-lead{font-size:15px;color:#3d4757;max-width:820px;margin-bottom:26px;}
+.entry-lead strong{color:var(--blue-deep);}
+.entry-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:20px;align-items:start;}
+.entry-line{background:linear-gradient(160deg,#eafaf0,#dff6e8);border:1px solid #bfe8cf;border-radius:16px;padding:28px 26px;position:relative;}
+.el-badge{display:inline-block;background:#06C755;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:999px;margin-bottom:12px;}
+.entry-line h3{font-family:var(--serif);font-size:20px;color:#0f5132;margin-bottom:8px;}
+.entry-line p{font-size:13.8px;color:#356049;margin-bottom:18px;}
+.el-btn{display:inline-flex;align-items:center;gap:10px;background:#06C755;color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:12px;box-shadow:0 14px 30px -12px rgba(6,199,85,.7);transition:transform .25s ease,box-shadow .25s ease;}
+.el-btn svg{width:20px;height:20px;fill:#fff;}
+.el-btn:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(6,199,85,.85);}
+.el-note{display:block;font-size:11.5px;color:#4c7a5f;margin-top:12px;}
+.entry-form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 16px 44px -32px rgba(18,58,115,.35);}
+.entry-form h3{font-family:var(--serif);font-size:20px;color:var(--blue-deep);margin-bottom:18px;}
+.ef-row{margin-bottom:16px;}
+.ef-row label{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+.ef-row .req{font-size:10px;background:var(--blue);color:#fff;padding:2px 8px;border-radius:4px;}
+.ef-row input,.ef-row textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--sans);font-size:14.5px;color:var(--ink);transition:border-color .2s,box-shadow .2s;}
+.ef-row textarea{resize:vertical;}
+.ef-row input:focus,.ef-row textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,102,184,.18);}
+.ef-submit{width:100%;padding:15px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-family:var(--sans);font-weight:700;font-size:15.5px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease;}
+.ef-submit:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(18,58,115,.7);}
+.ef-note{font-size:11.5px;color:var(--ink-soft);margin-top:12px;}
+.ef-note strong{color:var(--blue-deep);}
+.ef-result{text-align:center;font-weight:700;font-size:13.5px;margin-top:12px;min-height:1.2em;}
+.ef-result.ok{color:#0f5132;}
+.ef-result.ng{color:#c0392b;}
+@media(max-width:760px){.entry-grid{grid-template-columns:1fr;}}
+
 /* other services */
 .other{padding:60px 0 0;}
 .other-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
@@ -281,6 +310,51 @@ a{color:inherit;text-decoration:none;}
       </div>
     </section>
 
+    <!-- 求職者エントリー -->
+    <section class="sec entry" id="entry">
+      <div class="sec-head"><span class="en">Entry</span><h2>無料でキャリア相談・お仕事紹介</h2></div>
+      <p class="entry-lead">20代・営業職の転職に強い「SPRING キャリア」。現役人事が、あなたの理想のキャリア実現まで<strong>無料</strong>で伴走します。まずはお気軽にご相談ください。</p>
+      <div class="entry-grid">
+        <div class="entry-line">
+          <span class="el-badge">かんたん・最短</span>
+          <h3>LINEで相談する</h3>
+          <p>友だち追加するだけ。求人のご紹介やご質問も、LINEでそのままやり取りできます。すきま時間でもOK。</p>
+          <a href="https://lin.ee/uAJswoU" class="el-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
+            LINEで友だち追加（相談する）
+          </a>
+          <span class="el-note">※ 追加後、トークで「相談希望」と送るだけ</span>
+        </div>
+
+        <form class="entry-form" id="entryForm" novalidate>
+          <h3>フォームで相談する</h3>
+          <div class="ef-row">
+            <label for="efName">お名前<span class="req">必須</span></label>
+            <input type="text" id="efName" name="name" placeholder="山田 太郎" required />
+          </div>
+          <div class="ef-row">
+            <label for="efEmail">メールアドレス<span class="req">必須</span></label>
+            <input type="email" id="efEmail" name="email" placeholder="example@example.com" required />
+          </div>
+          <div class="ef-row">
+            <label for="efTel">電話番号（任意）</label>
+            <input type="tel" id="efTel" name="tel" placeholder="090-0000-0000" />
+          </div>
+          <div class="ef-row">
+            <label for="efCareer">ご希望の職種・ご経験（任意）</label>
+            <input type="text" id="efCareer" name="career" placeholder="例：営業職を希望／未経験可の職種を探している" />
+          </div>
+          <div class="ef-row">
+            <label for="efMsg">ご相談内容（任意）</label>
+            <textarea id="efMsg" name="message" rows="3" placeholder="キャリアのお悩みやご希望をご記入ください。"></textarea>
+          </div>
+          <button type="submit" class="ef-submit">無料で相談する</button>
+          <p class="ef-note">※「無料で相談する」を押すとメールソフトが起動し、<strong>info@spring-career.com</strong> 宛に作成されます。</p>
+          <p class="ef-result" id="entryResult" role="status"></p>
+        </form>
+      </div>
+    </section>
+
     <!-- 他サービス -->
     <section class="other">
       <div class="sec-head"><span class="en">Other Services</span><h2>その他の事業</h2></div>
@@ -409,7 +483,7 @@ a{color:inherit;text-decoration:none;}
       document.getElementById('svcNo').style.display = isAgent ? 'none' : '';
       document.getElementById('ctaSns').style.display = isAgent ? '' : 'none';
       var ctaPrimary = document.getElementById('ctaPrimary');
-      ctaPrimary.href = isAgent ? '../index.html#contact-seeker' : '../index.html#contact';
+      ctaPrimary.href = isAgent ? '#entry' : '../index.html#contact';
       ctaPrimary.textContent = isAgent ? '求職者の方の相談はこちら' : 'お問い合わせ';
 
       document.getElementById('probGrid').innerHTML =
@@ -461,6 +535,41 @@ a{color:inherit;text-decoration:none;}
       var l = document.getElementById('snsLine'), i = document.getElementById('snsIg');
       if (l) { if (SNS.line) { l.href = SNS.line; } else { l.style.display = 'none'; } }
       if (i) { if (SNS.instagram) { i.href = SNS.instagram; } else { i.style.display = 'none'; } }
+    })();
+
+    // 求職者エントリーフォーム（mailto）
+    (function(){
+      var form = document.getElementById('entryForm');
+      var result = document.getElementById('entryResult');
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var tel = form.tel.value.trim();
+        var career = form.career.value.trim();
+        var message = form.message.value.trim();
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!name || !email) { result.textContent = 'お名前とメールアドレスをご入力ください。'; result.className = 'ef-result ng'; return; }
+        if (!emailOk) { result.textContent = 'メールアドレスの形式をご確認ください。'; result.className = 'ef-result ng'; return; }
+        var subject = '【求職者エントリー／SPRING キャリア】' + name + ' 様';
+        var body = [
+          'お問い合わせ区分：求職者（SPRING キャリア）',
+          'お名前：' + name,
+          'メールアドレス：' + email,
+          '電話番号：' + (tel || '（未記入）'),
+          'ご希望の職種・ご経験：' + (career || '（未記入）'),
+          '',
+          'ご相談内容：',
+          (message || '（未記入）'),
+          '',
+          '――――――――――',
+          '※本メールは SPRING キャリアのエントリーフォームから作成されました。'
+        ].join('\r\n');
+        window.location.href = 'mailto:info@spring-career.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        result.textContent = 'メールソフトが起動します。内容をご確認のうえ送信してください。';
+        result.className = 'ef-result ok';
+      });
     })();
 
     function currentId(){
