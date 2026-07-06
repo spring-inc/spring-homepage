@@ -169,6 +169,12 @@ a{color:inherit;text-decoration:none;}
 .ef-submit:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(18,58,115,.7);}
 .ef-note{font-size:11.5px;color:var(--ink-soft);margin-top:12px;}
 .ef-note strong{color:var(--blue-deep);}
+.ef-ig{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:8px 14px 8px 8px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.ef-ig:hover{border-color:#dc2743;transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(220,39,67,.5);}
+.ef-ig-ic{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.ef-ig-ic svg{width:19px;height:19px;fill:#fff;}
+.ef-ig-tx{display:flex;flex-direction:column;line-height:1.25;font-size:13px;font-weight:700;color:var(--ink);}
+.ef-ig-tx em{font-style:normal;font-size:11px;font-weight:400;color:var(--ink-soft);}
 .ef-result{text-align:center;font-weight:700;font-size:13.5px;margin-top:12px;min-height:1.2em;}
 .ef-result.ok{color:#0f5132;}
 .ef-result.ng{color:#c0392b;}
@@ -297,17 +303,6 @@ a{color:inherit;text-decoration:none;}
         <a href="../index.html#contact" class="cta-btn primary" id="ctaPrimary">お問い合わせ</a>
         <a href="../index.html#works" class="cta-btn ghost">他の事業を見る</a>
       </div>
-      <div class="cta-sns" id="ctaSns" style="display:none;">
-        <span class="cta-sns-label">求職者の方は、公式SNSでもお気軽にご相談・情報収集いただけます</span>
-        <div class="cta-sns-btns">
-          <a href="#" class="sns-btn line" id="snsLine" target="_blank" rel="noopener" aria-label="公式LINEで相談">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2ZM8.4 12.63H6.66c-.25 0-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46.25 0 .46.2.46.46v2.55H8.4c.25 0 .46.2.46.46s-.2.46-.46.46Zm1.98-.46c0 .25-.2.46-.46.46s-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46s.46.2.46.46v3.47Zm4.02 0c0 .2-.13.37-.32.43a.5.5 0 0 1-.14.02c-.14 0-.28-.07-.37-.19l-1.78-2.42v2.16c0 .25-.2.46-.46.46s-.46-.2-.46-.46V8.7c0-.2.13-.37.32-.43.19-.06.4 0 .51.17l1.78 2.42V8.7c0-.25.2-.46.46-.46s.46.2.46.46v3.47Zm2.65-2.19c.25 0 .46.2.46.46s-.2.46-.46.46h-1.28v.82h1.28c.25 0 .46.2.46.46s-.2.46-.46.46h-1.74c-.25 0-.46-.2-.46-.46V8.7c0-.25.2-.46.46-.46h1.74c.25 0 .46.2.46.46s-.2.46-.46.46h-1.28v.82h1.28Z"/></svg>公式LINEで相談
-          </a>
-          <a href="#" class="sns-btn ig" id="snsIg" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg>Instagram
-          </a>
-        </div>
-      </div>
     </section>
 
     <!-- 求職者エントリー -->
@@ -351,6 +346,10 @@ a{color:inherit;text-decoration:none;}
           <button type="submit" class="ef-submit">無料で相談する</button>
           <p class="ef-note">※「無料で相談する」を押すとメールソフトが起動し、<strong>info@spring-career.com</strong> 宛に作成されます。</p>
           <p class="ef-result" id="entryResult" role="status"></p>
+          <a href="https://www.instagram.com/spring.career.tensyoku/" class="ef-ig" target="_blank" rel="noopener">
+            <span class="ef-ig-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg></span>
+            <span class="ef-ig-tx">インスタで最新情報をキャッチ！<em>@spring.career.tensyoku</em></span>
+          </a>
         </form>
       </div>
     </section>
@@ -481,7 +480,6 @@ a{color:inherit;text-decoration:none;}
       var isAgent = (id === 'agent');
       document.getElementById('svcBadge').hidden = !isAgent;
       document.getElementById('svcNo').style.display = isAgent ? 'none' : '';
-      document.getElementById('ctaSns').style.display = isAgent ? '' : 'none';
       var ctaPrimary = document.getElementById('ctaPrimary');
       ctaPrimary.href = isAgent ? '#entry' : '../index.html#contact';
       ctaPrimary.textContent = isAgent ? '求職者の方の相談はこちら' : 'お問い合わせ';
