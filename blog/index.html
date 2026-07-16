@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/images/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/images/favicon-180.png" />
+  <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}</script>
+  <title>コラム｜採用ノウハウ・キャリア情報｜株式会社SPRING</title>
+  <meta name="description" content="株式会社SPRINGのコラム。採用代行（RPO）・採用コンサルティングなど採用担当者向けのノウハウや、20代・営業職の転職に役立つキャリア情報を発信します。" />
+  <link rel="canonical" href="https://spring-career.com/blog" />
+  <meta property="og:site_name" content="株式会社SPRING" />
+  <meta property="og:title" content="コラム｜採用ノウハウ・キャリア情報｜株式会社SPRING" />
+  <meta property="og:description" content="採用担当者向けのノウハウと、転職・キャリアに役立つ情報を発信するコラムです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spring-career.com/blog" />
+  <meta property="og:image" content="https://spring-career.com/images/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://spring-career.com/images/ogp.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"HOME","item":"https://spring-career.com/"},
+    {"@type":"ListItem","position":2,"name":"コラム","item":"https://spring-career.com/blog"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{
+  --blue:#1f66b8; --blue-deep:#123a73; --blue-bright:#2b91d8; --blue-soft:#cfe1f4; --blue-tint:#eef4fb;
+  --green:#57ad46; --ink:#23303f; --ink-soft:#5f6b7a; --cream:#f7fafd; --cream-2:#eef3f9;
+  --line:#e2e9f1; --white:#fff; --radius:16px;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --deco:"Cormorant Garamond",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.container{width:min(92%,960px);margin-inline:auto;}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(247,250,253,.92);backdrop-filter:blur(12px);box-shadow:0 6px 22px -18px rgba(18,58,115,.55);}
+.header-inner{width:min(94%,1240px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:40px;height:40px;flex:none;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text strong{font-family:var(--deco);font-size:24px;font-weight:700;letter-spacing:.1em;color:var(--blue-deep);}
+.logo-text em{font-style:normal;font-size:9.5px;letter-spacing:.2em;color:var(--ink-soft);}
+.nav{display:flex;align-items:center;gap:24px;}
+.nav a{font-size:14px;font-weight:500;color:var(--ink);transition:color .2s;}
+.nav a:hover{color:var(--blue);}
+.nav a.current{color:var(--blue);font-weight:700;}
+.nav-home{display:inline-flex;align-items:center;gap:6px;background:var(--blue-deep);color:#fff !important;padding:9px 18px;border-radius:999px;font-weight:700;}
+.nav-home:hover{background:var(--blue);}
+@media(max-width:860px){.nav a:not(.nav-home){display:none;}}
+
+/* Hero */
+.subhero{background:radial-gradient(1000px 500px at 82% -10%,var(--blue-tint),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:56px 0 50px;}
+.crumb{font-size:12.5px;letter-spacing:.06em;color:var(--blue-soft);margin-bottom:16px;}
+.crumb a:hover{color:#fff;}
+.subhero .en{font-family:var(--deco);letter-spacing:.3em;text-transform:uppercase;color:var(--blue-soft);font-size:15px;}
+.subhero h1{font-family:var(--serif);font-size:clamp(24px,4.4vw,38px);font-weight:700;letter-spacing:.05em;margin:6px 0 10px;}
+.subhero p{font-size:14.5px;color:rgba(255,255,255,.82);}
+
+/* List */
+.list{padding:44px 0 60px;display:grid;gap:18px;}
+.post{display:grid;grid-template-columns:118px 1fr;gap:22px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 16px 46px -34px rgba(18,58,115,.35);transition:transform .25s ease,box-shadow .25s ease;}
+.post:hover{transform:translateY(-4px);box-shadow:0 26px 60px -34px rgba(18,58,115,.45);}
+.post .thumb{background:radial-gradient(120% 120% at 30% 20%,var(--blue-bright),var(--blue-deep));display:grid;place-items:center;color:#fff;}
+.post .thumb svg{width:52px;height:52px;}
+.post .body{padding:22px 24px 22px 0;}
+.post .meta{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.post .cat{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--blue-deep);background:var(--blue-tint);border:1px solid var(--blue-soft);border-radius:999px;padding:3px 12px;}
+.post .date{font-family:var(--deco);font-size:14px;color:var(--ink-soft);letter-spacing:.05em;}
+.post h2{font-family:var(--serif);font-size:clamp(17px,2.2vw,20px);font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:8px;}
+.post:hover h2{color:var(--blue-deep);}
+.post p{font-size:13.5px;color:var(--ink-soft);}
+.soon{text-align:center;color:var(--ink-soft);font-size:13.5px;background:#fff;border:1px dashed var(--blue-soft);border-radius:14px;padding:22px;}
+@media(max-width:560px){.post{grid-template-columns:1fr;}.post .thumb{height:110px;}.post .body{padding:0 22px 22px;}}
+
+/* Footer */
+.site-footer{background:#16233a;color:#cdd6e2;padding:44px 0 22px;}
+.foot-inner{width:min(92%,960px);margin-inline:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;}
+.foot-inner a{color:#cfe1f4;font-size:13.5px;font-weight:700;}
+.foot-addr{font-size:12.5px;color:#93a1b5;width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;margin-top:6px;}
+.copyright{text-align:center;font-family:var(--deco);letter-spacing:.12em;font-size:12.5px;color:#7e8ba0;margin-top:20px;}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand" aria-label="株式会社SPRING 採用コンサルティング">
+        <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="grn-h" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2f9e3f" /><stop offset="1" stop-color="#a6d63f" /></linearGradient>
+            <linearGradient id="blu-h" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#33b4e8" /><stop offset="0.55" stop-color="#1a63b5" /><stop offset="1" stop-color="#0c3576" /></linearGradient>
+            <radialGradient id="gld-h" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe463" /><stop offset="1" stop-color="#f39a12" /></radialGradient>
+          </defs>
+          <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
+          <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
+          <path d="M58 37 C44 33 33 42 37 55 C40 65 52 68 63 63 C71 60 75 65 84 60 C75 71 60 73 49 69 C34 63 28 49 35 41 C40 34 50 34 58 37 Z" fill="url(#blu-h)" />
+          <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
+          <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
+          <circle cx="63" cy="25" r="2.6" fill="#fff" opacity="0.55" />
+        </svg>
+        <span class="logo-text"><strong>SPRING</strong><em>採用コンサルティング</em></span>
+      </a>
+      <nav class="nav">
+        <a href="../service/rpo.html">事業紹介</a>
+        <a href="index.html" class="current">コラム</a>
+        <a href="../faq.html">よくある質問</a>
+        <a href="../index.html#contact" class="nav-home">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="subhero">
+    <div class="container">
+      <p class="crumb"><a href="../index.html">HOME</a>　/　コラム</p>
+      <span class="en">Column</span>
+      <h1>コラム</h1>
+      <p>採用担当者の方に役立つノウハウと、転職・キャリアのヒントを発信します。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="list">
+
+      <a href="rpo-toha.html" class="post">
+        <span class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <div class="body">
+          <div class="meta"><span class="cat">採用ノウハウ</span><span class="date">2026.07.02</span></div>
+          <h2>採用代行（RPO）とは？依頼できる業務・メリット・費用をわかりやすく解説</h2>
+          <p>「採用にリソースが足りない」を解決する採用代行（RPO）の基本を、業務範囲・メリット・採用コンサルとの違い・費用・会社の選び方まで解説します。</p>
+        </div>
+      </a>
+
+      <div class="soon">今後、採用ノウハウや20代・営業職の転職に役立つ記事を順次公開していきます。</div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="foot-inner">
+      <a href="../index.html">← トップページに戻る</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+      <p class="foot-addr">株式会社SPRING　〒531-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F　／　有料職業紹介事業 許可番号 27-ユ-305271</p>
+    </div>
+    <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
