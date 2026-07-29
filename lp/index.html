@@ -120,6 +120,25 @@ img{max-width:100%;display:block;}
 .form .res{text-align:center;font-weight:700;font-size:12.5px;margin-top:8px;min-height:1.1em;}
 .form .res.ok{color:#0f5132;} .form .res.ng{color:#c0392b;}
 
+/* hero face */
+.hero-face{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 20px 7px 7px;margin-top:20px;}
+.hero-face img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid rgba(255,255,255,.7);}
+.hero-face span{font-size:12.5px;font-weight:700;color:#fff;text-align:left;line-height:1.45;}
+.hero-face b{color:#ffd85e;}
+
+/* profile (担当者) */
+.pcard{background:linear-gradient(160deg,var(--blue-tint),#fff 70%);border:1px solid var(--blue-soft);border-radius:20px;padding:22px 20px;display:flex;gap:18px;align-items:center;box-shadow:0 18px 50px -34px rgba(18,58,115,.45);position:relative;overflow:hidden;}
+.pcard::after{content:"";position:absolute;right:-40px;top:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--green),var(--blue));opacity:.12;}
+.pphoto{flex:none;width:116px;position:relative;z-index:1;}
+.pphoto img{width:116px;height:138px;border-radius:16px;object-fit:cover;object-position:center 16%;box-shadow:0 14px 30px -14px rgba(18,58,115,.55);}
+.pbody{position:relative;z-index:1;}
+.pbody .prole{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-deep));border-radius:999px;padding:3px 13px;margin-bottom:9px;}
+.pbody h3{font-size:20px;font-weight:900;color:var(--blue-deep);margin-bottom:9px;}
+.pbody h3 span{font-size:12px;color:var(--ink-soft);font-weight:700;margin-left:6px;}
+.pmsg{font-size:13px;color:#3d4757;line-height:1.78;}
+.pmsg::before{content:"“";font-family:var(--deco);font-size:26px;color:var(--blue-soft);margin-right:2px;vertical-align:-6px;}
+@media(max-width:430px){.pcard{flex-direction:column;text-align:center;}.pphoto img{width:132px;height:150px;}}
+
 /* footer */
 .lp-foot{background:#16233a;color:#93a1b5;text-align:center;padding:26px 0 24px;font-size:11.5px;line-height:1.9;}
 .lp-foot a{color:#cfe1f4;}
@@ -161,6 +180,10 @@ img{max-width:100%;display:block;}
       <span class="badge">20代・営業職の転職に強い</span>
       <h1>その転職の迷い、<br /><span class="hl">現役人事</span>と話してみませんか？</h1>
       <p class="sub">「SPRING キャリア」は、20代・営業職の転職に強い転職エージェント。<br />相談から内定まで、すべて<strong style="color:#fff;">無料</strong>で伴走します。</p>
+      <div class="hero-face">
+        <img src="/images/rep.jpg" alt="現役人事 吉本春悟" />
+        <span><b>現役人事</b>が<br />あなたを直接サポート</span>
+      </div>
       <div class="stats">
         <div class="stat"><b>10万<span style="font-size:14px;">件+</span></b><span>取扱求人数</span></div>
         <div class="stat"><b>2<span style="font-size:14px;">週間〜</span></b><span>最短で内定</span></div>
@@ -187,6 +210,20 @@ img{max-width:100%;display:block;}
         <li>転職したいけど、何から始めればいいか不安</li>
         <div class="end">その悩み、現役人事が一緒に整理します。</div>
       </ul>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="pcard">
+        <div class="pphoto"><img src="/images/rep.jpg" alt="現役人事・吉本春悟" /></div>
+        <div class="pbody">
+          <span class="prole">あなたを担当する現役人事</span>
+          <h3>吉本 春悟<span>／代表取締役</span></h3>
+          <p class="pmsg">転職は、人生の大きな選択。だからこそ、迷いも本音も、まず私に話してください。採用する“会社側”を知り尽くした現役人事の視点で、あなたに本当に合う道を一緒に考えます。”</p>
+        </div>
+      </div>
     </div>
   </section>
 
