@@ -8,11 +8,11 @@
   <link rel="apple-touch-icon" href="/images/favicon-180.png" />
   <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}</script>
   <title>20代・営業の転職なら SPRING キャリア｜現役人事が無料でサポート</title>
-  <meta name="description" content="20代・営業職の転職に強い転職エージェント「SPRING キャリア」。現役人事があなたのキャリア実現に無料で伴走。取扱求人10万件以上、面談から最短2週間で内定も。まずはLINEで気軽に相談。" />
+  <meta name="description" content="20代・営業職の転職に強い「SPRING キャリア」。現役人事があなたのキャリアに無料で伴走。取扱求人10万件以上・面談から最短2週間で内定も。まずはLINEで気軽に相談。" />
   <link rel="canonical" href="https://spring-career.com/lp" />
   <meta property="og:site_name" content="SPRING キャリア" />
   <meta property="og:title" content="20代・営業の転職なら SPRING キャリア｜現役人事が無料でサポート" />
-  <meta property="og:description" content="現役人事が無料で伴走。取扱求人10万件以上・最短2週間で内定・求職者手数料無料。まずはLINEで相談。" />
+  <meta property="og:description" content="現役人事が無料で伴走。取扱求人10万件以上・最短2週間で内定・完全無料。まずはLINEで相談。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://spring-career.com/lp" />
   <meta property="og:image" content="https://spring-career.com/images/ogp.png" />
@@ -24,136 +24,155 @@
   <style>
 :root{
   --blue:#1f66b8; --blue-deep:#123a73; --blue-bright:#2b91d8; --blue-soft:#cfe1f4; --blue-tint:#eef4fb;
-  --green:#57ad46; --line-green:#06C755; --gold:#f5a623; --ink:#23303f; --ink-soft:#5f6b7a;
-  --cream:#f7fafd; --card-line:#e2e9f1; --white:#fff;
+  --green:#57ad46; --line-green:#06C755; --gold:#f5a623; --pink:#ff5b8a; --ink:#23303f; --ink-soft:#5f6b7a;
+  --cream:#f7fafd; --cl:#e2e9f1; --white:#fff;
   --sans:"Noto Sans JP",sans-serif; --deco:"Cormorant Garamond",serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.8;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:74px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.75;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:74px;}
 a{color:inherit;text-decoration:none;}
-.wrap{width:min(92%,560px);margin-inline:auto;}
+.wrap{width:min(92%,540px);margin-inline:auto;}
 img{max-width:100%;display:block;}
 
+/* present ribbon */
+.ribbon{background:linear-gradient(135deg,var(--gold),#f5852a);color:#fff;text-align:center;padding:11px 12px;font-weight:900;font-size:14.5px;line-height:1.45;}
+.ribbon .s{color:#fff2c2;}
+.ribbon small{display:block;font-size:11px;font-weight:700;opacity:.95;}
+
 /* top bar */
-.topbar{background:#fff;border-bottom:1px solid var(--card-line);position:sticky;top:0;z-index:40;}
-.topbar .in{width:min(92%,560px);margin-inline:auto;display:flex;align-items:center;gap:9px;padding:9px 0;}
-.topbar .em{width:32px;height:32px;flex:none;}
-.topbar strong{font-family:var(--deco);font-size:20px;letter-spacing:.1em;color:var(--blue-deep);}
-.topbar .tag{font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--green),var(--blue));border-radius:999px;padding:2px 10px;margin-left:auto;}
+.topbar{background:#fff;border-bottom:1px solid var(--cl);}
+.topbar .in{width:min(92%,540px);margin-inline:auto;display:flex;align-items:center;gap:9px;padding:9px 0;}
+.topbar .em{width:30px;height:30px;flex:none;}
+.topbar strong{font-family:var(--deco);font-size:19px;letter-spacing:.1em;color:var(--blue-deep);}
+.topbar .tag{font-size:10.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--green),var(--blue));border-radius:999px;padding:2px 9px;margin-left:auto;}
 
 /* hero */
-.hero{background:radial-gradient(700px 400px at 80% -10%,rgba(43,145,216,.5),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:38px 0 34px;text-align:center;position:relative;overflow:hidden;}
-.hero .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--blue-deep);background:#fff;border-radius:999px;padding:5px 16px;margin-bottom:16px;}
-.hero h1{font-size:clamp(24px,7vw,32px);font-weight:900;line-height:1.45;letter-spacing:.01em;}
-.hero h1 .hl{color:#ffd85e;}
-.hero .sub{font-size:14px;color:rgba(255,255,255,.9);margin-top:14px;}
-.stats{display:flex;justify-content:center;gap:8px;margin-top:22px;flex-wrap:wrap;}
-.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 8px;min-width:96px;flex:1 1 96px;max-width:130px;}
-.stat b{display:block;font-family:var(--deco);font-size:26px;font-weight:700;color:#fff;line-height:1;}
-.stat span{display:block;font-size:10.5px;color:var(--blue-soft);margin-top:5px;}
-.hero-cta{margin-top:24px;display:flex;flex-direction:column;gap:10px;align-items:center;}
+.hero{background:radial-gradient(650px 380px at 82% -10%,rgba(43,145,216,.55),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:30px 0 30px;text-align:center;overflow:hidden;}
+.hero .kicker{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.04em;color:#0d1f38;background:#ffd85e;border-radius:999px;padding:5px 16px;margin-bottom:14px;}
+.hero h1{font-size:clamp(23px,6.6vw,31px);font-weight:900;line-height:1.5;}
+.hero h1 .hl{background:linear-gradient(transparent 62%,rgba(255,216,94,.45) 62%);}
+.hero h1 .big{color:#ffd85e;font-size:1.14em;}
+.hero-photo{width:172px;height:172px;margin:20px auto 4px;border-radius:50%;object-fit:cover;object-position:center 20%;border:4px solid rgba(255,255,255,.85);box-shadow:0 18px 40px -16px rgba(0,0,0,.55);}
+.hero .who{font-size:13px;color:#fff;font-weight:700;margin-bottom:2px;}
+.hero .who b{color:#ffd85e;}
+.stats{display:flex;justify-content:center;gap:8px;margin-top:20px;}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 6px;flex:1;max-width:120px;}
+.stat b{display:block;font-family:var(--deco);font-size:25px;font-weight:700;color:#fff;line-height:1;}
+.stat b i{font-style:normal;font-size:13px;}
+.stat span{display:block;font-size:10px;color:var(--blue-soft);margin-top:5px;}
 
 /* buttons */
-.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;max-width:360px;background:var(--line-green);color:#fff;font-weight:900;font-size:16px;padding:16px;border-radius:14px;box-shadow:0 14px 30px -12px rgba(6,199,85,.7);transition:transform .2s,box-shadow .2s;}
-.btn-line:hover{transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(6,199,85,.85);}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;max-width:360px;background:var(--line-green);color:#fff;font-weight:900;font-size:16px;padding:16px;border-radius:14px;box-shadow:0 12px 26px -10px rgba(6,199,85,.75);transition:transform .2s;}
+.btn-line:active{transform:scale(.98);}
+.btn-line:hover{transform:translateY(-2px);}
 .btn-line svg{width:22px;height:22px;fill:#fff;}
-.btn-line small{display:block;font-size:10.5px;font-weight:500;opacity:.9;margin-top:1px;}
-.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 22px;}
-.btn-ghost:hover{background:rgba(255,255,255,.1);}
+.btn-line small{display:block;font-size:10.5px;font-weight:500;opacity:.92;margin-top:1px;}
+.cta-block{padding:26px 0;text-align:center;}
+.cta-block .note{font-size:11.5px;color:var(--ink-soft);margin-top:9px;}
+.hero .cta-block{padding:20px 0 4px;}
 
 /* sections */
-.sec{padding:42px 0;}
+.sec{padding:38px 0;}
 .sec.alt{background:#fff;}
-.sec-title{text-align:center;font-size:clamp(19px,5.4vw,23px);font-weight:900;line-height:1.5;margin-bottom:6px;}
-.sec-title .en{display:block;font-family:var(--deco);font-size:12px;letter-spacing:.28em;color:var(--blue);text-transform:uppercase;font-weight:700;margin-bottom:4px;}
-.sec-lead{text-align:center;font-size:13.5px;color:var(--ink-soft);margin-bottom:26px;}
+.sec-title{text-align:center;font-size:clamp(19px,5.4vw,23px);font-weight:900;line-height:1.5;margin-bottom:8px;}
+.sec-title .en{display:block;font-family:var(--deco);font-size:12px;letter-spacing:.28em;color:var(--blue);text-transform:uppercase;font-weight:700;margin-bottom:3px;}
+.sec-title .hl{background:linear-gradient(transparent 60%,rgba(245,166,35,.35) 60%);}
+.sec-lead{text-align:center;font-size:13.5px;color:var(--ink-soft);margin-bottom:24px;}
 
 /* worries */
-.worry{background:var(--blue-tint);border:1px solid var(--blue-soft);border-radius:14px;padding:20px 20px;}
-.worry li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:14.5px;padding:8px 0;border-bottom:1px dashed var(--blue-soft);}
-.worry li:last-child{border-bottom:none;}
-.worry li::before{content:"✓";flex:none;width:22px;height:22px;background:var(--blue);color:#fff;border-radius:6px;display:grid;place-items:center;font-size:12px;margin-top:1px;}
-.worry .end{text-align:center;font-size:14px;font-weight:900;color:var(--blue-deep);margin-top:16px;}
+.worry{background:var(--blue-tint);border:1px dashed var(--blue-bright);border-radius:14px;padding:18px 18px;}
+.worry li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:14.5px;padding:8px 0;}
+.worry li::before{content:"😥";flex:none;font-size:16px;}
+.worry .end{text-align:center;font-size:15px;font-weight:900;color:var(--blue-deep);margin-top:14px;padding-top:14px;border-top:1px dashed var(--blue-bright);}
+.worry .end b{color:var(--gold);}
 
-/* reasons */
-.reasons{display:grid;gap:14px;}
-.reason{background:#fff;border:1px solid var(--card-line);border-radius:14px;padding:20px 20px;box-shadow:0 14px 40px -34px rgba(18,58,115,.4);display:flex;gap:14px;align-items:flex-start;}
-.reason .no{flex:none;width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-family:var(--deco);font-weight:700;font-size:20px;display:grid;place-items:center;}
-.reason h3{font-size:16px;font-weight:900;color:var(--blue-deep);margin-bottom:4px;}
-.reason p{font-size:13.5px;color:#4a5666;}
-.sec.alt .reason{background:var(--cream);}
+/* points */
+.points{display:grid;gap:14px;}
+.pt{background:#fff;border:1px solid var(--cl);border-radius:16px;padding:18px;text-align:center;box-shadow:0 14px 40px -34px rgba(18,58,115,.4);position:relative;}
+.pt .lbl{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-size:11px;font-weight:900;padding:3px 14px;border-radius:999px;white-space:nowrap;}
+.pt .num{font-family:var(--deco);font-size:52px;font-weight:700;color:var(--blue);line-height:1;margin-top:8px;}
+.pt .num i{font-style:normal;font-size:22px;}
+.pt .cap{font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;}
+.pt .cap small{display:block;font-size:11.5px;font-weight:500;color:var(--ink-soft);margin-top:3px;}
+.sec.alt .pt{background:var(--cream);}
 
-/* assurance */
-.assure{background:linear-gradient(160deg,#eafaf0,#dff6e8);border:1px solid #bfe8cf;border-radius:16px;padding:24px 22px;text-align:center;}
-.assure h3{font-size:17px;font-weight:900;color:#0f5132;margin-bottom:8px;}
-.assure p{font-size:13.5px;color:#356049;}
+/* profile */
+.pcard{background:linear-gradient(160deg,var(--blue-tint),#fff 70%);border:1px solid var(--blue-soft);border-radius:20px;padding:22px 20px;display:flex;gap:16px;align-items:center;box-shadow:0 18px 50px -34px rgba(18,58,115,.45);position:relative;overflow:hidden;}
+.pcard::after{content:"";position:absolute;right:-40px;top:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--green),var(--blue));opacity:.12;}
+.pphoto{flex:none;width:118px;position:relative;z-index:1;}
+.pphoto img{width:118px;height:140px;border-radius:16px;object-fit:cover;object-position:center 14%;box-shadow:0 14px 30px -14px rgba(18,58,115,.55);}
+.pbody{position:relative;z-index:1;}
+.pbody .prole{display:inline-block;font-size:11px;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-deep));border-radius:999px;padding:3px 13px;margin-bottom:9px;}
+.pbody h3{font-size:20px;font-weight:900;color:var(--blue-deep);margin-bottom:8px;}
+.pbody h3 span{font-size:12px;color:var(--ink-soft);font-weight:700;margin-left:6px;}
+.pmsg{font-size:12.8px;color:#3d4757;line-height:1.75;}
+@media(max-width:430px){.pcard{flex-direction:column;text-align:center;}.pphoto img{width:130px;height:150px;}}
+
+/* compare table */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px;border-radius:14px;overflow:hidden;box-shadow:0 14px 40px -30px rgba(18,58,115,.4);}
+.cmp th,.cmp td{padding:12px 8px;text-align:center;border-bottom:1px solid var(--cl);background:#fff;}
+.cmp thead th{font-size:12px;font-weight:900;color:#fff;padding:13px 8px;}
+.cmp thead th.us{background:linear-gradient(135deg,var(--blue),var(--blue-deep));}
+.cmp thead th.them{background:#8a94a3;}
+.cmp thead th.rowh,.cmp tbody th{background:var(--blue-tint);color:var(--ink-soft);font-weight:700;font-size:11.5px;text-align:left;padding-left:12px;white-space:nowrap;}
+.cmp .us-col{background:#f2f8ff;font-weight:700;color:var(--blue-deep);}
+.cmp .mk{font-size:17px;font-weight:900;}
+.cmp .o{color:var(--green);} .cmp .t{color:#c0392b;} .cmp .n{color:var(--gold);}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:none;}
 
 /* flow */
-.flow{display:grid;gap:10px;}
-.fstep{background:#fff;border:1px solid var(--card-line);border-radius:12px;padding:15px 18px;display:flex;gap:14px;align-items:center;}
-.fstep .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--blue-tint);color:var(--blue-deep);font-weight:900;font-size:14px;display:grid;place-items:center;}
-.fstep b{font-size:14.5px;}
-.fstep span{font-size:12.5px;color:var(--ink-soft);}
+.flow{display:grid;gap:0;position:relative;}
+.fstep{display:flex;gap:14px;align-items:flex-start;padding:0 0 20px;position:relative;}
+.fstep:not(:last-child)::before{content:"";position:absolute;left:19px;top:40px;bottom:0;width:2px;background:var(--blue-soft);}
+.fstep .n{flex:none;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-weight:900;font-size:16px;display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 8px 18px -8px rgba(18,58,115,.6);}
+.fstep .ft{padding-top:3px;}
+.fstep b{font-size:15px;font-weight:900;color:var(--ink);}
+.fstep .lc{color:var(--line-green);}
+.fstep span{display:block;font-size:12.8px;color:var(--ink-soft);margin-top:2px;}
 
 /* faq */
-.faq details{background:#fff;border:1px solid var(--card-line);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+.faq details{background:#fff;border:1px solid var(--cl);border-radius:12px;margin-bottom:10px;overflow:hidden;}
 .faq summary{list-style:none;cursor:pointer;padding:15px 18px;font-weight:700;font-size:14px;display:flex;gap:10px;}
 .faq summary::-webkit-details-marker{display:none;}
 .faq summary::before{content:"Q";flex:none;width:22px;height:22px;background:var(--blue);color:#fff;border-radius:6px;display:grid;place-items:center;font-size:12px;}
-.faq .a{padding:0 18px 16px 50px;font-size:13.5px;color:#4a5666;}
+.faq .a{padding:0 18px 16px 50px;font-size:13.3px;color:#4a5666;}
 
-/* final cta */
-.final{background:radial-gradient(700px 400px at 80% 0%,rgba(43,145,216,.5),transparent 60%),linear-gradient(160deg,#133056,#0d1f38);color:#fff;text-align:center;padding:44px 0;}
-.final h2{font-size:clamp(20px,5.6vw,25px);font-weight:900;line-height:1.5;margin-bottom:10px;}
-.final p{font-size:13.5px;color:rgba(255,255,255,.85);margin-bottom:22px;}
-.final .igbtn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;font-weight:700;color:#fff;}
-.final .igbtn .ic{width:30px;height:30px;border-radius:9px;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);display:grid;place-items:center;}
-.final .igbtn .ic svg{width:17px;height:17px;fill:#fff;}
-.form{background:#fff;border-radius:16px;padding:22px 20px;margin:26px auto 0;max-width:400px;text-align:left;color:var(--ink);}
+/* final */
+.final{background:radial-gradient(650px 380px at 80% 0%,rgba(43,145,216,.5),transparent 60%),linear-gradient(160deg,#133056,#0d1f38);color:#fff;text-align:center;padding:40px 0;}
+.final h2{font-size:clamp(21px,5.8vw,26px);font-weight:900;line-height:1.5;margin-bottom:10px;}
+.final h2 .hl{color:#ffd85e;}
+.final p{font-size:13.3px;color:rgba(255,255,255,.86);margin-bottom:20px;}
+.igbtn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:12.5px;font-weight:700;color:#fff;}
+.igbtn .ic{width:30px;height:30px;border-radius:9px;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);display:grid;place-items:center;}
+.igbtn .ic svg{width:17px;height:17px;fill:#fff;}
+.form{background:#fff;border-radius:16px;padding:22px 20px;margin:24px auto 0;max-width:400px;text-align:left;color:var(--ink);}
 .form h3{font-size:15px;font-weight:900;color:var(--blue-deep);margin-bottom:14px;text-align:center;}
 .form label{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px;}
-.form input,.form textarea{width:100%;padding:11px 13px;border:1.5px solid var(--card-line);border-radius:10px;font-family:var(--sans);font-size:14.5px;margin-bottom:12px;}
+.form input,.form textarea{width:100%;padding:11px 13px;border:1.5px solid var(--cl);border-radius:10px;font-family:var(--sans);font-size:14.5px;margin-bottom:12px;}
 .form input:focus,.form textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,102,184,.15);}
 .form button{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-weight:900;font-size:15px;cursor:pointer;}
 .form .note{font-size:11px;color:var(--ink-soft);margin-top:8px;text-align:center;}
 .form .res{text-align:center;font-weight:700;font-size:12.5px;margin-top:8px;min-height:1.1em;}
 .form .res.ok{color:#0f5132;} .form .res.ng{color:#c0392b;}
 
-/* hero face */
-.hero-face{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 20px 7px 7px;margin-top:20px;}
-.hero-face img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid rgba(255,255,255,.7);}
-.hero-face span{font-size:12.5px;font-weight:700;color:#fff;text-align:left;line-height:1.45;}
-.hero-face b{color:#ffd85e;}
-
-/* profile (担当者) */
-.pcard{background:linear-gradient(160deg,var(--blue-tint),#fff 70%);border:1px solid var(--blue-soft);border-radius:20px;padding:22px 20px;display:flex;gap:18px;align-items:center;box-shadow:0 18px 50px -34px rgba(18,58,115,.45);position:relative;overflow:hidden;}
-.pcard::after{content:"";position:absolute;right:-40px;top:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--green),var(--blue));opacity:.12;}
-.pphoto{flex:none;width:116px;position:relative;z-index:1;}
-.pphoto img{width:116px;height:138px;border-radius:16px;object-fit:cover;object-position:center 16%;box-shadow:0 14px 30px -14px rgba(18,58,115,.55);}
-.pbody{position:relative;z-index:1;}
-.pbody .prole{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-deep));border-radius:999px;padding:3px 13px;margin-bottom:9px;}
-.pbody h3{font-size:20px;font-weight:900;color:var(--blue-deep);margin-bottom:9px;}
-.pbody h3 span{font-size:12px;color:var(--ink-soft);font-weight:700;margin-left:6px;}
-.pmsg{font-size:13px;color:#3d4757;line-height:1.78;}
-.pmsg::before{content:"“";font-family:var(--deco);font-size:26px;color:var(--blue-soft);margin-right:2px;vertical-align:-6px;}
-@media(max-width:430px){.pcard{flex-direction:column;text-align:center;}.pphoto img{width:132px;height:150px;}}
-
 /* footer */
 .lp-foot{background:#16233a;color:#93a1b5;text-align:center;padding:26px 0 24px;font-size:11.5px;line-height:1.9;}
 .lp-foot a{color:#cfe1f4;}
 .lp-foot .co{font-family:var(--deco);color:#fff;font-size:15px;letter-spacing:.08em;display:block;margin-bottom:6px;}
 
-/* sticky bottom bar */
-.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--card-line);padding:9px 12px;display:flex;gap:10px;}
+/* sticky */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--cl);padding:9px 12px;display:flex;gap:10px;}
 .stickybar a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;font-weight:900;font-size:14px;padding:12px;}
-.stickybar .line{background:var(--line-green);color:#fff;}
+.stickybar .line{background:var(--line-green);color:#fff;flex:2;}
 .stickybar .line svg{width:19px;height:19px;fill:#fff;}
 .stickybar .form-lnk{background:var(--blue-tint);color:var(--blue-deep);border:1px solid var(--blue-soft);}
-@media(min-width:600px){.stat b{font-size:30px;}}
   </style>
 </head>
 <body>
+
+  <!-- Present ribbon -->
+  <div class="ribbon">＼ 完全無料 ／ LINE登録で<span class="s">"非公開求人"</span>＆<span class="s">キャリア相談</span>をプレゼント🎁<small>友だち追加だけ・しつこい連絡はしません</small></div>
 
   <!-- Top bar -->
   <div class="topbar">
@@ -177,24 +196,20 @@ img{max-width:100%;display:block;}
   <!-- Hero -->
   <section class="hero">
     <div class="wrap">
-      <span class="badge">20代・営業職の転職に強い</span>
-      <h1>その転職の迷い、<br /><span class="hl">現役人事</span>と話してみませんか？</h1>
-      <p class="sub">「SPRING キャリア」は、20代・営業職の転職に強い転職エージェント。<br />相談から内定まで、すべて<strong style="color:#fff;">無料</strong>で伴走します。</p>
-      <div class="hero-face">
-        <img src="/images/rep.jpg" alt="現役人事 吉本春悟" />
-        <span><b>現役人事</b>が<br />あなたを直接サポート</span>
-      </div>
+      <span class="kicker">20代・営業の転職に強い</span>
+      <h1>その転職の迷い、<br /><span class="hl">現役人事</span>に<br /><span class="big">まるっと相談</span>しよう。</h1>
+      <img class="hero-photo" src="/images/rep.jpg" alt="現役人事・吉本春悟" />
+      <p class="who">現役人事｜<b>吉本 春悟</b>（株式会社SPRING 代表）</p>
       <div class="stats">
-        <div class="stat"><b>10万<span style="font-size:14px;">件+</span></b><span>取扱求人数</span></div>
-        <div class="stat"><b>2<span style="font-size:14px;">週間〜</span></b><span>最短で内定</span></div>
-        <div class="stat"><b>0<span style="font-size:14px;">円</span></b><span>相談〜入社まで</span></div>
+        <div class="stat"><b>10万<i>件+</i></b><span>取扱求人数</span></div>
+        <div class="stat"><b>2<i>週間〜</i></b><span>最短で内定</span></div>
+        <div class="stat"><b>0<i>円</i></b><span>相談〜入社</span></div>
       </div>
-      <div class="hero-cta">
+      <div class="cta-block">
         <a href="https://lin.ee/Vz5wzeB" class="btn-line" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
           <span>LINEで無料相談する<small>友だち追加だけでOK・30秒</small></span>
         </a>
-        <a href="#form" class="btn-ghost">フォームで相談する →</a>
       </div>
     </div>
   </section>
@@ -202,14 +217,26 @@ img{max-width:100%;display:block;}
   <!-- Worries -->
   <section class="sec">
     <div class="wrap">
-      <h2 class="sec-title"><span class="en">Check</span>こんなお悩み、ありませんか？</h2>
+      <h2 class="sec-title"><span class="en">Check</span>こんな<span class="hl">モヤモヤ</span>、ありませんか？</h2>
       <ul class="worry">
-        <li>今の営業を続けるべきか、正直迷っている</li>
-        <li>自分に合う仕事・キャリアが分からない</li>
-        <li>未経験の職種に挑戦してみたい</li>
-        <li>転職したいけど、何から始めればいいか不安</li>
-        <div class="end">その悩み、現役人事が一緒に整理します。</div>
+        <li>今の営業、続けるべきか正直迷ってる…</li>
+        <li>自分に合う仕事が、そもそも分からない</li>
+        <li>未経験の職種にも挑戦してみたい</li>
+        <li>転職したいけど、何から始めれば？</li>
+        <div class="end">その迷い、<b>現役人事</b>が一緒に整理します。</div>
       </ul>
+    </div>
+  </section>
+
+  <!-- Points -->
+  <section class="sec alt">
+    <div class="wrap">
+      <h2 class="sec-title"><span class="en">Point</span>SPRING キャリアの<br /><span class="hl">3つの強み</span></h2>
+      <div class="points">
+        <div class="pt"><span class="lbl">現役人事が担当</span><div class="num">10万<i>件+</i></div><div class="cap">取扱求人数<small>豊富な求人からあなたに合う1社を厳選</small></div></div>
+        <div class="pt"><span class="lbl">スピード内定</span><div class="num">2<i>週間〜</i></div><div class="cap">面談から最短で内定<small>急ぎの転職もしっかりサポート</small></div></div>
+        <div class="pt"><span class="lbl">ずっと無料</span><div class="num">0<i>円</i></div><div class="cap">相談〜入社まで完全無料<small>書類添削・面接対策も費用ゼロ</small></div></div>
+      </div>
     </div>
   </section>
 
@@ -219,47 +246,57 @@ img{max-width:100%;display:block;}
       <div class="pcard">
         <div class="pphoto"><img src="/images/rep.jpg" alt="現役人事・吉本春悟" /></div>
         <div class="pbody">
-          <span class="prole">あなたを担当する現役人事</span>
+          <span class="prole">あなたの担当・現役人事</span>
           <h3>吉本 春悟<span>／代表取締役</span></h3>
-          <p class="pmsg">転職は、人生の大きな選択。だからこそ、迷いも本音も、まず私に話してください。採用する“会社側”を知り尽くした現役人事の視点で、あなたに本当に合う道を一緒に考えます。”</p>
+          <p class="pmsg">“採用する側”を知り尽くした現役人事だからこそ、伝えられる本音があります。迷いも不安も、まずは気軽に話してください。あなたに本当に合う道を、一緒に考えます。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reasons -->
-  <section class="sec alt">
+  <!-- CTA ribbon -->
+  <div class="ribbon">＼ 迷ってるだけでもOK ／ まずは<span class="s">LINEで無料相談</span>🎁</div>
+  <div class="cta-block" style="background:#fff;">
     <div class="wrap">
-      <h2 class="sec-title"><span class="en">Reasons</span>SPRING キャリアが<br />選ばれる理由</h2>
-      <div class="reasons">
-        <div class="reason"><div class="no">1</div><div><h3>現役人事がサポート</h3><p>採用する側を知り尽くした現役人事が、あなたの強みの伝え方まで一緒に考えます。</p></div></div>
-        <div class="reason"><div class="no">2</div><div><h3>20代・営業の転職に特化</h3><p>20代・営業職の支援に強み。未経験職への挑戦やキャリアアップも得意です（他職種も対応可）。</p></div></div>
-        <div class="reason"><div class="no">3</div><div><h3>10万件以上の求人</h3><p>豊富な求人から、あなたの希望と適性に合う1社を厳選してご提案します。</p></div></div>
-        <div class="reason"><div class="no">4</div><div><h3>相談〜入社まで完全無料</h3><p>キャリア相談・書類添削・面接対策・条件交渉まで、費用は一切かかりません。</p></div></div>
-      </div>
+      <a href="https://lin.ee/Vz5wzeB" class="btn-line" target="_blank" rel="noopener" style="margin:0 auto;">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
+        <span>LINEで無料相談する<small>友だち追加だけでOK・30秒</small></span>
+      </a>
+      <p class="note">24時間受付／2営業日以内にご返信します</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Assurance -->
+  <!-- Compare -->
   <section class="sec">
     <div class="wrap">
-      <div class="assure">
-        <h3>「転職ありき」ではありません。</h3>
-        <p>私たちは、中長期のキャリアを一緒に考えるパートナーです。<br />現職に残ることが最適だと判断される場合は、<strong>あえて転職をおすすめしないこともあります。</strong>だから、迷っている段階のご相談も大歓迎です。</p>
-      </div>
+      <h2 class="sec-title"><span class="en">Compare</span>大手求人サイトとの<span class="hl">違い</span></h2>
+      <table class="cmp">
+        <thead>
+          <tr><th class="rowh">&nbsp;</th><th class="us">SPRING<br>キャリア</th><th class="them">大手<br>求人サイト</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>サポート</th><td class="us-col">現役人事が<br>マンツーマン</td><td>基本は<br>自分で応募</td></tr>
+          <tr><th>得意分野</th><td class="us-col">20代・営業に<br>特化</td><td>幅広いが<br>浅め</td></tr>
+          <tr><th>面接対策</th><td class="us-col"><span class="mk o">◎</span><br>企業に合わせる</td><td><span class="mk n">○</span><br>基本的</td></tr>
+          <tr><th>料金</th><td class="us-col"><span class="mk o">◎</span> 完全無料</td><td><span class="mk o">◎</span> 無料</td></tr>
+          <tr><th>連絡</th><td class="us-col">LINEで気軽</td><td>メール中心</td></tr>
+          <tr><th>スタンス</th><td class="us-col">残留が最適なら<br>そう伝える</td><td><span class="mk t">−</span></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <!-- Flow -->
   <section class="sec alt">
     <div class="wrap">
-      <h2 class="sec-title"><span class="en">Flow</span>ご相談の流れ</h2>
-      <p class="sec-lead">まずはLINEで友だち追加、トークで「相談希望」と送るだけ。</p>
+      <h2 class="sec-title"><span class="en">Flow</span>相談〜入社の<span class="hl">流れ</span></h2>
+      <p class="sec-lead">まずはLINEで「相談希望」と送るだけ。あとは二人三脚で。</p>
       <div class="flow">
-        <div class="fstep"><span class="n">1</span><div><b>初回面談（無料）</b><br /><span>ご経歴・ご希望を丁寧にヒアリング</span></div></div>
-        <div class="fstep"><span class="n">2</span><div><b>求人のご紹介</b><br /><span>最適な求人をご紹介・書類作成もサポート</span></div></div>
-        <div class="fstep"><span class="n">3</span><div><b>面接対策</b><br /><span>あなたの魅力が伝わるよう選考を伴走</span></div></div>
-        <div class="fstep"><span class="n">4</span><div><b>内定・条件交渉・入社</b><br /><span>入社まで一貫してサポート</span></div></div>
+        <div class="fstep"><span class="n">1</span><div class="ft"><b class="lc">LINEで相談</b><span>友だち追加して気軽にメッセージ（24時間OK）</span></div></div>
+        <div class="fstep"><span class="n">2</span><div class="ft"><b>面談・ヒアリング</b><span>オンライン可。ご経歴・ご希望を丁寧にお聞きします</span></div></div>
+        <div class="fstep"><span class="n">3</span><div class="ft"><b>求人のご紹介</b><span>あなたに合う求人をご提案＋応募書類もサポート</span></div></div>
+        <div class="fstep"><span class="n">4</span><div class="ft"><b>面接対策</b><span>企業に合わせた対策で選考を伴走</span></div></div>
+        <div class="fstep"><span class="n">5</span><div class="ft"><b>内定・入社後もフォロー</b><span>条件交渉から入社後まで、ずっとそばに</span></div></div>
       </div>
     </div>
   </section>
@@ -269,9 +306,10 @@ img{max-width:100%;display:block;}
     <div class="wrap">
       <h2 class="sec-title"><span class="en">FAQ</span>よくある質問</h2>
       <div class="faq">
-        <details><summary>本当に無料ですか？</summary><div class="a">はい。ご相談から求人紹介、書類添削・面接対策、入社まですべて無料でご利用いただけます。</div></details>
-        <details><summary>20代・営業職じゃなくても相談できますか？</summary><div class="a">ご相談いただけます。20代・営業職に強みがありますが、それ以外の年代・職種の方も支援しています。</div></details>
-        <details><summary>相談したら必ず転職しないとダメ？</summary><div class="a">いいえ。現職に残るのが最適な場合は転職をおすすめしないこともあります。迷っている段階でも歓迎です。</div></details>
+        <details><summary>本当に全部無料ですか？</summary><div class="a">はい。相談・求人紹介・書類添削・面接対策・入社まで、すべて無料です。</div></details>
+        <details><summary>20代・営業職じゃなくても大丈夫？</summary><div class="a">大丈夫です。20代・営業に強みがありますが、それ以外の年代・職種の方も支援しています。</div></details>
+        <details><summary>相談したら必ず転職しないとダメ？</summary><div class="a">いいえ。現職に残るのが最適なら、そう正直にお伝えします。迷っている段階でも歓迎です。</div></details>
+        <details><summary>今すぐ転職する気はないけど相談できる？</summary><div class="a">もちろんOKです。情報収集・キャリアの整理だけのご相談も大歓迎です。</div></details>
       </div>
     </div>
   </section>
@@ -279,14 +317,13 @@ img{max-width:100%;display:block;}
   <!-- Final CTA -->
   <section class="final" id="form">
     <div class="wrap">
-      <h2>まずは気軽に、<br />LINEで相談してみませんか？</h2>
-      <p>友だち追加して「相談希望」と送るだけ。しつこい連絡はしません。</p>
-      <div class="hero-cta">
-        <a href="https://lin.ee/Vz5wzeB" class="btn-line" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
-          <span>LINEで無料相談する<small>友だち追加だけでOK・30秒</small></span>
-        </a>
-      </div>
+      <h2>まずは、<span class="hl">LINEで</span><br />ひとこと話してみよう。</h2>
+      <p>友だち追加して「相談希望」と送るだけ。<br />しつこい連絡は一切しません。</p>
+      <a href="https://lin.ee/Vz5wzeB" class="btn-line" target="_blank" rel="noopener" style="margin:0 auto;">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
+        <span>LINEで無料相談する<small>友だち追加だけでOK・30秒</small></span>
+      </a>
+      <br />
       <a href="https://www.instagram.com/spring.career.tensyoku/" class="igbtn" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.68A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg></span>
         Instagramもチェック（@spring.career.tensyoku）
@@ -318,7 +355,7 @@ img{max-width:100%;display:block;}
     </div>
   </footer>
 
-  <!-- Sticky bottom bar -->
+  <!-- Sticky bar -->
   <div class="stickybar">
     <a href="https://lin.ee/Vz5wzeB" class="line" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>LINEで無料相談
