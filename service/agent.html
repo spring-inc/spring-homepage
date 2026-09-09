@@ -357,7 +357,7 @@ a{color:inherit;text-decoration:none;}
             <textarea id="efMsg" name="message" rows="3" placeholder="キャリアのお悩みやご希望をご記入ください。"></textarea>
           </div>
           <button type="submit" class="ef-submit">無料で相談する</button>
-          <p class="ef-note">※「無料で相談する」を押すとメールソフトが起動し、<strong>info@spring-career.com</strong> 宛に作成されます。</p>
+          <p class="ef-note">※「無料で相談する」を押すと、<strong>株式会社SPRING（SPRING キャリア）</strong> へ内容が送信されます。</p>
           <p class="ef-result" id="entryResult" role="status"></p>
         </form>
       </div>
@@ -555,22 +555,38 @@ a{color:inherit;text-decoration:none;}
         if (!name || !email) { result.textContent = 'お名前とメールアドレスをご入力ください。'; result.className = 'ef-result ng'; return; }
         if (!emailOk) { result.textContent = 'メールアドレスの形式をご確認ください。'; result.className = 'ef-result ng'; return; }
         var subject = '【求職者エントリー／SPRING キャリア】' + name + ' 様';
-        var body = [
-          'お問い合わせ区分：求職者（SPRING キャリア）',
-          'お名前：' + name,
-          'メールアドレス：' + email,
-          '電話番号：' + (tel || '（未記入）'),
-          'ご希望の職種・ご経験：' + (career || '（未記入）'),
-          '',
-          'ご相談内容：',
-          (message || '（未記入）'),
-          '',
-          '――――――――――',
-          '※本メールは SPRING キャリアのエントリーフォームから作成されました。'
-        ].join('\r\n');
-        window.location.href = 'mailto:info@spring-career.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        result.textContent = 'メールソフトが起動します。内容をご確認のうえ送信してください。';
-        result.className = 'ef-result ok';
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) { submitBtn.disabled = true; }
+        result.textContent = '送信中です…';
+        result.className = 'ef-result';
+        fetch('https://formspree.io/f/xnpqownb', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: subject,
+            _replyto: email,
+            'お問い合わせ区分': '求職者（SPRING キャリア）',
+            'お名前': name,
+            'メールアドレス': email,
+            '電話番号': tel || '（未記入）',
+            'ご希望の職種・ご経験': career || '（未記入）',
+            'ご相談内容': message || '（未記入）'
+          })
+        }).then(function (res) {
+          if (res.ok) {
+            form.reset();
+            result.textContent = 'ご相談内容を送信しました。担当者より折り返しご連絡いたします。';
+            result.className = 'ef-result ok';
+          } else {
+            result.textContent = '送信に失敗しました。お手数ですが info@spring-career.com までご連絡ください。';
+            result.className = 'ef-result ng';
+          }
+        }).catch(function () {
+          result.textContent = '送信に失敗しました。お手数ですが info@spring-career.com までご連絡ください。';
+          result.className = 'ef-result ng';
+        }).finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; }
+        });
       });
     })();
 

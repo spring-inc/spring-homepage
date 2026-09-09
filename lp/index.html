@@ -442,7 +442,7 @@ body{background:#0c1230;}
         <label for="m">ご相談内容（任意）</label>
         <textarea id="m" name="message" rows="3" placeholder="例：営業から未経験職に挑戦したい／転職すべきか迷っている"></textarea>
         <button type="submit">無料で相談する</button>
-        <p class="note">※送信するとメールソフトが起動し、info@spring-career.com 宛に作成されます。</p>
+        <p class="note">※送信すると株式会社SPRING（SPRING キャリア）へ内容が送信されます。</p>
         <p class="res" id="lpRes" role="status"></p>
       </form>
     </div>
@@ -475,9 +475,29 @@ body{background:#0c1230;}
       e.preventDefault();
       var name=f.name.value.trim(),contact=f.contact.value.trim(),msg=f.message.value.trim();
       if(!name||!contact){r.textContent='お名前と連絡先をご入力ください。';r.className='res ng';return;}
-      var body=['【求職者エントリー／LP】','お名前：'+name,'連絡先：'+contact,'','ご相談内容：',(msg||'（未記入）'),'','――――','※SPRING キャリアのLPフォームから作成されました。'].join('\r\n');
-      window.location.href='mailto:info@spring-career.com?subject='+encodeURIComponent('【求職者エントリー／LP】'+name+' 様')+'&body='+encodeURIComponent(body);
-      r.textContent='メールソフトが起動します。内容をご確認のうえ送信してください。';r.className='res ok';
+      var btn=f.querySelector('button[type="submit"]');
+      if(btn){btn.disabled=true;}
+      r.textContent='送信中です…';r.className='res';
+      fetch('https://formspree.io/f/xnpqownb',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({
+          _subject:'【求職者エントリー／LP】'+name+' 様',
+          'お問い合わせ区分':'求職者（SPRING キャリア／LP）',
+          'お名前':name,
+          '連絡先（メール／電話）':contact,
+          'ご相談内容':(msg||'（未記入）')
+        })
+      }).then(function(res){
+        if(res.ok){
+          f.reset();
+          r.textContent='ご相談内容を送信しました。担当者より折り返しご連絡いたします。';r.className='res ok';
+        }else{
+          r.textContent='送信に失敗しました。お手数ですが info@spring-career.com までご連絡ください。';r.className='res ng';
+        }
+      }).catch(function(){
+        r.textContent='送信に失敗しました。お手数ですが info@spring-career.com までご連絡ください。';r.className='res ng';
+      }).finally(function(){ if(btn){btn.disabled=false;} });
     });
   })();
   </script>

@@ -1103,7 +1103,7 @@ a { color: inherit; text-decoration: none; }
           <label for="cMessage">お問い合わせ内容<span class="req">必須</span></label>
           <textarea id="cMessage" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
         </div>
-        <p class="form-note">※「送信する」を押すとメールソフトが起動し、<strong style="color:#fff;">info@spring-career.com</strong> 宛のメールが作成されます。内容をご確認のうえ送信してください。ご入力いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</p>
+        <p class="form-note">※「送信する」を押すと、内容が <strong style="color:#fff;">株式会社SPRING</strong> へ送信されます。ご入力いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</p>
         <div class="form-submit">
           <button type="submit" class="btn btn-primary btn-lg">送信する</button>
         </div>
@@ -1283,26 +1283,43 @@ a { color: inherit; text-decoration: none; }
         }
 
         const subject = '【' + who + '】お問い合わせ' + (type ? '（' + type + '）' : '') + ' ' + name + ' 様';
-        const lines = ['お問い合わせ区分：' + who];
-        if (isCompany) { lines.push('会社名：' + company); }
-        lines.push(
-          'お名前：' + name,
-          'メールアドレス：' + email,
-          '電話番号：' + (tel || '（未記入）'),
-          'お問い合わせ種別：' + (type || '（未選択）'),
-          '',
-          'お問い合わせ内容：',
-          message,
-          '',
-          '――――――――――',
-          '※本メールは株式会社SPRING ウェブサイトのお問い合わせフォームから作成されました。'
-        );
-        const mailto = 'mailto:info@spring-career.com'
-          + '?subject=' + encodeURIComponent(subject)
-          + '&body=' + encodeURIComponent(lines.join('\r\n'));
-        window.location.href = mailto;
-        result.textContent = 'メールソフトが起動します。内容をご確認のうえ送信してください。';
-        result.className = 'form-result ok';
+        const payload = {
+          _subject: subject,
+          _replyto: email,
+          'お問い合わせ区分': who,
+          'お名前': name,
+          'メールアドレス': email,
+          '電話番号': tel || '（未記入）',
+          'お問い合わせ種別': type || '（未選択）',
+          'お問い合わせ内容': message
+        };
+        if (isCompany) { payload['会社名'] = company; }
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) { submitBtn.disabled = true; }
+        result.textContent = '送信中です…';
+        result.className = 'form-result';
+
+        fetch('https://formspree.io/f/xnpqownb', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function (res) {
+          if (res.ok) {
+            form.reset();
+            applyMode('company');
+            result.textContent = 'お問い合わせを送信しました。担当者より折り返しご連絡いたします。';
+            result.className = 'form-result ok';
+          } else {
+            result.textContent = '送信に失敗しました。お手数ですが info@spring-career.com までメールでご連絡ください。';
+            result.className = 'form-result ng';
+          }
+        }).catch(function () {
+          result.textContent = '送信に失敗しました。お手数ですが info@spring-career.com までメールでご連絡ください。';
+          result.className = 'form-result ng';
+        }).finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; }
+        });
       });
     }
 
