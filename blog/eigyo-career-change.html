@@ -271,5 +271,12 @@ table.cmp th{background:var(--blue-tint);color:var(--blue-deep);font-weight:700;
     <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
   </footer>
 
+  <script>
+  /* GA4: LINEクリックをイベント計測 */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="lin.ee"]');
+    if(a&&typeof gtag==='function'){gtag('event','line_click',{link_url:a.href,page_path:location.pathname});}
+  },true);
+  </script>
 </body>
 </html>

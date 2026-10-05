@@ -1310,6 +1310,7 @@ a { color: inherit; text-decoration: none; }
             applyMode('company');
             result.textContent = 'お問い合わせを送信しました。担当者より折り返しご連絡いたします。';
             result.className = 'form-result ok';
+            if (typeof gtag === 'function') { gtag('event', 'form_submit', { form_name: 'contact_top', page_path: location.pathname }); }
           } else {
             result.textContent = '送信に失敗しました。お手数ですが info@spring-career.com までメールでご連絡ください。';
             result.className = 'form-result ng';

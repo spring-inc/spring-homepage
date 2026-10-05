@@ -492,6 +492,7 @@ body{background:#0c1230;}
         if(res.ok){
           f.reset();
           r.textContent='ご相談内容を送信しました。担当者より折り返しご連絡いたします。';r.className='res ok';
+          if(typeof gtag==='function'){gtag('event','form_submit',{form_name:'lp_seeker',page_path:location.pathname});}
         }else{
           r.textContent='送信に失敗しました。お手数ですが info@spring-career.com までご連絡ください。';r.className='res ng';
         }
@@ -500,6 +501,13 @@ body{background:#0c1230;}
       }).finally(function(){ if(btn){btn.disabled=false;} });
     });
   })();
+  </script>
+  <script>
+  /* GA4: LINEクリックをイベント計測 */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="lin.ee"]');
+    if(a&&typeof gtag==='function'){gtag('event','line_click',{link_url:a.href,page_path:location.pathname});}
+  },true);
   </script>
 </body>
 </html>
