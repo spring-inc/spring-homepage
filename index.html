@@ -146,6 +146,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
   color: var(--ink);
   padding: 4px 0;
+  white-space: nowrap;
 }
 .nav a:not(.nav-cta)::after {
   content: "";
@@ -683,10 +684,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- To top ---------- */
-/* Floating contact button (bottom-right) */
-.float-contact {
+/* Floating CTA buttons (bottom-right): LINE相談＋お問い合わせ */
+.float-ctas {
   position: fixed; right: 24px; bottom: 24px;
   z-index: 95;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+}
+.float-contact {
+  position: relative;
   display: inline-flex; align-items: center; gap: 9px;
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
   color: #fff; font-weight: 700; font-size: 14px; letter-spacing: .04em;
@@ -703,9 +708,12 @@ a { color: inherit; text-decoration: none; }
 .float-contact:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -14px rgba(18,58,115,.95); }
 .float-contact svg { width: 18px; height: 18px; fill: #fff; position: relative; }
 .float-contact span { position: relative; }
+.float-contact.is-line { background: #06C755; box-shadow: 0 14px 34px -12px rgba(6,140,60,.75); }
+.float-contact.is-line::before { display: none; }
+.float-contact.is-line:hover { box-shadow: 0 20px 44px -14px rgba(6,140,60,.9); }
 
 .to-top {
-  position: fixed; right: 28px; bottom: 88px;
+  position: fixed; right: 28px; bottom: 146px;
   width: 44px; height: 44px;
   display: grid; place-items: center;
   background: #fff; color: var(--blue-deep);
@@ -755,13 +763,9 @@ a { color: inherit; text-decoration: none; }
   .rep-photo { max-width: 320px; }
 }
 
-@media (max-width: 760px) {
-  .sp-only { display: inline; }
+/* ナビは項目数が多いため、1行に収まらない幅（約1100px以下）からハンバーガーメニューに切り替える */
+@media (max-width: 1120px) {
   .nav-toggle { display: flex; }
-  .float-contact { right: 16px; bottom: 16px; padding: 12px 18px; font-size: 13px; }
-  .to-top { right: 20px; bottom: 74px; }
-  /* スマホでは位置移動をなくしフェードのみに（アニメーションのズレ防止） */
-  .reveal { transform: none; transition: opacity .6s ease; }
   .nav {
     position: fixed;
     inset: 0 0 0 auto;
@@ -789,6 +793,15 @@ a { color: inherit; text-decoration: none; }
     padding: 0 0 6px 14px; min-width: 0; gap: 0;
   }
   .dropdown-menu a { font-size: 14.5px; padding: 9px 0; color: var(--ink-soft); }
+}
+
+@media (max-width: 760px) {
+  .sp-only { display: inline; }
+  .float-ctas { right: 16px; bottom: 16px; gap: 8px; }
+  .float-contact { padding: 12px 18px; font-size: 13px; }
+  .to-top { right: 20px; bottom: 136px; }
+  /* スマホでは位置移動をなくしフェードのみに（アニメーションのズレ防止） */
+  .reveal { transform: none; transition: opacity .6s ease; }
 
   .work-card { grid-template-columns: 1fr; }
   .work-index { padding: 16px 0; }
@@ -852,6 +865,7 @@ a { color: inherit; text-decoration: none; }
         <a href="#company">会社情報</a>
         <a href="faq.html">よくある質問</a>
         <a href="blog/index.html">コラム</a>
+        <a href="lp/index.html">転職相談（求職者の方）</a>
         <a href="#contact" class="nav-cta">お問い合わせ</a>
       </nav>
 
@@ -875,7 +889,7 @@ a { color: inherit; text-decoration: none; }
       </p>
       <div class="hero-actions">
         <a href="#works" class="btn btn-primary">サービスを見る</a>
-        <a href="service/agent.html" class="btn btn-ghost">求職者の方はこちら</a>
+        <a href="lp/index.html" class="btn btn-ghost">求職者の方はこちら</a>
       </div>
     </div>
     <a href="#message" class="hero-scroll" aria-label="下へスクロール"><span></span>Scroll</a>
@@ -1153,10 +1167,16 @@ a { color: inherit; text-decoration: none; }
     <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
   </footer>
 
-  <a href="#contact" class="float-contact" aria-label="お問い合わせ">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm.4 2 7.6 5.3L19.6 6H4.4ZM20 7.9l-8 5.6-8-5.6V18h16V7.9Z"/></svg>
-    <span>お問い合わせ</span>
-  </a>
+  <div class="float-ctas">
+    <a href="https://lin.ee/Vz5wzeB" class="float-contact is-line" target="_blank" rel="noopener" aria-label="LINEで転職相談（求職者の方）">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
+      <span>LINEで転職相談</span>
+    </a>
+    <a href="#contact" class="float-contact" aria-label="お問い合わせ">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm.4 2 7.6 5.3L19.6 6H4.4ZM20 7.9l-8 5.6-8-5.6V18h16V7.9Z"/></svg>
+      <span>お問い合わせ</span>
+    </a>
+  </div>
 
   <a href="#hero" class="to-top" id="toTop" aria-label="ページ上部へ戻る">↑</a>
 
@@ -1350,6 +1370,13 @@ a { color: inherit; text-decoration: none; }
       }
     })();
   })();
+  </script>
+  <script>
+  /* GA4: LINEクリックをイベント計測 */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="lin.ee"]');
+    if(a&&typeof gtag==='function'){gtag('event','line_click',{link_url:a.href,page_path:location.pathname});}
+  },true);
   </script>
 </body>
 </html>
