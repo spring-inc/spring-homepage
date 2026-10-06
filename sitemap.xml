@@ -31,6 +31,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://spring-career.com/blog/boshudan-keisei</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://spring-career.com/blog/eigyo-mensetsu-shitsumon</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
