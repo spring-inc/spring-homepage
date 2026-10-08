@@ -274,6 +274,7 @@ a{color:inherit;text-decoration:none;}
       <p id="ctaText">貴社の採用課題・キャリアのご希望に合わせて、最適なプランをご提案します。</p>
       <div class="cta-btns">
         <a href="../index.html#contact" class="cta-btn primary" id="ctaPrimary">お問い合わせ</a>
+        <a href="../document.html" class="cta-btn ghost" id="ctaDoc">サービス資料（無料）</a>
         <a href="../index.html#works" class="cta-btn ghost">他の事業を見る</a>
       </div>
       <div class="cta-sns" id="ctaSns" style="display:none;">
@@ -419,6 +420,7 @@ a{color:inherit;text-decoration:none;}
       var ctaPrimary = document.getElementById('ctaPrimary');
       ctaPrimary.href = isAgent ? '../index.html#contact-seeker' : '../index.html#contact';
       ctaPrimary.textContent = isAgent ? '求職者の方の相談はこちら' : 'お問い合わせ';
+      document.getElementById('ctaDoc').style.display = isAgent ? 'none' : '';
 
       document.getElementById('probGrid').innerHTML =
         d.problems.map(function(p){return '<div class="prob"><p>'+esc(p)+'</p></div>';}).join('');

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# 資料PDFは資料請求ページ（/document）経由で配布するため、検索結果に出さない
+Disallow: /docs/
 
 Sitemap: https://spring-career.com/sitemap.xml
