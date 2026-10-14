@@ -260,20 +260,37 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
   margin-bottom: 30px;
 }
+.hero-title { word-break: keep-all; overflow-wrap: anywhere; }
 .hero-title span {
   background: linear-gradient(120deg, var(--blue-deep), var(--blue-bright));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-title, .hero-lead, .hero-actions { opacity: 0; animation: fadeUp 1s forwards; }
+.hero-title, .hero-lead, .hero-services, .hero-actions, .hero-seeker { opacity: 0; animation: fadeUp 1s forwards; }
 .hero-title { animation-delay: .25s; }
 .hero-lead { animation-delay: .45s; }
-.hero-actions { animation-delay: .6s; }
+.hero-services { animation-delay: .55s; }
+.hero-actions { animation-delay: .65s; }
+.hero-seeker { animation-delay: .75s; }
 .hero-lead {
   font-size: clamp(15px, 2vw, 19px);
   color: var(--ink-soft);
-  margin-bottom: 42px;
+  margin-bottom: 22px;
 }
+.hero-services { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+.hero-services li {
+  font-size: 13.5px; font-weight: 700; color: var(--blue-deep);
+  background: #fff; border: 1px solid var(--blue-soft); border-radius: 999px; padding: 6px 15px;
+  box-shadow: 0 6px 16px -12px rgba(18,58,115,.45);
+}
+.hero-services li.area { color: var(--ink-soft); background: transparent; border-color: transparent; box-shadow: none; padding-left: 4px; }
+.hero-services li.area::before { content: "●"; color: var(--green); font-size: 9px; margin-right: 6px; vertical-align: 2px; }
+.hero-seeker {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 22px;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  border-bottom: 1px solid rgba(31,102,184,.35); padding-bottom: 2px;
+}
+.hero-seeker:hover { color: var(--blue-deep); border-color: var(--blue-deep); }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .hero-scroll {
@@ -335,7 +352,7 @@ a { color: inherit; text-decoration: none; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-  .hero-eyebrow, .hero-title, .hero-lead, .hero-actions { animation: none !important; opacity: 1 !important; }
+  .hero-eyebrow, .hero-title, .hero-lead, .hero-services, .hero-actions, .hero-seeker { animation: none !important; opacity: 1 !important; }
 }
 
 /* ============================================================
@@ -700,7 +717,10 @@ a { color: inherit; text-decoration: none; }
   position: fixed; right: 24px; bottom: 24px;
   z-index: 95;
   display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: opacity .35s ease, transform .35s ease, visibility .35s;
 }
+.float-ctas.show { opacity: 1; visibility: visible; transform: none; }
 .float-contact {
   position: relative;
   display: inline-flex; align-items: center; gap: 9px;
@@ -740,6 +760,56 @@ a { color: inherit; text-decoration: none; }
 .to-top.show { opacity: 1; visibility: visible; transform: none; }
 .to-top:hover { background: var(--blue-deep); color: #fff; }
 
+/* ============================================================
+   Cases（支援事例の抜粋）
+   ============================================================ */
+.cases { background: var(--white); }
+.case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.case-card {
+  background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--blue);
+  border-radius: 16px; padding: 26px 26px 24px; box-shadow: var(--shadow);
+}
+.case-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-bottom: 12px; }
+.case-tag { font-size: 11.5px; font-weight: 700; color: #fff; background: var(--blue); border-radius: 999px; padding: 3px 12px; }
+.case-tag.is-consul { background: var(--green); }
+.case-co { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); }
+.case-card h3 { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--blue-deep); margin-bottom: 12px; word-break: auto-phrase; }
+.case-card p { font-size: 14px; color: #4a5666; line-height: 1.85; }
+.case-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; margin-top: 34px; }
+.case-links a { font-weight: 700; font-size: 14.5px; color: var(--blue); border-bottom: 1px solid rgba(31,102,184,.35); padding-bottom: 2px; }
+.case-links a:hover { color: var(--blue-deep); border-color: var(--blue-deep); }
+.case-note { text-align: center; font-size: 12px; color: var(--ink-soft); margin-top: 14px; }
+
+/* ページ途中の相談案内 */
+.mid-cta {
+  background:
+    radial-gradient(700px 360px at 90% 0%, rgba(43,145,216,.5), transparent 60%),
+    linear-gradient(160deg, #133056 0%, #0d1f38 100%);
+  color: #fff; padding: 48px 0;
+}
+.mid-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; }
+.mid-cta-title { font-family: var(--serif); font-size: clamp(19px, 2.6vw, 25px); font-weight: 700; margin-bottom: 6px; word-break: auto-phrase; }
+.mid-cta-text { font-size: 14px; color: rgba(255,255,255,.82); word-break: auto-phrase; }
+.mid-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.mid-cta .btn-primary { background: #fff; color: var(--blue-deep); box-shadow: 0 12px 26px -14px rgba(0,0,0,.6); }
+.mid-cta .btn-ghost { color: #fff; border-color: rgba(255,255,255,.5); }
+.mid-cta .btn-ghost:hover { background: rgba(255,255,255,.1); color: #fff; border-color: #fff; }
+
+/* 新着コラム */
+.columns { background: var(--cream); }
+.col-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.col-card {
+  display: block; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 24px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.col-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--blue-soft); }
+.col-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.col-cat { font-size: 11.5px; font-weight: 700; color: var(--blue-deep); background: var(--blue-tint); border: 1px solid var(--blue-soft); border-radius: 999px; padding: 2px 11px; }
+.col-cat.is-career { color: #2f7a3a; background: #eef8ea; border-color: var(--green-soft); }
+.col-meta time { font-family: var(--deco); font-size: 15px; color: var(--ink-soft); letter-spacing: .04em; }
+.col-card h3 { font-size: 15.5px; line-height: 1.7; color: var(--ink); word-break: auto-phrase; }
+.col-more { text-align: center; margin-top: 34px; }
+
 /* ---------- Keyframes ---------- */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 
@@ -769,6 +839,8 @@ a { color: inherit; text-decoration: none; }
    Responsive
    ============================================================ */
 @media (max-width: 900px) {
+  .case-grid, .col-grid { grid-template-columns: 1fr; }
+  .mid-cta-inner { flex-direction: column; align-items: flex-start; }
   .message-grid, .company-grid { grid-template-columns: 1fr; gap: 40px; }
   .message-visual { order: -1; }
   .rep-photo { max-width: 320px; }
@@ -810,6 +882,13 @@ a { color: inherit; text-decoration: none; }
   .sp-only { display: inline; }
   .float-ctas { right: 16px; bottom: 16px; gap: 8px; }
   .float-contact { padding: 12px 18px; font-size: 13px; }
+  .hero-actions .btn { flex: 1 1 100%; }
+  .hero-scroll { display: none; }
+  .hero { padding-bottom: 40px; }
+  .hero-services { margin-bottom: 26px; }
+  .hero-services li { font-size: 12.5px; padding: 5px 12px; }
+  .mid-cta-btns { width: 100%; }
+  .mid-cta-btns .btn { flex: 1 1 100%; }
   .to-top { right: 20px; bottom: 136px; }
   /* スマホでは位置移動をなくしフェードのみに（アニメーションのズレ防止） */
   .reveal { transform: none; transition: opacity .6s ease; }
@@ -863,7 +942,6 @@ a { color: inherit; text-decoration: none; }
       </a>
 
       <nav class="nav" id="nav">
-        <a href="#message">ご挨拶</a>
         <div class="nav-dropdown">
           <a href="#works" class="ddlink">事業紹介<span class="caret" aria-hidden="true">▾</span></a>
           <div class="dropdown-menu">
@@ -872,6 +950,7 @@ a { color: inherit; text-decoration: none; }
             <a href="service/agent.html">人材紹介事業「SPRING キャリア」</a>
           </div>
         </div>
+        <a href="#message">ご挨拶</a>
         <a href="#info">お知らせ</a>
         <a href="company.html">会社情報</a>
         <a href="faq.html">よくある質問</a>
@@ -898,41 +977,21 @@ a { color: inherit; text-decoration: none; }
       <p class="hero-lead">
         人と企業の最適なマッチングを実現し、<br class="sp-only" />社会に新たな価値を創造する。
       </p>
+      <ul class="hero-services" aria-label="事業内容">
+        <li>RPO（採用代行）</li>
+        <li>採用コンサルティング</li>
+        <li>人材紹介「SPRING キャリア」</li>
+        <li class="area">大阪・梅田</li>
+      </ul>
       <div class="hero-actions">
-        <a href="#works" class="btn btn-primary">サービスを見る</a>
-        <a href="https://lp.spring-career.com/?utm_source=hp&utm_medium=referral&utm_content=hero" class="btn btn-ghost">求職者の方はこちら</a>
+        <a href="#contact" class="btn btn-primary">無料で採用相談</a>
+        <a href="document.html" class="btn btn-ghost">サービス資料（無料）</a>
       </div>
+      <a href="https://lp.spring-career.com/?utm_source=hp&amp;utm_medium=referral&amp;utm_content=hero" class="hero-seeker">求職者の方は、転職のご相談はこちら<span aria-hidden="true">→</span></a>
     </div>
-    <a href="#message" class="hero-scroll" aria-label="下へスクロール"><span></span>Scroll</a>
+    <a href="#works" class="hero-scroll" aria-label="下へスクロール"><span></span>Scroll</a>
   </section>
 
-  <!-- ===== Message ===== -->
-  <section class="section message" id="message">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-en">Message</span>
-        <h2 class="section-title">ご挨拶</h2>
-      </div>
-
-      <div class="message-grid">
-        <div class="message-body reveal">
-          <p class="message-catch">いい出会いは、いい組織を作る。<br />いい組織は、人を輝かせる。</p>
-          <p>株式会社SPRINGのウェブサイトをご覧いただき、誠にありがとうございます。</p>
-          <p>私たちは、人と企業の最適なマッチングを実現することで、社会に新たな価値を創造することを使命としています。採用市場において、企業様の成長を支援し、求職者の方々のキャリア実現をサポートすることが、私たちの喜びです。</p>
-          <p>「SPRING」という社名には、新しい季節の始まり、成長、そして希望という意味が込められています。桜の花が咲くように、一人ひとりの才能が開花し、企業様の発展につながる。そんな未来を創造していきたいと考えています。</p>
-          <p>採用支援のプロフェッショナルとして、常に最新のトレンドを把握し、お客様一社一社に最適なソリューションを提供してまいります。</p>
-          <p class="message-sign">代表取締役　吉本 春悟</p>
-        </div>
-        <div class="message-visual reveal">
-          <figure class="rep-photo">
-            <img src="images/rep.jpg" alt="株式会社SPRING 代表取締役 吉本春悟" width="1168" height="1017" loading="lazy" decoding="async"
-                 onerror="this.closest('.rep-photo').classList.add('is-missing');" />
-            <figcaption><span>REPRESENTATIVE DIRECTOR</span>代表取締役　吉本 春悟</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== Works ===== -->
   <section class="section works" id="works">
@@ -1018,6 +1077,108 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
   </section>
+
+  <!-- ===== Cases（支援事例の抜粋） ===== -->
+  <section class="section cases" id="cases">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Case</span>
+        <h2 class="section-title">支援事例</h2>
+        <p class="section-sub">採用代行・採用コンサルティングで、実際にご支援した事例の一部をご紹介します。</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card reveal">
+          <div class="case-meta"><span class="case-tag">RPO（採用代行）</span><span class="case-co">不動産ベンチャー企業</span></div>
+          <h3>新卒一次面接・スカウト改善で<br />採用数を昨年比倍増</h3>
+          <p>月約150名の一次面接を担当し、スカウトの配信・内容も改善。採用基準・合否判断の基準を言語化し、昨年比で倍増となる採用数の達成に貢献しました。</p>
+        </article>
+        <article class="case-card reveal">
+          <div class="case-meta"><span class="case-tag">RPO（採用代行）</span><span class="case-co">大手SES企業</span></div>
+          <h3>新卒採用リクルーターを<br />一気通貫で代行</h3>
+          <p>説明会・インターン運営から一次面接、クロージング、入社フォローまで担当。厳しい採用市場の中で、2年連続で採用目標を達成しました。</p>
+        </article>
+        <article class="case-card reveal">
+          <div class="case-meta"><span class="case-tag is-consul">採用コンサルティング</span><span class="case-co">中小IT企業</span></div>
+          <h3>母集団強化のコンサル＆実務で<br />応募数を倍以上に</h3>
+          <p>エージェント開拓や新規媒体の選定から実行し、1ヶ月で応募数を倍以上に。コンスタントに応募が集まる仕組みを構築しました。</p>
+        </article>
+      </div>
+      <div class="case-links">
+        <a href="service/rpo.html">RPO（採用代行）の事例・支援内容 →</a>
+        <a href="service/consulting.html">採用コンサルティングの事例・支援内容 →</a>
+      </div>
+      <p class="case-note">※守秘義務のため、企業名は業種のみの表記としています。</p>
+    </div>
+  </section>
+
+  <!-- ===== 相談の案内（ページ途中のCTA） ===== -->
+  <section class="mid-cta">
+    <div class="container mid-cta-inner reveal">
+      <div>
+        <p class="mid-cta-title">採用のお悩み、まずはお気軽にご相談ください</p>
+        <p class="mid-cta-text">ヒアリング・お見積りは無料です。資料で検討したい方には、サービス資料もご用意しています。</p>
+      </div>
+      <div class="mid-cta-btns">
+        <a href="#contact" class="btn btn-primary">無料で採用相談</a>
+        <a href="document.html" class="btn btn-ghost">サービス資料（無料）</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Message ===== -->
+  <section class="section message" id="message">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Message</span>
+        <h2 class="section-title">ご挨拶</h2>
+      </div>
+
+      <div class="message-grid">
+        <div class="message-body reveal">
+          <p class="message-catch">いい出会いは、いい組織を作る。<br />いい組織は、人を輝かせる。</p>
+          <p>株式会社SPRINGのウェブサイトをご覧いただき、誠にありがとうございます。</p>
+          <p>私たちは、人と企業の最適なマッチングを実現することで、社会に新たな価値を創造することを使命としています。採用市場において、企業様の成長を支援し、求職者の方々のキャリア実現をサポートすることが、私たちの喜びです。</p>
+          <p>「SPRING」という社名には、新しい季節の始まり、成長、そして希望という意味が込められています。桜の花が咲くように、一人ひとりの才能が開花し、企業様の発展につながる。そんな未来を創造していきたいと考えています。</p>
+          <p>採用支援のプロフェッショナルとして、常に最新のトレンドを把握し、お客様一社一社に最適なソリューションを提供してまいります。</p>
+          <p class="message-sign">代表取締役　吉本 春悟</p>
+        </div>
+        <div class="message-visual reveal">
+          <figure class="rep-photo">
+            <img src="images/rep.jpg" alt="株式会社SPRING 代表取締役 吉本春悟" width="1168" height="1017" loading="lazy" decoding="async"
+                 onerror="this.closest('.rep-photo').classList.add('is-missing');" />
+            <figcaption><span>REPRESENTATIVE DIRECTOR</span>代表取締役　吉本 春悟</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 新着コラム ===== -->
+  <section class="section columns" id="columns">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-en">Column</span>
+        <h2 class="section-title">新着コラム</h2>
+        <p class="section-sub">採用ノウハウや、20代・営業職のキャリアに役立つ情報を発信しています。</p>
+      </div>
+      <div class="col-grid">
+        <a href="blog/boshudan-keisei.html" class="col-card reveal">
+          <div class="col-meta"><span class="col-cat">採用ノウハウ</span><time datetime="2026-10-06">2026.10.06</time></div>
+          <h3>母集団形成とは？応募が集まらない原因と増やし方・主な手法を解説</h3>
+        </a>
+        <a href="blog/eigyo-mensetsu-shitsumon.html" class="col-card reveal">
+          <div class="col-meta"><span class="col-cat is-career">転職・キャリア</span><time datetime="2026-10-01">2026.10.01</time></div>
+          <h3>営業の転職面接でよく聞かれる質問と答え方｜回答例・準備のコツ</h3>
+        </a>
+        <a href="blog/eigyo-career-change.html" class="col-card reveal">
+          <div class="col-meta"><span class="col-cat is-career">転職・キャリア</span><time datetime="2026-09-01">2026.09.01</time></div>
+          <h3>営業からのキャリアチェンジは可能？活かせる職種・成功のポイント</h3>
+        </a>
+      </div>
+      <div class="col-more"><a href="blog/index.html" class="btn btn-ghost">コラム一覧を見る</a></div>
+    </div>
+  </section>
+
 
   <!-- ===== Info / News ===== -->
   <section class="section info" id="info">
@@ -1177,8 +1338,9 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
       <nav class="footer-nav">
-        <a href="#message">ご挨拶</a>
         <a href="#works">事業紹介</a>
+        <a href="#cases">支援事例</a>
+        <a href="#message">ご挨拶</a>
         <a href="#info">お知らせ</a>
         <a href="company.html">会社情報</a>
         <a href="faq.html">よくある質問</a>
@@ -1195,7 +1357,7 @@ a { color: inherit; text-decoration: none; }
     <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
   </footer>
 
-  <div class="float-ctas">
+  <div class="float-ctas" id="floatCtas">
     <a href="https://lin.ee/Vz5wzeB" class="float-contact is-line" target="_blank" rel="noopener" aria-label="LINEで転職相談（求職者の方）">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.58 7.39 8.42 8.02.33.07.77.22.88.5.1.26.07.66.03.92 0 0-.12.72-.14.86-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.93 1.48-1.62 2.08-3.28 2.08-5.09C22 5.64 17.52 2 12 2Z"/></svg>
       <span>LINEで転職相談</span>
@@ -1219,12 +1381,14 @@ a { color: inherit; text-decoration: none; }
     const nav        = document.getElementById('nav');
     const navToggle  = document.getElementById('navToggle');
     const toTop      = document.getElementById('toTop');
+    const floatCtas  = document.getElementById('floatCtas');
 
     /* ---- Header state on scroll ---- */
     function onScroll() {
       const y = window.scrollY;
       header.classList.toggle('scrolled', y > 40);
       toTop.classList.toggle('show', y > 600);
+      if (floatCtas) floatCtas.classList.toggle('show', y > 360);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
