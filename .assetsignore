@@ -1,0 +1,9 @@
+# 公開サイトに含めないファイル（Gitの管理用・公開設定・Macの隠しファイル）
+.git
+.gitignore
+.gitattributes
+.assetsignore
+wrangler.jsonc
+.DS_Store
+.wrangler
+node_modules

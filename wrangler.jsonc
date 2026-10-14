@@ -1,0 +1,18 @@
+// Cloudflare Workers（red-sun-3692）の公開設定。
+// 以前はビルド時にCloudflareが自動生成していた内容を、リポジトリで管理するようにしたもの。
+// 公開から外すファイルは .assetsignore に書く。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "red-sun-3692",
+  "compatibility_date": "2026-10-12",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    // /company.html → /company、/blog → /blog/ のような今までのURLの扱いを維持
+    "html_handling": "auto-trailing-slash",
+    // 存在しないURLには 404.html を返す
+    "not_found_handling": "404-page"
+  }
+}
