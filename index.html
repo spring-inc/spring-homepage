@@ -17,11 +17,11 @@
   <link rel="apple-touch-icon" href="/images/favicon-180.png?v=20261014" />
   <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}</script>
   <title>株式会社SPRING｜採用代行(RPO)・採用コンサルティング・転職エージェント【大阪】</title>
-  <meta name="description" content="大阪の株式会社SPRING。RPO（採用代行）・採用コンサルティング・人材紹介「SPRING キャリア」を提供。母集団形成から内定承諾まで企業の採用を支援し、20代・営業職の転職エージェントとしてキャリア実現をサポートします。" />
+  <meta name="description" content="大阪の株式会社SPRING。採用代行・採用コンサルティング「スプリングクルー」と人材紹介「スプリングキャリア」を提供。母集団形成から内定承諾まで企業の採用を支援し、20代・営業職の転職エージェントとしてキャリア実現をサポートします。" />
   <link rel="canonical" href="https://spring-career.com/" />
   <meta property="og:site_name" content="株式会社SPRING" />
   <meta property="og:title" content="株式会社SPRING｜採用代行(RPO)・採用コンサルティング・人材紹介" />
-  <meta property="og:description" content="大阪の採用支援会社。RPO・採用コンサル・人材紹介と、20代・営業の転職エージェント「SPRING キャリア」。" />
+  <meta property="og:description" content="大阪の採用支援会社。採用代行・採用コンサル「スプリングクルー」と、20代・営業の転職エージェント「スプリングキャリア」。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://spring-career.com/" />
   <meta property="og:image" content="https://spring-career.com/images/ogp.png" />
@@ -465,6 +465,11 @@ a { color: inherit; text-decoration: none; }
   position: relative;
 }
 .work-content { padding: 38px 42px; }
+.work-brand { display: inline-flex; align-items: baseline; gap: 10px; font-size: 14px; font-weight: 700; color: var(--blue-deep); border: 1px solid currentColor; border-radius: 6px; padding: 3px 12px; margin-bottom: 10px; }
+.work-brand span { font-size: 12px; color: var(--ink-soft); }
+.work-brand.career { color: var(--green); }
+.works-brands { margin-top: 10px; }
+.hero-services li b { font-weight: 700; color: var(--blue-deep); }
 .work-title {
   font-family: var(--serif);
   font-size: clamp(20px, 2.4vw, 26px);
@@ -947,7 +952,7 @@ a { color: inherit; text-decoration: none; }
           <div class="dropdown-menu">
             <a href="service/rpo.html">RPO（採用代行）事業</a>
             <a href="service/consulting.html">採用コンサルティング</a>
-            <a href="service/agent.html">人材紹介事業「SPRING キャリア」</a>
+            <a href="service/agent.html">人材紹介事業「スプリングキャリア」</a>
           </div>
         </div>
         <a href="#message">ご挨拶</a>
@@ -978,9 +983,8 @@ a { color: inherit; text-decoration: none; }
         人と企業の最適なマッチングを実現し、<br class="sp-only" />社会に新たな価値を創造する。
       </p>
       <ul class="hero-services" aria-label="事業内容">
-        <li>RPO（採用代行）</li>
-        <li>採用コンサルティング</li>
-        <li>人材紹介「SPRING キャリア」</li>
+        <li><b>スプリングクルー</b>　採用代行・採用コンサルティング</li>
+        <li><b>スプリングキャリア</b>　人材紹介</li>
         <li class="area">大阪・梅田</li>
       </ul>
       <div class="hero-actions">
@@ -1000,6 +1004,7 @@ a { color: inherit; text-decoration: none; }
         <span class="section-en">Business</span>
         <h2 class="section-title">事業紹介</h2>
         <p class="section-sub">採用の「実行」から「戦略」、そして「出会い」まで。<br class="sp-only" />企業の採用課題を、3つのサービスで包括的に支援します。</p>
+        <p class="section-sub works-brands">採用代行・採用コンサルティングは<b>「スプリングクルー」</b>、人材紹介は<b>「スプリングキャリア」</b>としてご提供しています。</p>
       </div>
 
       <div class="works-list">
@@ -1007,6 +1012,7 @@ a { color: inherit; text-decoration: none; }
         <article class="work-card reveal">
           <div class="work-index"><span>01</span></div>
           <div class="work-content">
+            <p class="work-brand">スプリングクルー<span>採用代行・採用コンサルティング</span></p>
             <h3 class="work-title">RPO（採用代行）事業</h3>
             <p class="work-lead">現場の負担をなくし、採用のプロが実行を加速させる</p>
             <dl class="work-detail">
@@ -1031,6 +1037,7 @@ a { color: inherit; text-decoration: none; }
         <article class="work-card reveal">
           <div class="work-index"><span>02</span></div>
           <div class="work-content">
+            <p class="work-brand">スプリングクルー<span>採用代行・採用コンサルティング</span></p>
             <h3 class="work-title">採用コンサルティング</h3>
             <p class="work-lead">理想の出会いを設計し、自走できる組織へアップデートする</p>
             <dl class="work-detail">
@@ -1055,7 +1062,8 @@ a { color: inherit; text-decoration: none; }
         <article class="work-card reveal">
           <div class="work-index"><span>03</span></div>
           <div class="work-content">
-            <h3 class="work-title">人材紹介事業「SPRING キャリア」</h3>
+            <p class="work-brand career">スプリングキャリア<span>人材紹介</span></p>
+            <h3 class="work-title">人材紹介事業「スプリングキャリア」</h3>
             <p class="work-lead">「人材紹介 × 採用支援」企業の採用成功と求職者のキャリア実現を両立するパートナー</p>
             <dl class="work-detail">
               <div>
@@ -1190,6 +1198,11 @@ a { color: inherit; text-decoration: none; }
 
       <ul class="news-list">
         <li class="news-item reveal">
+          <time datetime="2026-10-15">2026.10.15</time>
+          <span class="news-tag">サービス</span>
+          <p>サービス名を変更しました。採用代行・採用コンサルティングは「スプリングクルー」、人材紹介は「スプリングキャリア」（旧表記：SPRING キャリア）です。</p>
+        </li>
+        <li class="news-item reveal">
           <time datetime="2026-10-08">2026.10.08</time>
           <span class="news-tag">サービス</span>
           <p>企業のご担当者様向けに、<a href="document.html">採用支援サービス資料（無料）</a>のダウンロードを開始しました。</p>
@@ -1207,7 +1220,7 @@ a { color: inherit; text-decoration: none; }
         <li class="news-item reveal">
           <time datetime="2026-06-01">2026.06.01</time>
           <span class="news-tag">サービス</span>
-          <p>人材紹介事業「SPRING キャリア」のサービスを開始しました。</p>
+          <p>人材紹介事業「スプリングキャリア」のサービスを開始しました。</p>
         </li>
         <li class="news-item reveal">
           <time datetime="2026-02-13">2026.02.13</time>

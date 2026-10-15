@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="/images/favicon-180.png?v=20261014" />
   <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}</script>
   <title>RPO（採用代行）｜母集団形成から面接代行まで｜株式会社SPRING（大阪）</title>
-  <meta name="description" content="株式会社SPRINGのRPO（採用代行）。母集団形成・スカウト・一次面接代行・エージェントコントロールまで、採用実務を貴社の一員として代行します。大阪を拠点に採用課題を解決します。" />
+  <meta name="description" content="株式会社SPRINGのRPO（採用代行）「スプリングクルー」。母集団形成・スカウト・一次面接代行・エージェントコントロールまで、採用実務を貴社の一員として代行します。大阪を拠点に採用課題を解決します。" />
   <link rel="canonical" href="https://spring-career.com/service/rpo" />
   <meta property="og:site_name" content="株式会社SPRING" />
   <meta property="og:title" content="RPO（採用代行）｜株式会社SPRING" />
@@ -151,6 +151,10 @@ a{color:inherit;text-decoration:none;}
 .career-badge .cb-mark{width:42px;height:42px;flex:none;}
 .career-badge .cb-word{display:flex;align-items:center;gap:9px;}
 .career-badge .cb-word b{font-family:var(--deco);font-size:26px;font-weight:700;color:var(--blue-deep);letter-spacing:.08em;line-height:1;}
+.career-badge .cb-sub{font-size:13px;font-weight:700;color:#5b6573;}
+.career-badge{flex-wrap:wrap;row-gap:6px;max-width:100%;}
+.career-badge .cb-word b,.career-badge .cb-tag,.career-badge .cb-sub{white-space:nowrap;}
+@media (max-width:600px){.career-badge .cb-word b{font-size:22px;}.career-badge .cb-mark{width:34px;height:34px;}}
 .career-badge .cb-tag{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;font-weight:700;font-size:14px;padding:4px 14px;border-radius:999px;letter-spacing:.06em;}
 
 /* other services */
@@ -220,7 +224,7 @@ a{color:inherit;text-decoration:none;}
           <path d="M24 60 C39 75 67 77 87 60 C68 72 43 71 31 60 C28 57 26 57 24 60 Z" fill="url(#blu-h)" />
           <circle cx="66" cy="28" r="8.5" fill="url(#gld-h)" />
         </svg>
-        <span class="cb-word"><b>SPRING</b><span class="cb-tag">キャリア</span></span>
+        <span class="cb-word"><b>スプリング</b><span class="cb-tag" id="svcBrandTag">キャリア</span></span><span class="cb-sub" id="svcBrandSub">人材紹介</span>
       </div>
       <div class="svc-no" id="svcNo">01</div>
       <div class="svc-en" id="svcEn">Service</div>
@@ -234,7 +238,7 @@ a{color:inherit;text-decoration:none;}
     <nav class="svc-switch">
       <a href="rpo.html" data-id="rpo">RPO（採用代行）</a>
       <a href="consulting.html" data-id="consulting">採用コンサルティング</a>
-      <a href="agent.html" data-id="agent">SPRING キャリア（人材紹介）</a>
+      <a href="agent.html" data-id="agent">スプリングキャリア（人材紹介）</a>
     </nav>
 
     <!-- 概要 -->
@@ -312,7 +316,7 @@ a{color:inherit;text-decoration:none;}
     'use strict';
     var DATA = {
       rpo: {
-        no: '01', en: 'RPO', name: 'RPO（採用代行）事業', forWho: 'For 企業のご担当者様',
+        no: '01', en: 'RPO', brand: 'クルー', brandSub: '採用代行・採用コンサルティング', name: 'RPO（採用代行）事業', forWho: 'For 企業のご担当者様',
         tag: '現場に入り込み、採用実務を「実行」で加速させる。',
         lead: '母集団形成から内定承諾までの採用プロセスを、設計から実務まで臨機応変に代行します。スカウト送信・一次面接の代行・日程調整・エージェントコントロールなど、貴社の一員として手を動かし、選考スピードと歩留まりを高めます。',
         problems: [
@@ -341,7 +345,7 @@ a{color:inherit;text-decoration:none;}
         cta: ['採用実務の負担、まるごとお任せください','貴社の状況に合わせて代行範囲を柔軟にご提案します。']
       },
       consulting: {
-        no: '02', en: 'Consulting', name: '採用コンサルティング', forWho: 'For 企業のご担当者様',
+        no: '02', en: 'Consulting', brand: 'クルー', brandSub: '採用代行・採用コンサルティング', name: '採用コンサルティング', forWho: 'For 企業のご担当者様',
         tag: '採用の「型」を設計し、自走できる組織へアップデートする。',
         lead: '母集団形成から内定承諾までの採用プロセス全体を「設計」し、採用ブランディング・面接手法・選考フローを仕組み化します。外部に頼り切らず自走できる強い採用基盤づくりを、臨機応変に伴走支援します。（RPOが実務の代行であるのに対し、コンサルティングは仕組みづくり・改善提案が中心です。）',
         problems: [
@@ -370,10 +374,10 @@ a{color:inherit;text-decoration:none;}
         cta: ['採用の“土台”から一緒に作りましょう','戦略設計から仕組みの内製化まで伴走します。']
       },
       agent: {
-        no: '03', en: 'SPRING Career', name: 'SPRING キャリア（人材紹介）', forWho: 'For 求職者の方',
+        no: '03', en: 'Career', brand: 'キャリア', brandSub: '人材紹介', name: 'スプリングキャリア（人材紹介）', forWho: 'For 求職者の方',
         tag: '現役人事がサポートし、理想のキャリアの実現へ導く。',
-        lead: '「SPRING キャリア」は、株式会社SPRINGが運営する人材紹介サービスです。転職ありきではありません。現役人事の視点で、中長期的なキャリアを見据えてご支援します。取扱求人は10万件以上、最短で面談から2週間以内の内定実現も可能です。とくに20代の営業職の転職支援に強みがあり（営業職以外の職種も支援可能です）、未経験職への転職やキャリアアップも実現しています。現職に残ることが最適と判断される場合には、あえて転職をおすすめしないこともあります。',
-        resultsTitle: 'SPRING キャリアの特長',
+        lead: '「スプリングキャリア」は、株式会社SPRINGが運営する人材紹介サービスです。転職ありきではありません。現役人事の視点で、中長期的なキャリアを見据えてご支援します。取扱求人は10万件以上、最短で面談から2週間以内の内定実現も可能です。とくに20代の営業職の転職支援に強みがあり（営業職以外の職種も支援可能です）、未経験職への転職やキャリアアップも実現しています。現職に残ることが最適と判断される場合には、あえて転職をおすすめしないこともあります。',
+        resultsTitle: 'スプリングキャリアの特長',
         problems: [
           '自分に合うキャリア・企業が分からない。',
           '未経験の職種に挑戦したい／キャリアアップしたい。',
@@ -414,8 +418,10 @@ a{color:inherit;text-decoration:none;}
       document.getElementById('ctaText').textContent = d.cta[1];
 
       var isAgent = (id === 'agent');
-      document.getElementById('svcBadge').hidden = !isAgent;
-      document.getElementById('svcNo').style.display = isAgent ? 'none' : '';
+      document.getElementById('svcBadge').hidden = false;
+      document.getElementById('svcBrandTag').textContent = d.brand;
+      document.getElementById('svcBrandSub').textContent = d.brandSub;
+      document.getElementById('svcNo').style.display = 'none';
       document.getElementById('ctaSns').style.display = isAgent ? '' : 'none';
       var ctaPrimary = document.getElementById('ctaPrimary');
       ctaPrimary.href = isAgent ? '../index.html#contact-seeker' : '../index.html#contact';
@@ -462,7 +468,7 @@ a{color:inherit;text-decoration:none;}
       window.scrollTo({top:0});
     }
 
-    // ▼▼ SPRING キャリア 公式SNSのURLをここに設定してください ▼▼
+    // ▼▼ スプリングキャリア 公式SNSのURLをここに設定してください ▼▼
     var SNS = {
       line: '',        // 例: 'https://lin.ee/xxxxxxx'
       instagram: ''    // 例: 'https://www.instagram.com/spring_career/'
