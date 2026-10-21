@@ -9,7 +9,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-2T48B5PE2P');
+    // 本番（spring-career.com）だけ計測し、手元での確認は数えない
+    if (/(^|\.)spring-career\.com$/.test(location.hostname)) gtag('config', 'G-2T48B5PE2P');
   </script>
   <link rel="icon" href="/images/favicon.svg?v=20261014" type="image/svg+xml" />
   <link rel="icon" href="/images/favicon-32.png?v=20261014" sizes="32x32" type="image/png" />
@@ -682,6 +683,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 0 0 4px rgba(43,145,216,.35);
 }
 .form-note { font-size: 13.5px; color: rgba(255,255,255,.93); margin-bottom: 26px; }
+.form-note.sales-note { margin-bottom: 8px; }
 .form-submit { text-align: center; }
 .form-result { text-align: center; margin-top: 18px; font-weight: 700; min-height: 1.4em; }
 .form-result.ok { color: #a9e6b0; }
@@ -1320,6 +1322,7 @@ a { color: inherit; text-decoration: none; }
           <label for="cMessage">お問い合わせ内容<span class="req">必須</span></label>
           <textarea id="cMessage" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
         </div>
+        <p class="form-note sales-note" data-role="company">※サービスのご提案・営業を目的としたお問い合わせはご遠慮ください。</p>
         <p class="form-note">※「送信する」を押すと、内容が <strong style="color:#fff;">株式会社SPRING</strong> へ送信されます。ご入力いただいた個人情報は、お問い合わせへの対応のみに使用いたします。</p>
         <div class="form-submit">
           <button type="submit" class="btn btn-primary btn-lg">送信する</button>

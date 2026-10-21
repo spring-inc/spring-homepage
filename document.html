@@ -9,7 +9,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-2T48B5PE2P');
+    // 本番（spring-career.com）だけ計測し、手元での確認は数えない
+    if (/(^|\.)spring-career\.com$/.test(location.hostname)) gtag('config', 'G-2T48B5PE2P');
   </script>
   <link rel="icon" href="/images/favicon.svg?v=20261014" type="image/svg+xml" />
   <link rel="icon" href="/images/favicon-32.png?v=20261014" sizes="32x32" type="image/png" />

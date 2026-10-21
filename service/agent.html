@@ -9,7 +9,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-2T48B5PE2P');
+    // 本番（spring-career.com）だけ計測し、手元での確認は数えない
+    if (/(^|\.)spring-career\.com$/.test(location.hostname)) gtag('config', 'G-2T48B5PE2P');
   </script>
   <link rel="icon" href="/images/favicon.svg?v=20261014" type="image/svg+xml" />
   <link rel="icon" href="/images/favicon-32.png?v=20261014" sizes="32x32" type="image/png" />
@@ -480,7 +481,6 @@ a{color:inherit;text-decoration:none;}
 
     function render(id){
       var d = DATA[id] || DATA.rpo;
-      document.title = d.name + '｜株式会社SPRING';
       document.getElementById('crumbName').textContent = d.name;
       document.getElementById('svcNo').textContent = d.no;
       document.getElementById('svcEn').textContent = d.en;
