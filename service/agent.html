@@ -35,6 +35,9 @@
     {"@type":"ListItem","position":3,"name":"人材紹介事業「スプリングキャリア」","item":"https://spring-career.com/service/agent"}
   ]}
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"人材紹介「スプリングキャリア」","serviceType":"人材紹介","brand":{"@type":"Brand","name":"スプリングキャリア"},"description":"20代・営業職の転職に強い転職エージェント「スプリングキャリア」。現役人事があなたの理想のキャリア実現へ伴走します。取扱求人10万件以上、面談から最短2週間で内定も。未経験・キャリアアップ歓迎、求職者手数料は無料です。","provider":{"@type":"Organization","name":"株式会社SPRING","url":"https://spring-career.com/"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"Audience","audienceType":"求職者（20代・営業職に強み）"},"url":"https://spring-career.com/service/agent","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"求職者の利用は無料"}}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
@@ -252,11 +255,11 @@ a{color:inherit;text-decoration:none;}
     </div>
   </header>
 
-  <!-- Hero (populated by JS) -->
+  <!-- Hero -->
   <section class="svc-hero">
     <div class="container">
       <p class="crumb"><a href="../index.html">HOME</a>　/　<a href="../index.html#works">事業紹介</a>　/　<span id="crumbName">人材紹介事業「スプリングキャリア」</span></p>
-      <div class="career-badge" id="svcBadge" hidden>
+      <div class="career-badge" id="svcBadge">
         <svg class="cb-mark" viewBox="0 0 100 100" aria-hidden="true">
           <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
           <path d="M45 51 C40 41 47 29 61 25 C56 37 52 45 49 51 C47 53 46 53 45 51 Z" fill="#bfe05a" opacity="0.75" />
@@ -266,11 +269,11 @@ a{color:inherit;text-decoration:none;}
         </svg>
         <span class="cb-word"><b>スプリング</b><span class="cb-tag" id="svcBrandTag">キャリア</span></span><span class="cb-sub" id="svcBrandSub">人材紹介</span>
       </div>
-      <div class="svc-no" id="svcNo">01</div>
-      <div class="svc-en" id="svcEn">Service</div>
+      <div class="svc-no" id="svcNo" style="display:none">03</div>
+      <div class="svc-en" id="svcEn">Career</div>
       <h1 id="svcName">20代・営業の転職エージェント「スプリングキャリア」</h1>
-      <p class="svc-tag" id="svcTag"></p>
-      <span class="svc-for" id="svcFor"></span>
+      <p class="svc-tag" id="svcTag">現役人事がサポートし、理想のキャリアの実現へ導く。</p>
+      <span class="svc-for" id="svcFor">For 求職者の方</span>
     </div>
   </section>
 
@@ -278,38 +281,38 @@ a{color:inherit;text-decoration:none;}
     <nav class="svc-switch">
       <a href="rpo.html" data-id="rpo">RPO（採用代行）</a>
       <a href="consulting.html" data-id="consulting">採用コンサルティング</a>
-      <a href="agent.html" data-id="agent">スプリングキャリア（人材紹介）</a>
+      <a href="agent.html" data-id="agent" class="active">スプリングキャリア（人材紹介）</a>
     </nav>
 
     <!-- 概要 -->
     <section class="sec">
       <div class="sec-head"><span class="en">Overview</span><h2>サービス概要</h2></div>
-      <p class="lead" id="ovLead"></p>
+      <p class="lead" id="ovLead">「スプリングキャリア」は、株式会社SPRINGが運営する人材紹介サービスです。転職ありきではありません。現役人事の視点で、中長期的なキャリアを見据えてご支援します。取扱求人は10万件以上、最短で面談から2週間以内の内定実現も可能です。とくに20代の営業職の転職支援に強みがあり（営業職以外の職種も支援可能です）、未経験職への転職やキャリアアップも実現しています。現職に残ることが最適と判断される場合には、あえて転職をおすすめしないこともあります。</p>
     </section>
 
     <!-- 課題 -->
     <section class="sec">
       <div class="sec-head"><span class="en">Issues</span><h2>こんなお悩みに</h2></div>
-      <div class="prob-grid" id="probGrid"></div>
+      <div class="prob-grid" id="probGrid"><div class="prob"><p>自分に合うキャリア・企業が分からない。</p></div><div class="prob"><p>未経験の職種に挑戦したい／キャリアアップしたい。</p></div><div class="prob"><p>転職すべきか、現職に残るべきか迷っている。</p></div></div>
     </section>
 
     <!-- サポート内容 -->
     <section class="sec">
       <div class="sec-head"><span class="en">Support</span><h2>サポート内容</h2></div>
-      <div class="sup-grid" id="supGrid"></div>
+      <div class="sup-grid" id="supGrid"><div class="sup"><h3><i>1</i>現役人事によるキャリアカウンセリング</h3><p>現役人事の視点で、あなたに本当に合う選択肢を一緒に考えます。転職ありきではありません。</p></div><div class="sup"><h3><i>2</i>10万件以上からの求人紹介</h3><p>豊富な求人の中から、ご希望と適性に合う求人を厳選してご提案します。</p></div><div class="sup"><h3><i>3</i>応募書類の作成・面接対策</h3><p>企業へのご推薦にあたり、応募書類の作成から面接対策まで伴走します。</p></div><div class="sup"><h3><i>4</i>条件交渉・入社まで伴走</h3><p>内定後の条件交渉から入社まで、安心して進められるようサポートします。</p></div></div>
     </section>
 
     <!-- 支援の流れ -->
     <section class="sec">
       <div class="sec-head"><span class="en">Flow</span><h2>支援の流れ</h2></div>
-      <div class="flow" id="flow"></div>
+      <div class="flow" id="flow"><div class="flow-item"><div><h3>初回面談</h3><p>ご経歴・ご希望を丁寧にヒアリングします（ご登録・ご相談は無料）。</p></div></div><div class="flow-item"><div><h3>求人のご紹介・ご推薦</h3><p>最適な求人をご紹介し、応募書類の作成をサポートのうえ企業へご推薦します。</p></div></div><div class="flow-item"><div><h3>面接対策</h3><p>選考通過に向けて面接対策を実施し、あなたの魅力を最大限にお伝えします。</p></div></div><div class="flow-item"><div><h3>内定・条件交渉・入社</h3><p>内定後の条件交渉から入社まで伴走。※最短で面談から2週間以内の内定実現も可能です。</p></div></div></div>
     </section>
 
     <!-- 支援事例 -->
     <section class="sec">
-      <div class="sec-head"><span class="en">Case</span><h2 id="resultsTitle">支援事例</h2></div>
-      <div class="stats" id="stats"></div>
-      <div class="cases" id="cases" style="margin-top:20px;"></div>
+      <div class="sec-head"><span class="en">Case</span><h2 id="resultsTitle">スプリングキャリアの特長</h2></div>
+      <div class="stats" id="stats"><div class="stat"><div class="num">10万<em>件+</em></div><div class="label">取扱求人数</div></div><div class="stat"><div class="num">2<em>週間〜</em></div><div class="label">面談から内定まで（最短）</div></div><div class="stat"><div class="num">20代<em></em></div><div class="label">営業職に特化 ※他職種も可</div></div><div class="stat"><div class="num">0<em>円</em></div><div class="label">求職者の手数料</div></div></div>
+      <div class="cases" id="cases" style="margin-top:20px;display:none"></div>
     </section>
 
     <!-- 求職者エントリー -->
@@ -372,7 +375,7 @@ a{color:inherit;text-decoration:none;}
     <!-- 他サービス -->
     <section class="other">
       <div class="sec-head"><span class="en">Other Services</span><h2>その他の事業</h2></div>
-      <div class="other-grid" id="otherGrid"></div>
+      <div class="other-grid" id="otherGrid"><a href="rpo.html"><span class="oi"><small>RPO</small><strong>RPO（採用代行）事業</strong></span><span class="oarrow">→</span></a><a href="consulting.html"><span class="oi"><small>Consulting</small><strong>採用コンサルティング</strong></span><span class="oarrow">→</span></a></div>
     </section>
   </div>
 
@@ -389,151 +392,6 @@ a{color:inherit;text-decoration:none;}
   <script>
   (function () {
     'use strict';
-    var DATA = {
-      rpo: {
-        no: '01', en: 'RPO', brand: 'クルー', brandSub: '採用代行・採用コンサルティング', name: 'RPO（採用代行）事業', forWho: 'For 企業のご担当者様',
-        tag: '現場に入り込み、採用実務を「実行」で加速させる。',
-        lead: '母集団形成から内定承諾までの採用プロセスを、設計から実務まで臨機応変に代行します。スカウト送信・一次面接の代行・日程調整・エージェントコントロールなど、貴社の一員として手を動かし、選考スピードと歩留まりを高めます。',
-        problems: [
-          '採用人数が急増し、社内リソースが足りない。',
-          'スカウトの返信率が上がらず、母集団が作れない。',
-          '面接や日程調整、エージェント対応に追われ、選考が進まない。'
-        ],
-        supports: [
-          ['母集団形成・スカウト実務', '各媒体・スカウトサービスを横断して母集団を構築し、返信率を高める文面でターゲットへアプローチします。'],
-          ['一次面接・候補者対応の代行', '一次面接や候補者とのやり取りを代行し、選考を止めずスピーディに進めます。'],
-          ['日程調整・エージェントコントロール', '面接調整や人材紹介会社との連携・進捗管理を巻き取り、現場の負担を軽減します。'],
-          ['内定承諾までの伴走', '条件面の調整やフォローまで対応し、内定承諾率・歩留まりの改善につなげます。']
-        ],
-        flow: [
-          ['ヒアリング', '採用目標・課題・体制、これまでの選考状況を丁寧に把握します。'],
-          ['提案', '課題に合わせて、代行範囲と運用プランをご提案します。'],
-          ['合意', '役割分担・進め方・ゴールを握り、実行体制を確定します。'],
-          ['実装', '母集団形成〜面接代行〜調整まで実務を推進。※ニーズに合わせ臨機応変に対応します。']
-        ],
-        stats: [],
-        cases: [
-          ['人材ベンチャー企業','中途採用の一次面接代行・エージェントコントロール','中途採用の一次面接を代行し、エージェントコントロールを実施。採用リソースを確保したことで、人事担当が本来注力すべき業務に集中できる体制に。エージェントへのフィードバックも改善して良好な関係を築き、紹介数の増加につなげました。'],
-          ['大手SES企業','新卒採用リクルーターを一気通貫で代行','説明会・インターン運営から一次面接、カジュアル面談、内定後面談、クロージング、入社フォローまで担当。厳しい採用市場でも採用予算を達成しました。技術職に加え総合職採用もエージェント開拓から実施し、2年連続で採用目標を達成。従来より高い学歴層の候補者獲得にも成功しました。'],
-          ['不動産ベンチャー企業','新卒一次面接・スカウト改善で採用数を昨年比倍増','日本トップクラスのスピードで拡大するベンチャー企業にて、新卒採用の一次面接を担当。社内システムが未整備の中で構築を助言し、スカウトの配信・内容の改善、定例MTGでの報告内容の設計も実施。月約150名の面接で優秀層の惹きつけを強化しつつリソース不足も改善し、採用基準・合否判断の基準を言語化。昨年比で倍増となる採用数の達成に貢献しました。']
-        ],
-        cta: ['採用実務の負担、まるごとお任せください','貴社の状況に合わせて代行範囲を柔軟にご提案します。']
-      },
-      consulting: {
-        no: '02', en: 'Consulting', brand: 'クルー', brandSub: '採用代行・採用コンサルティング', name: '採用コンサルティング', forWho: 'For 企業のご担当者様',
-        tag: '採用の「型」を設計し、自走できる組織へアップデートする。',
-        lead: '母集団形成から内定承諾までの採用プロセス全体を「設計」し、採用ブランディング・面接手法・選考フローを仕組み化します。外部に頼り切らず自走できる強い採用基盤づくりを、臨機応変に伴走支援します。（RPOが実務の代行であるのに対し、コンサルティングは仕組みづくり・改善提案が中心です。）',
-        problems: [
-          '採用のミスマッチを減らしたい。',
-          '自社の魅力が言語化できず、採用競合に負けてしまう。',
-          '場当たり的な採用から脱し、再現性のある仕組みにしたい。'
-        ],
-        supports: [
-          ['採用ブランディング設計', '「選ばれる理由」を言語化し、候補者に響く訴求メッセージ・採用コンセプトを設計します。'],
-          ['面接設計・面接官トレーニング', '面接の実施方法や評価基準を型化し、面接官の目線を統一・育成します。'],
-          ['選考フロー／プロセス設計', '母集団形成から内定承諾までの導線を設計し、歩留まりを最適化します。'],
-          ['エージェント活用設計', '人材紹介会社の使い方・連携方針を設計し、外部リソースの成果を最大化します。']
-        ],
-        flow: [
-          ['ヒアリング', '採用データと課題を診断し、ボトルネックを特定します。'],
-          ['提案', '戦略・改善プランと、仕組み化の設計をご提案します。'],
-          ['合意', '施策の優先順位・体制・ゴールを合意します。'],
-          ['実装', '設計した仕組みの導入・定着まで伴走。※ニーズに合わせ臨機応変に対応します。']
-        ],
-        stats: [],
-        cases: [
-          ['人材ベンチャー企業','週次MTGで採用ブランディング・面接手法を改善','週次の定例MTGに参加し、採用ブランディングや面接の実施方法の改善、候補者の惹きつけ強化を設計・支援。実務のリソースを確保したことで、人事担当がブランディングなど従来手が回らなかった領域にも着手できる体制づくりに貢献しました。'],
-          ['ITコンサルティング企業','面接官の育成と選考オペレーションの仕組み化','急成長企業にて、インターン前の1対5グループ面接で見極めを行い、必要参加数を確保。社内共有システムを構築し、新人採用担当の面接指導も担当しました。繁忙期には月約300名規模の面接に対応し、面接官のリソース不足と候補者の取りこぼしを大きく改善しました。'],
-          ['中小IT企業','母集団強化のコンサル＆実務で応募数を倍以上に','中途採用の母集団強化に向け、エージェント開拓や新規媒体の選定から実行。1ヶ月で応募数を倍以上に増やし、コンスタントに応募を集める仕組みを構築しました。定例MTGでは数字を分析して採用計画の立案・改善を提案し、採用単価を抑えた採用に貢献。中途に加え新卒採用の立ち上げも支援し、初年度ながら早期に採用目標数を達成しました。']
-        ],
-        cta: ['採用の“土台”から一緒に作りましょう','戦略設計から仕組みの内製化まで伴走します。']
-      },
-      agent: {
-        no: '03', en: 'Career', brand: 'キャリア', brandSub: '人材紹介', name: 'スプリングキャリア（人材紹介）', forWho: 'For 求職者の方',
-        tag: '現役人事がサポートし、理想のキャリアの実現へ導く。',
-        lead: '「スプリングキャリア」は、株式会社SPRINGが運営する人材紹介サービスです。転職ありきではありません。現役人事の視点で、中長期的なキャリアを見据えてご支援します。取扱求人は10万件以上、最短で面談から2週間以内の内定実現も可能です。とくに20代の営業職の転職支援に強みがあり（営業職以外の職種も支援可能です）、未経験職への転職やキャリアアップも実現しています。現職に残ることが最適と判断される場合には、あえて転職をおすすめしないこともあります。',
-        resultsTitle: 'スプリングキャリアの特長',
-        problems: [
-          '自分に合うキャリア・企業が分からない。',
-          '未経験の職種に挑戦したい／キャリアアップしたい。',
-          '転職すべきか、現職に残るべきか迷っている。'
-        ],
-        supports: [
-          ['現役人事によるキャリアカウンセリング', '現役人事の視点で、あなたに本当に合う選択肢を一緒に考えます。転職ありきではありません。'],
-          ['10万件以上からの求人紹介', '豊富な求人の中から、ご希望と適性に合う求人を厳選してご提案します。'],
-          ['応募書類の作成・面接対策', '企業へのご推薦にあたり、応募書類の作成から面接対策まで伴走します。'],
-          ['条件交渉・入社まで伴走', '内定後の条件交渉から入社まで、安心して進められるようサポートします。']
-        ],
-        flow: [
-          ['初回面談', 'ご経歴・ご希望を丁寧にヒアリングします（ご登録・ご相談は無料）。'],
-          ['求人のご紹介・ご推薦', '最適な求人をご紹介し、応募書類の作成をサポートのうえ企業へご推薦します。'],
-          ['面接対策', '選考通過に向けて面接対策を実施し、あなたの魅力を最大限にお伝えします。'],
-          ['内定・条件交渉・入社', '内定後の条件交渉から入社まで伴走。※最短で面談から2週間以内の内定実現も可能です。']
-        ],
-        stats: [['10万','件+','取扱求人数'],['2','週間〜','面談から内定まで（最短）'],['20代','','営業職に特化 ※他職種も可'],['0','円','求職者の手数料']],
-        cases: [],
-        cta: ['まずはお気軽にキャリアのご相談を','転職すべきか迷う段階でも歓迎です。現役人事があなたの理想のキャリアへ伴走します。']
-      }
-    };
-    var ORDER = ['rpo','consulting','agent'];
-
-    function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-
-    function render(id){
-      var d = DATA[id] || DATA.rpo;
-      document.getElementById('crumbName').textContent = d.name;
-      document.getElementById('svcNo').textContent = d.no;
-      document.getElementById('svcEn').textContent = d.en;
-      document.getElementById('svcName').textContent = d.name;
-      document.getElementById('svcTag').textContent = d.tag;
-      document.getElementById('svcFor').textContent = d.forWho;
-      document.getElementById('ovLead').textContent = d.lead;
-
-      var isAgent = (id === 'agent');
-      document.getElementById('svcBadge').hidden = false;
-      document.getElementById('svcBrandTag').textContent = d.brand;
-      document.getElementById('svcBrandSub').textContent = d.brandSub;
-      document.getElementById('svcNo').style.display = 'none';
-
-      document.getElementById('probGrid').innerHTML =
-        d.problems.map(function(p){return '<div class="prob"><p>'+esc(p)+'</p></div>';}).join('');
-
-      document.getElementById('supGrid').innerHTML =
-        d.supports.map(function(s,i){return '<div class="sup"><h3><i>'+(i+1)+'</i>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>';}).join('');
-
-      document.getElementById('flow').innerHTML =
-        d.flow.map(function(f){return '<div class="flow-item"><div><h3>'+esc(f[0])+'</h3><p>'+esc(f[1])+'</p></div></div>';}).join('');
-
-      var statsEl = document.getElementById('stats');
-      if (d.stats && d.stats.length) {
-        statsEl.style.display = '';
-        statsEl.innerHTML = d.stats.map(function(s){return '<div class="stat"><div class="num">'+esc(s[0]||'—')+'<em>'+esc(s[1])+'</em></div><div class="label">'+esc(s[2])+'</div></div>';}).join('');
-      } else {
-        statsEl.style.display = 'none';
-        statsEl.innerHTML = '';
-      }
-
-      document.getElementById('resultsTitle').textContent = d.resultsTitle || '支援事例';
-      var casesEl = document.getElementById('cases');
-      if (d.cases && d.cases.length) {
-        casesEl.style.display = '';
-        casesEl.innerHTML = d.cases.map(function(c){return '<div class="case"><div class="ch">'+esc(c[0])+'</div><div class="cb"><h3>'+esc(c[1])+'</h3><p>'+esc(c[2])+'</p></div></div>';}).join('');
-      } else {
-        casesEl.style.display = 'none';
-        casesEl.innerHTML = '';
-      }
-
-      var sw = document.querySelectorAll('.svc-switch a');
-      sw.forEach(function(a){a.classList.toggle('active', a.dataset.id===id);});
-
-      var others = ORDER.filter(function(x){return x!==id;});
-      document.getElementById('otherGrid').innerHTML = others.map(function(x){
-        var o=DATA[x];
-        return '<a href="'+x+'.html"><span class="oi"><small>'+o.en+'</small><strong>'+esc(o.name)+'</strong></span><span class="oarrow">→</span></a>';
-      }).join('');
-
-      window.scrollTo({top:0});
-    }
 
     // ▼▼ スプリングキャリア 公式SNSのURLをここに設定してください ▼▼
     var SNS = {
@@ -598,12 +456,6 @@ a{color:inherit;text-decoration:none;}
       });
     })();
 
-    function currentId(){
-      var h = (location.hash || '').replace('#','');
-      return DATA[h] ? h : 'rpo';
-    }
-    render('agent');
-    window.addEventListener('hashchange', function(){ render('agent'); });
   })();
   </script>
   <script>
