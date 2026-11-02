@@ -1,0 +1,3 @@
+# 2026-11-02 採用コンサルティングのページを採用代行のページに統合
+/service/consulting /service/rpo#consulting 301
+/service/consulting.html /service/rpo#consulting 301
