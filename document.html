@@ -114,7 +114,13 @@ img{max-width:100%;display:block;}
 .dl-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;font-size:16px;}
 .dl-btn svg{width:20px;height:20px;fill:#fff;}
 .done .next{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:#2f3946;}
-.done .next a{display:inline-block;margin-top:10px;border:1.5px solid var(--blue);color:var(--blue-deep);font-weight:700;border-radius:999px;padding:10px 26px;}
+.done .next .next-title{font-size:16.5px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.done .next .next-text{font-size:14.5px;line-height:1.8;margin-bottom:16px;text-align:left;}
+.book-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px;border-radius:12px;border:1.5px solid var(--blue);background:#fff;color:var(--blue-deep);font-weight:700;font-size:16px;transition:background .2s;}
+.book-btn:hover{background:#eef6fd;}
+.book-btn svg{width:20px;height:20px;fill:var(--blue-deep);}
+.done .next .next-sub{font-size:13.5px;color:var(--ink-soft);margin:14px 0 0;}
+.done .next .next-sub a{color:var(--blue);text-decoration:underline;}
 
 @media(max-width:860px){
   .doc-wrap{grid-template-columns:1fr;margin-top:-40px;}
@@ -227,8 +233,13 @@ h1,h2,.subhero p,.done p,.sub{word-break:auto-phrase;}
           資料をダウンロード（PDF）
         </a>
         <div class="next">
-          資料をご覧になって気になる点があれば、お気軽にご相談ください。<br />ヒアリング・お見積りは無料です。
-          <br /><a href="index.html#contact">無料で相談する</a>
+          <p class="next-title">お打ち合わせの日程も、このままご予約いただけます</p>
+          <p class="next-text">資料の内容や費用の目安について、代表の吉本が直接お答えします（60分）。ご都合のよい日時をお選びください。ヒアリング・お見積りは無料です。</p>
+          <a class="book-btn" id="bookBtn" href="https://timerex.net/s/spring-career/2311f7ce" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3V2Zm12 8H5v9h14v-9ZM5 6v2h14V6H5Z"/></svg>
+            日程を選んで予約する
+          </a>
+          <p class="next-sub">文章でのご相談は<a href="index.html#contact">お問い合わせフォーム</a>からどうぞ。</p>
         </div>
       </div>
     </div>
@@ -298,6 +309,10 @@ h1,h2,.subhero p,.done p,.sub{word-break:auto-phrase;}
 
     document.getElementById('dlBtn').addEventListener('click', function () {
       if (typeof gtag === 'function') { gtag('event', 'document_download', { page_path: location.pathname }); }
+    });
+
+    document.getElementById('bookBtn').addEventListener('click', function () {
+      if (typeof gtag === 'function') { gtag('event', 'cta_click', { cta_name: 'document_booking', page_path: location.pathname }); }
     });
   })();
   </script>
