@@ -256,11 +256,11 @@ a { color: inherit; text-decoration: none; }
 .hero-title {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(30px, 6vw, 62px);
+  font-size: clamp(30px, 5.4vw, 58px);
   line-height: 1.5;
   letter-spacing: .02em;
   color: var(--ink);
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 .hero-title { word-break: keep-all; overflow-wrap: anywhere; }
 .hero-title span {
@@ -294,6 +294,12 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-seeker:hover { color: var(--blue-deep); border-color: var(--blue-deep); }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; opacity: 0; animation: fadeUp 1s .55s forwards; }
+.hero-facts li { background: #fff; border: 1px solid var(--blue-soft); border-radius: 14px; padding: 10px 18px; box-shadow: 0 6px 16px -12px rgba(18,58,115,.45); }
+.hero-facts b { display: block; font-family: var(--serif); font-size: clamp(17px, 2.2vw, 22px); color: var(--blue-deep); line-height: 1.45; white-space: nowrap; }
+.hero-facts span { font-size: 12.5px; color: var(--ink-soft); }
+.hero-note { font-size: 12px; color: var(--ink-soft); margin-top: 14px; padding-bottom: 24px; opacity: 0; animation: fadeUp 1s .85s forwards; }
+@media (max-height: 880px) { .hero .hero-scroll { display: none; } }
 
 .hero-scroll {
   position: absolute; left: 50%; bottom: 26px;
@@ -354,7 +360,7 @@ a { color: inherit; text-decoration: none; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-  .hero-eyebrow, .hero-title, .hero-lead, .hero-services, .hero-actions, .hero-seeker { animation: none !important; opacity: 1 !important; }
+  .hero-eyebrow, .hero-title, .hero-lead, .hero-services, .hero-facts, .hero-actions, .hero-seeker, .hero-note { animation: none !important; opacity: 1 !important; }
 }
 
 /* ============================================================
@@ -900,6 +906,8 @@ a { color: inherit; text-decoration: none; }
   .hero { padding-bottom: 40px; }
   .hero-services { margin-bottom: 26px; }
   .hero-services li { font-size: 13.5px; padding: 5px 12px; }
+  .hero-facts { margin-bottom: 24px; gap: 8px; }
+  .hero-facts li { flex: 1 1 130px; padding: 8px 12px; }
   .mid-cta-btns { width: 100%; }
   .mid-cta-btns .btn { flex: 1 1 100%; }
   .to-top { right: 20px; bottom: 136px; }
@@ -987,18 +995,19 @@ a { color: inherit; text-decoration: none; }
         <span>いい組織は、人を輝かせる。</span>
       </h1>
       <p class="hero-lead">
-        人と企業の最適なマッチングを実現し、<br class="sp-only" />社会に新たな価値を創造する。
+        採用代行・採用コンサルティングと人材紹介で、<br class="sp-only" />企業の採用を支援する大阪・梅田の会社です。
       </p>
-      <ul class="hero-services" aria-label="事業内容">
-        <li><b>スプリングクルー</b><span>採用代行・採用コンサルティング</span></li>
-        <li><b>スプリングキャリア</b><span>人材紹介</span></li>
-        <li class="area">大阪・梅田</li>
+      <ul class="hero-facts" aria-label="実績と料金">
+        <li><b>年間 約3,000名</b><span>の面接に対応※</span></li>
+        <li><b>10社以上</b><span>の採用をご支援</span></li>
+        <li><b>月額20万円〜</b><span>採用代行の料金</span></li>
       </ul>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">無料で採用相談</a>
         <a href="document.html" class="btn btn-ghost">サービス資料（無料）</a>
       </div>
       <a href="https://lp.spring-career.com/?utm_source=hp&amp;utm_medium=referral&amp;utm_content=hero" class="hero-seeker">求職者の方は、転職のご相談はこちら<span aria-hidden="true">→</span></a>
+      <p class="hero-note">※代表の吉本が1人で、採用代行として複数の企業の選考で担当した面接の延べ人数</p>
     </div>
     <a href="#works" class="hero-scroll" aria-label="下へスクロール"><span></span>Scroll</a>
   </section>
@@ -1010,7 +1019,7 @@ a { color: inherit; text-decoration: none; }
       <div class="section-head">
         <span class="section-en">Business</span>
         <h2 class="section-title">事業紹介</h2>
-        <p class="section-sub">採用の「仕組みづくり」と「実務」、そして「出会い」まで。<br class="sp-only" />企業の採用課題を、2つのサービスで包括的に支援します。</p>
+        <p class="section-sub">採用の「仕組みづくり」と「実務」、そして「出会い」まで。<br class="sp-only" />企業の採用課題を、2つのサービスで支援します。</p>
         <p class="section-sub works-brands">採用代行・採用コンサルティングは<b>「スプリングクルー」</b>、人材紹介は<b>「スプリングキャリア」</b>としてご提供しています。</p>
       </div>
 
@@ -1025,7 +1034,7 @@ a { color: inherit; text-decoration: none; }
             <dl class="work-detail">
               <div>
                 <dt>概要</dt>
-                <dd>採用ブランディング・面接設計・選考フローの見直しなどの「仕組みづくり」と、母集団形成・スカウト送信・一次面接・日程調整などの「実務」を、貴社の一員としてまとめて担います。実務だけ、仕組みづくりだけのご依頼も可能です。</dd>
+                <dd>採用ブランディング・面接設計・選考フローの見直しなどの「仕組みづくり」と、母集団形成・スカウト送信・一次面接・日程調整などの「実務」を、まとめてお引き受けします。実務だけ、仕組みづくりだけのご依頼も可能です。</dd>
               </div>
               <div>
                 <dt>提供価値</dt>
@@ -1084,7 +1093,7 @@ a { color: inherit; text-decoration: none; }
         </article>
         <article class="case-card reveal">
           <div class="case-meta"><span class="case-tag">RPO（採用代行）</span><span class="case-co">大手SES企業</span></div>
-          <h3>新卒採用リクルーターを<br />一気通貫で代行</h3>
+          <h3>新卒採用のリクルーター業務を<br />説明会から入社フォローまで代行</h3>
           <p>説明会・インターン運営から一次面接、クロージング、入社フォローまで担当。厳しい採用市場の中で、2年連続で採用目標を達成しました。</p>
         </article>
         <article class="case-card reveal">

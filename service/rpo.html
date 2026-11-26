@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" href="/images/favicon-180.png?v=20261014" />
   <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}</script>
   <title>採用代行（RPO）・採用コンサルティング｜仕組みづくりから面接代行まで｜株式会社SPRING（大阪）</title>
-  <meta name="description" content="採用代行（RPO）と採用コンサルティングを、株式会社SPRINGの「スプリングクルー」がまとめてご提供。採用ブランディング・面接設計・選考フローの見直しなどの仕組みづくりから、スカウト・一次面接・日程調整・エージェント対応などの実務まで、必要な範囲でお任せいただけます。大阪を拠点に、ヒアリング・お見積りは無料です。" />
+  <meta name="description" content="採用代行（RPO）と採用コンサルティングを、株式会社SPRINGの「スプリングクルー」がまとめてご提供。スカウト・一次面接・日程調整・エージェント対応などの実務から、面接設計・選考フローの見直しなどの仕組みづくりまで、必要な範囲でお任せいただけます。採用代行は月額20万円〜、ヒアリング・お見積りは無料。大阪を拠点に全国対応。" />
   <link rel="canonical" href="https://spring-career.com/service/rpo" />
   <meta property="og:site_name" content="株式会社SPRING" />
   <meta property="og:title" content="採用代行（RPO）・採用コンサルティング｜株式会社SPRING" />
@@ -36,7 +36,7 @@
   ]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"採用代行（RPO）・採用コンサルティング","serviceType":"採用代行・採用コンサルティング","brand":{"@type":"Brand","name":"スプリングクルー"},"description":"採用代行（RPO）と採用コンサルティングを、株式会社SPRINGの「スプリングクルー」がまとめてご提供。採用ブランディング・面接設計・選考フローの見直しなどの仕組みづくりから、スカウト・一次面接・日程調整・エージェント対応などの実務まで、必要な範囲でお任せいただけます。大阪を拠点に、ヒアリング・お見積りは無料です。","provider":{"@type":"Organization","name":"株式会社SPRING","url":"https://spring-career.com/"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"Audience","audienceType":"企業の採用担当者"},"url":"https://spring-career.com/service/rpo"}
+  {"@context":"https://schema.org","@type":"Service","name":"採用代行（RPO）・採用コンサルティング","serviceType":"採用代行・採用コンサルティング","brand":{"@type":"Brand","name":"スプリングクルー"},"description":"採用代行（RPO）と採用コンサルティングを、株式会社SPRINGの「スプリングクルー」がまとめてご提供。スカウト・一次面接・日程調整・エージェント対応などの実務から、面接設計・選考フローの見直しなどの仕組みづくりまで、必要な範囲でお任せいただけます。採用代行は月額20万円〜、ヒアリング・お見積りは無料。大阪を拠点に全国対応。","provider":{"@type":"Organization","name":"株式会社SPRING","url":"https://spring-career.com/"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"Audience","audienceType":"企業の採用担当者"},"url":"https://spring-career.com/service/rpo","offers":{"@type":"Offer","priceCurrency":"JPY","priceSpecification":{"@type":"UnitPriceSpecification","minPrice":200000,"priceCurrency":"JPY","unitText":"月"}}}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,7 +69,10 @@ a{color:inherit;text-decoration:none;}
 .nav a.current{color:var(--blue);font-weight:700;}
 .nav-home{display:inline-flex;align-items:center;gap:6px;background:var(--blue-deep);color:#fff !important;padding:9px 18px;border-radius:999px;font-weight:700;}
 .nav-home:hover{background:var(--blue);}
-@media(max-width:860px){.nav a:not(.nav-home){display:none;}}
+.nav-doc{border:1.5px solid var(--blue);color:var(--blue-deep) !important;padding:7px 16px;border-radius:999px;font-weight:700 !important;background:#fff;}
+.nav-doc:hover{background:var(--blue-tint);}
+@media(max-width:1100px){.nav{gap:10px;}.nav a:not(.nav-home):not(.nav-doc){display:none;}}
+@media(max-width:560px){.nav-doc{display:none;}}
 
 /* Hero */
 .svc-hero{position:relative;overflow:hidden;background:radial-gradient(1000px 520px at 84% -10%,var(--blue-tint),transparent 60%),linear-gradient(160deg,#12294a,#0d1f38);color:#fff;padding:60px 0 62px;}
@@ -187,6 +190,89 @@ a{color:inherit;text-decoration:none;}
 @media(max-width:560px){
   .prob-grid,.stats,.cases{grid-template-columns:1fr;}
 }
+/* ---- 2026-11 追加 ---- */
+.note{font-size:13px;color:var(--ink-soft);margin-top:12px;}
+.txt-link{color:var(--blue);font-weight:700;text-decoration:underline;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15.5px;line-height:1.4;transition:transform .25s ease,box-shadow .25s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(18,58,115,.55);}
+.btn.solid{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;}
+.btn.white{background:#fff;color:var(--blue-deep);}
+.btn.outline{border:1.5px solid var(--blue);color:var(--blue-deep);background:#fff;}
+.btn.outline-w{border:1.5px solid rgba(255,255,255,.6);color:#fff;}
+
+/* hero */
+.hero-facts{list-style:none;display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+.hero-facts li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:12px 20px;min-width:170px;}
+.hero-facts b{display:block;font-family:var(--serif);font-size:clamp(19px,2.6vw,24px);line-height:1.4;color:#fff;}
+.hero-facts span{font-size:13px;color:var(--blue-soft);}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.hero-note{font-size:12.5px;color:rgba(255,255,255,.8);margin-top:18px;}
+
+/* reason */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.why{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;box-shadow:0 16px 44px -32px rgba(18,58,115,.35);}
+.why .no{font-family:var(--deco);font-size:34px;font-weight:700;color:var(--blue);line-height:1;}
+.why h3{font-family:var(--serif);font-size:17.5px;color:var(--blue-deep);margin:10px 0;line-height:1.6;}
+.why p{font-size:15px;color:#333d4a;}
+.rep{display:flex;gap:22px;align-items:center;background:var(--blue-tint);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-top:18px;}
+.rep img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none;}
+.rep .rn{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--ink);}
+.rep .rn small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:10px;}
+.rep p{font-size:14.5px;color:#333d4a;}
+.rep a{display:inline-block;margin-top:6px;color:var(--blue);font-weight:700;text-decoration:underline;font-size:14.5px;}
+
+/* band */
+.band{margin-top:30px;background:#fff;border:1px solid var(--blue-soft);border-radius:16px;padding:22px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+.band p{font-size:16px;font-weight:700;color:var(--blue-deep);}
+.band p small{display:block;font-weight:400;font-size:14px;color:var(--ink-soft);}
+.band .btns{display:flex;flex-wrap:wrap;gap:10px;}
+
+/* case number */
+.case-num{display:flex;flex-direction:column;border-bottom:1px dashed var(--blue-soft);padding-bottom:10px;margin-bottom:12px;}
+.case-num span{font-size:12.5px;font-weight:700;color:var(--ink-soft);letter-spacing:.04em;}
+.case-num b{font-family:var(--serif);font-size:23px;color:var(--blue);line-height:1.45;}
+
+/* price */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;}
+.price{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;text-align:center;}
+.price.main{border:2px solid var(--blue);}
+.price .pl{font-size:14px;font-weight:700;color:var(--ink-soft);}
+.price .pv{font-family:var(--serif);font-size:clamp(24px,3.2vw,30px);font-weight:700;color:var(--blue-deep);line-height:1.5;margin:4px 0 8px;}
+.price .pv small{font-size:.5em;margin-left:4px;}
+.price p{font-size:14.5px;color:#333d4a;text-align:left;}
+.price-list{margin:20px 0 0 1.3em;font-size:15px;color:#2f3946;}
+.tbl-wrap{overflow-x:auto;margin-top:20px;}
+.tbl{width:100%;border-collapse:collapse;background:#fff;font-size:15px;min-width:540px;}
+.tbl th,.tbl td{border:1px solid var(--line);padding:12px 16px;text-align:left;}
+.tbl thead th{background:var(--blue-tint);color:var(--blue-deep);}
+.tbl tbody th{background:#f7fafd;color:var(--blue-deep);font-weight:700;}
+
+/* faq */
+.faq-list{display:grid;gap:12px;max-width:900px;}
+.faq{background:#fff;border:1px solid var(--line);border-radius:12px;}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;font-size:15.5px;display:flex;gap:12px;align-items:flex-start;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::before{content:"Q";font-family:var(--deco);font-size:21px;color:var(--blue);line-height:1.35;flex:none;}
+.faq summary::after{content:"＋";margin-left:auto;color:var(--blue);flex:none;}
+.faq[open] summary::after{content:"－";}
+.faq .a{padding:0 22px 20px 47px;font-size:15px;color:#333d4a;}
+
+/* related columns */
+.rel-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;list-style:none;}
+.rel-list a{display:block;height:100%;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;font-size:15px;font-weight:700;color:var(--ink);transition:border-color .2s,color .2s;}
+.rel-list a:hover{border-color:var(--blue);color:var(--blue-deep);}
+
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;}
+
+@media(max-width:820px){
+  .why-grid,.price-grid,.rel-list{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .rep{flex-direction:column;align-items:flex-start;}
+  .hero-facts li{min-width:0;flex:1 1 140px;padding:10px 14px;}
+  .hero-btns .btn,.band .btns,.band .btn{width:100%;}
+  .band{padding:20px;}
+}
   </style>
 </head>
 <body>
@@ -211,10 +297,13 @@ a{color:inherit;text-decoration:none;}
         <span class="logo-text"><strong>SPRING</strong><em>採用コンサルティング</em></span>
       </a>
       <nav class="nav">
-        <a href="../index.html#works" class="current">事業紹介</a>
-        <a href="../company.html">会社情報</a>
-        <a href="../recruitment.html">有料職業紹介事業</a>
-        <a href="../index.html#contact" class="nav-home">お問い合わせ</a>
+        <a href="#support">サービス内容</a>
+        <a href="#case">支援事例</a>
+        <a href="#price">料金</a>
+        <a href="#faq">よくある質問</a>
+        <a href="../blog/index.html">コラム</a>
+        <a href="../document.html" class="nav-doc" data-cta="header_document">資料ダウンロード</a>
+        <a href="../index.html#contact" class="nav-home" data-cta="header_contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
@@ -222,7 +311,7 @@ a{color:inherit;text-decoration:none;}
   <!-- Hero -->
   <section class="svc-hero">
     <div class="container">
-      <p class="crumb"><a href="../index.html">HOME</a>　/　<a href="../index.html#works">事業紹介</a>　/　<span id="crumbName">採用代行・採用コンサルティング</span></p>
+      <p class="crumb"><a href="../index.html">HOME</a>　/　<a href="../index.html#works">事業紹介</a>　/　<span>採用代行・採用コンサルティング</span></p>
       <div class="career-badge" id="svcBadge">
         <svg class="cb-mark" viewBox="0 0 100 100" aria-hidden="true">
           <path d="M42 53 C33 40 42 23 65 19 C57 33 53 45 49 53 C47 56 44 56 42 53 Z" fill="url(#grn-h)" />
@@ -233,80 +322,204 @@ a{color:inherit;text-decoration:none;}
         </svg>
         <span class="cb-word"><b>スプリング</b><span class="cb-tag" id="svcBrandTag">クルー</span></span><span class="cb-sub" id="svcBrandSub">採用代行・採用コンサルティング</span>
       </div>
-      <div class="svc-no" id="svcNo" style="display:none">01</div>
-      <div class="svc-en" id="svcEn">RPO / Consulting</div>
-      <h1 id="svcName">採用代行・採用コンサルティング</h1>
-      <p class="svc-tag" id="svcTag">採用の仕組みづくりから実務まで、まとめて任せられる。</p>
-      <span class="svc-for" id="svcFor">For 企業のご担当者様</span>
+      <div class="svc-en">RPO / Consulting</div>
+      <h1>採用代行・採用コンサルティング</h1>
+      <p class="svc-tag">年間 約3,000名の面接に対応してきた経験をもとに、採用の仕組みづくりから実務までお引き受けします。</p>
+      <ul class="hero-facts">
+        <li><b>年間 約3,000名</b><span>の面接に対応※</span></li>
+        <li><b>10社以上</b><span>の採用をご支援</span></li>
+        <li><b>月額20万円〜</b><span>一部の業務だけでも可</span></li>
+      </ul>
+      <div class="hero-btns">
+        <a href="../index.html#contact" class="btn white" data-cta="hero_contact">無料で相談する</a>
+        <a href="../document.html" class="btn outline-w" data-cta="hero_document">サービス資料（無料）</a>
+      </div>
+      <p class="hero-note">※代表の吉本が1人で、採用代行として複数の企業の選考で担当した面接の延べ人数</p>
     </div>
   </section>
 
   <div class="container">
-    <nav class="svc-switch">
-      <a href="rpo.html" data-id="rpo" class="active">採用代行・採用コンサル</a>
-      <a href="agent.html" data-id="agent">スプリングキャリア（人材紹介）</a>
-    </nav>
 
     <!-- 概要 -->
-    <section class="sec">
+    <section class="sec" id="overview">
       <div class="sec-head"><span class="en">Overview</span><h2>サービス概要</h2></div>
-      <p class="lead" id="ovLead">採用の進め方や基準を決める<strong>「仕組みづくり」（採用コンサルティング）</strong>と、スカウト送信・一次面接・日程調整・エージェント対応などの<strong>「実務」（採用代行）</strong>を、まとめてお任せいただけます。多くの企業様は両方を組み合わせてご依頼いただいており、実務だけ、仕組みづくりだけのご依頼も可能です。面接の基準や進め方は社内に残し、支援が終わったあとも自社で採用を続けられる状態を目指します。</p>
+      <p class="lead">採用の進め方や基準を決める<strong>「仕組みづくり」（採用コンサルティング）</strong>と、スカウト送信・一次面接・日程調整・エージェント対応などの<strong>「実務」（採用代行）</strong>を、まとめてお任せいただけます。多くの企業様は両方を組み合わせてご依頼いただいており、実務だけ、仕組みづくりだけのご依頼も可能です。面接の基準や進め方は社内に残し、支援が終わったあとも自社で採用を続けられる状態を目指します。</p>
     </section>
 
     <!-- 課題 -->
-    <section class="sec">
+    <section class="sec" id="issues">
       <div class="sec-head"><span class="en">Issues</span><h2>こんなお悩みに</h2></div>
-      <div class="prob-grid" id="probGrid"><div class="prob"><p>採用人数が急増し、社内リソースが足りない。</p></div><div class="prob"><p>スカウトの返信率が上がらず、母集団が作れない。</p></div><div class="prob"><p>面接や日程調整、エージェント対応に追われ、選考が進まない。</p></div><div class="prob"><p>採用のミスマッチを減らしたい。</p></div><div class="prob"><p>自社の魅力が言語化できず、採用競合に負けてしまう。</p></div><div class="prob"><p>場当たり的な採用から脱し、再現性のある仕組みにしたい。</p></div></div>
+      <div class="prob-grid"><div class="prob"><p>採用人数が急増し、社内リソースが足りない。</p></div><div class="prob"><p>スカウトの返信率が上がらず、母集団が作れない。</p></div><div class="prob"><p>面接や日程調整、エージェント対応に追われ、選考が進まない。</p></div><div class="prob"><p>採用のミスマッチを減らしたい。</p></div><div class="prob"><p>自社の魅力が言語化できず、採用競合に負けてしまう。</p></div><div class="prob"><p>場当たり的な採用から脱し、再現性のある仕組みにしたい。</p></div></div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section class="sec" id="reason">
+      <div class="sec-head"><span class="en">Reason</span><h2>SPRINGが選ばれる理由</h2></div>
+      <div class="why-grid">
+        <div class="why">
+          <div class="no">01</div>
+          <h3>採用する側で、年間 約3,000名と面接してきた目線</h3>
+          <p>代表自身が採用代行として企業の選考に入り、年間 約3,000名の面接を担当しています（繁忙期は月300名規模）。※<br />どこで候補者の評価が分かれるか、どこで辞退が起きるかを現場で見てきたからこそ、面接の基準づくりや選考の見直しを、机上の話ではなく具体的にご提案できます。</p>
+        </div>
+        <div class="why">
+          <div class="no">02</div>
+          <h3>仕組みづくりから実務まで、必要なところだけお任せいただける</h3>
+          <p>面接の基準や選考の流れを整える「仕組みづくり」と、スカウト送信・一次面接・日程調整などの「実務」を、まとめてでも、一部だけでもお引き受けします。<br />実務を進めながら採用基準や手順を文書にまとめ、支援が終わったあとも社内で採用を続けられる状態を目指します。</p>
+        </div>
+        <div class="why">
+          <div class="no">03</div>
+          <h3>採用代行と人材紹介の両方を持ち、若手営業職・新卒の採用に強い</h3>
+          <p>採用代行・採用コンサルティングに加えて、自社で人材紹介「スプリングキャリア」も運営しています。採用の進め方の相談と、候補者のご紹介を同じ窓口でご相談いただけます。<br />とくに、若手の営業職と新卒の採用を得意としています。</p>
+        </div>
+      </div>
+      <div class="rep">
+        <img src="../images/rep.jpg" alt="株式会社SPRING 代表取締役 吉本春悟" width="1168" height="1017" loading="lazy" decoding="async" />
+        <div>
+          <p class="rn">吉本 春悟<small>株式会社SPRING 代表取締役</small></p>
+          <p>高校時代に甲子園出場。立命館大学を卒業後、不動産・IT業界の営業職を経て、フリーランスで採用支援・キャリア支援に携わり、2026年2月に株式会社SPRINGを設立。得意な領域は、若手営業職の採用、新卒・中途の面接対応、人材紹介会社とのやりとり、求人媒体の選定、採用の数字の分析です。</p>
+          <a href="../company.html#rep-profile">代表プロフィールを見る →</a>
+        </div>
+      </div>
+      <p class="note">※代表の吉本が1人で、採用代行として複数の企業の選考で担当した面接の延べ人数</p>
     </section>
 
     <!-- サポート内容 -->
-    <section class="sec">
+    <section class="sec" id="support">
       <div class="sec-head"><span class="en">Support</span><h2>サポート内容</h2></div>
       <h3 class="sup-sub" id="rpo">実務の代行（採用代行）</h3>
-      <div class="sup-grid"><div class="sup"><h3><i>1</i>母集団形成・スカウト実務</h3><p>各媒体・スカウトサービスを横断して母集団を構築し、返信率を高める文面でターゲットへアプローチします。</p></div><div class="sup"><h3><i>2</i>一次面接・候補者対応の代行</h3><p>一次面接や候補者とのやり取りを代行し、選考を止めずスピーディに進めます。</p></div><div class="sup"><h3><i>3</i>日程調整・エージェントコントロール</h3><p>面接調整や人材紹介会社との連携・進捗管理を巻き取り、現場の負担を軽減します。</p></div><div class="sup"><h3><i>4</i>内定承諾までの伴走</h3><p>条件面の調整やフォローまで対応し、内定承諾率・歩留まりの改善につなげます。</p></div></div>
+      <div class="sup-grid"><div class="sup"><h3><i>1</i>母集団形成・スカウト実務</h3><p>求人媒体やスカウトサービスを使って応募を集めます。返信につながる文面をつくり、求める人物像に合う方へスカウトを送ります。</p></div><div class="sup"><h3><i>2</i>一次面接・候補者対応の代行</h3><p>一次面接や候補者とのやり取りを代行し、選考を止めずに進めます。</p></div><div class="sup"><h3><i>3</i>日程調整・エージェントコントロール</h3><p>面接の日程調整や、人材紹介会社との連絡・進み具合の管理を引き受け、現場の負担を減らします。</p></div><div class="sup"><h3><i>4</i>内定承諾までのフォロー</h3><p>条件面の調整や候補者へのフォローまで対応し、内定の辞退を減らします。</p></div></div>
       <h3 class="sup-sub" id="consulting">仕組みづくり（採用コンサルティング）</h3>
-      <div class="sup-grid"><div class="sup"><h3><i>1</i>採用ブランディング設計</h3><p>「選ばれる理由」を言語化し、候補者に響く訴求メッセージ・採用コンセプトを設計します。</p></div><div class="sup"><h3><i>2</i>面接設計・面接官トレーニング</h3><p>面接の実施方法や評価基準を型化し、面接官の目線を統一・育成します。</p></div><div class="sup"><h3><i>3</i>選考フロー／プロセス設計</h3><p>母集団形成から内定承諾までの導線を設計し、歩留まりを最適化します。</p></div><div class="sup"><h3><i>4</i>エージェント活用設計</h3><p>人材紹介会社の使い方・連携方針を設計し、外部リソースの成果を最大化します。</p></div></div>
-    </section>
-
-    <!-- 支援の流れ -->
-    <section class="sec">
-      <div class="sec-head"><span class="en">Flow</span><h2>支援の流れ</h2></div>
-      <div class="flow" id="flow"><div class="flow-item"><div><h3>ヒアリング</h3><p>採用目標・課題・体制、これまでの選考データを把握し、ボトルネックを特定します。</p></div></div><div class="flow-item"><div><h3>提案</h3><p>課題に合わせて、仕組みづくりと代行の範囲、運用プランをご提案します。</p></div></div><div class="flow-item"><div><h3>合意</h3><p>役割分担・施策の優先順位・ゴールを合意し、体制を確定します。</p></div></div><div class="flow-item"><div><h3>実装</h3><p>設計した仕組みの導入と、母集団形成〜面接代行〜調整までの実務を推進します。※ニーズに合わせ臨機応変に対応します。</p></div></div></div>
+      <div class="sup-grid"><div class="sup"><h3><i>1</i>採用ブランディング設計</h3><p>「選ばれる理由」を言葉にし、候補者に伝わる打ち出し方と採用のコンセプトをつくります。</p></div><div class="sup"><h3><i>2</i>面接設計・面接官トレーニング</h3><p>面接の進め方と評価の基準を決まった形にまとめ、面接官ごとの判断のばらつきをなくします。</p></div><div class="sup"><h3><i>3</i>選考フロー／プロセス設計</h3><p>応募から内定承諾までの流れを見直し、途中の辞退や離脱を減らします。</p></div><div class="sup"><h3><i>4</i>エージェント活用設計</h3><p>人材紹介会社の使い方と連携の方針を決め、紹介の数と質を高めます。</p></div></div>
+      <div class="band">
+        <p>「一次面接だけ」「スカウトの運用だけ」のご依頼もできます<small>任せたい範囲が決まっていなくても、そのままご相談ください。</small></p>
+        <div class="btns">
+          <a href="../index.html#contact" class="btn solid" data-cta="support_contact">無料で相談する</a>
+          <a href="../document.html" class="btn outline" data-cta="support_document">サービス資料（無料）</a>
+        </div>
+      </div>
     </section>
 
     <!-- 支援事例 -->
-    <section class="sec">
-      <div class="sec-head"><span class="en">Case</span><h2 id="resultsTitle">支援事例</h2></div>
-      <div class="stats" id="stats" style="display:none"></div>
-      <div class="cases" id="cases" style="margin-top:20px;"><div class="case"><div class="ch">不動産ベンチャー企業</div><div class="cb"><h3>新卒一次面接・スカウト改善で採用数を昨年比倍増</h3><p>日本トップクラスのスピードで拡大するベンチャー企業にて、新卒採用の一次面接を担当。社内システムが未整備の中で構築を助言し、スカウトの配信・内容の改善、定例MTGでの報告内容の設計も実施。月約150名の面接で優秀層の惹きつけを強化しつつリソース不足も改善し、採用基準・合否判断の基準を言語化。昨年比で倍増となる採用数の達成に貢献しました。</p></div></div><div class="case"><div class="ch">大手SES企業</div><div class="cb"><h3>新卒採用リクルーターを一気通貫で代行</h3><p>説明会・インターン運営から一次面接、カジュアル面談、内定後面談、クロージング、入社フォローまで担当。厳しい採用市場でも採用予算を達成しました。技術職に加え総合職採用もエージェント開拓から実施し、2年連続で採用目標を達成。従来より高い学歴層の候補者獲得にも成功しました。</p></div></div><div class="case"><div class="ch">中小IT企業</div><div class="cb"><h3>母集団強化のコンサル＆実務で応募数を倍以上に</h3><p>中途採用の母集団強化に向け、エージェント開拓や新規媒体の選定から実行。1ヶ月で応募数を倍以上に増やし、コンスタントに応募を集める仕組みを構築しました。定例MTGでは数字を分析して採用計画の立案・改善を提案し、採用単価を抑えた採用に貢献。中途に加え新卒採用の立ち上げも支援し、初年度ながら早期に採用目標数を達成しました。</p></div></div><div class="case"><div class="ch">ITコンサルティング企業</div><div class="cb"><h3>面接官の育成と選考オペレーションの仕組み化</h3><p>急成長企業にて、インターン前の1対5グループ面接で見極めを行い、必要参加数を確保。社内共有システムを構築し、新人採用担当の面接指導も担当しました。繁忙期には月約300名規模の面接に対応し、面接官のリソース不足と候補者の取りこぼしを大きく改善しました。</p></div></div><div class="case"><div class="ch">人材ベンチャー企業</div><div class="cb"><h3>一次面接代行と、採用ブランディング・面接手法の改善</h3><p>中途採用の一次面接を代行し、エージェントコントロールを実施。エージェントへのフィードバックも改善して紹介数の増加につなげました。あわせて週次の定例MTGに参加し、採用ブランディングや面接の実施方法の改善、候補者の惹きつけ強化を設計・支援。人事担当がブランディングなど従来手が回らなかった領域にも着手できる体制づくりに貢献しました。</p></div></div></div>
+    <section class="sec" id="case">
+      <div class="sec-head"><span class="en">Case</span><h2>支援事例</h2></div>
+      <div class="cases">
+        <div class="case"><div class="ch">不動産ベンチャー企業</div><div class="cb"><div class="case-num"><span>採用数</span><b>昨年比 2倍</b></div><h3>新卒一次面接・スカウト改善で採用数を昨年比倍増</h3><p>日本トップクラスのスピードで拡大するベンチャー企業にて、新卒採用の一次面接を担当。社内システムが未整備の中で構築を助言し、スカウトの配信・内容の改善、定例MTGでの報告内容の設計も実施。月約150名の面接で優秀層の惹きつけを強化しつつリソース不足も改善し、採用基準・合否判断の基準を言語化。昨年比で倍増となる採用数の達成に貢献しました。</p></div></div>
+        <div class="case"><div class="ch">大手SES企業</div><div class="cb"><div class="case-num"><span>採用目標</span><b>2年連続で達成</b></div><h3>新卒採用のリクルーター業務を、説明会から入社フォローまで代行</h3><p>説明会・インターン運営から一次面接、カジュアル面談、内定後面談、クロージング、入社フォローまで担当。厳しい採用市場でも採用予算を達成しました。技術職に加え総合職採用もエージェント開拓から実施し、2年連続で採用目標を達成。従来より高い学歴層の候補者獲得にも成功しました。</p></div></div>
+        <div class="case"><div class="ch">中小IT企業</div><div class="cb"><div class="case-num"><span>応募数</span><b>1か月で2倍以上</b></div><h3>母集団強化のコンサル＆実務で応募数を倍以上に</h3><p>中途採用の母集団強化に向け、エージェント開拓や新規媒体の選定から実行。1ヶ月で応募数を倍以上に増やし、コンスタントに応募を集める仕組みを構築しました。定例MTGでは数字を分析して採用計画の立案・改善を提案し、採用単価を抑えた採用に貢献。中途に加え新卒採用の立ち上げも支援し、初年度ながら早期に採用目標数を達成しました。</p></div></div>
+        <div class="case"><div class="ch">ITコンサルティング企業</div><div class="cb"><div class="case-num"><span>面接への対応</span><b>繁忙期 月約300名</b></div><h3>面接官の育成と選考オペレーションの仕組み化</h3><p>急成長企業にて、インターン前の1対5グループ面接で見極めを行い、必要参加数を確保。社内共有システムを構築し、新人採用担当の面接指導も担当しました。繁忙期には月約300名規模の面接に対応し、面接官のリソース不足と候補者の取りこぼしを大きく改善しました。</p></div></div>
+        <div class="case"><div class="ch">人材ベンチャー企業</div><div class="cb"><div class="case-num"><span>人材紹介会社からの紹介数</span><b>増加</b></div><h3>一次面接代行と、採用ブランディング・面接手法の改善</h3><p>中途採用の一次面接を代行し、エージェントコントロールを実施。エージェントへのフィードバックも改善して紹介数の増加につなげました。あわせて週次の定例MTGに参加し、採用ブランディングや面接の実施方法の改善、候補者の惹きつけ強化を設計・支援。人事担当がブランディングなど従来手が回らなかった領域にも着手できる体制づくりに貢献しました。</p></div></div>
+      </div>
+      <p class="note">※守秘義務のため、企業名は業種のみの表記としています。</p>
+    </section>
+
+    <!-- 料金 -->
+    <section class="sec" id="price">
+      <div class="sec-head"><span class="en">Price</span><h2>料金</h2></div>
+      <p class="lead">採用代行は<strong>月額20万円〜</strong>です。お任せいただく業務の範囲と量に合わせて、個別にお見積もりします。</p>
+      <div class="price-grid">
+        <div class="price main">
+          <div class="pl">採用代行（実務の代行）</div>
+          <div class="pv">月額20万円〜</div>
+          <p>「一次面接だけ」「スカウトの運用だけ」など、一部の業務だけのご依頼にも対応します。</p>
+        </div>
+        <div class="price">
+          <div class="pl">採用コンサルティング（仕組みづくり）</div>
+          <div class="pv">3か月〜<small>の期間契約</small></div>
+          <p>面接の基準や選考の流れを整えます。金額は内容に合わせて個別にお見積もりします。</p>
+        </div>
+        <div class="price">
+          <div class="pl">ヒアリング・お見積もり</div>
+          <div class="pv">無料</div>
+          <p>採用の状況を伺ったうえで、お任せいただく範囲と金額をご提案します。</p>
+        </div>
+      </div>
+      <ul class="price-list">
+        <li>初期費用は、お任せいただく内容をお伺いしたうえで、ご相談して決めます。</li>
+        <li>求人広告の掲載料やスカウトサービスの利用料など、求人媒体の費用は別にかかります。</li>
+      </ul>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>依頼のしかた</th><th>期間の例</th><th>費用の目安</th></tr></thead>
+          <tbody>
+            <tr><th>一部の業務を、短い期間で</th><td>3か月</td><td>月額20万円〜 × 3か月 ＝ 60万円〜</td></tr>
+            <tr><th>一部の業務を、半年続けて</th><td>6か月</td><td>月額20万円〜 × 6か月 ＝ 120万円〜</td></tr>
+            <tr><th>複数の職種や、計画から内定者フォローまで</th><td>ご相談</td><td>業務の量に合わせて個別にお見積もり</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">※上の金額に、初期費用と求人媒体の費用は含みません。</p>
+      <p class="note">費用の相場や、見積もりを比べるときの確認点は、コラム「<a href="../blog/saiyo-daiko-hiyou.html" class="txt-link">採用代行（RPO）の費用相場は？</a>」で解説しています。</p>
+      <div class="band">
+        <p>自社の場合の費用を、無料でお見積もりします<small>採用したい職種・人数・時期が、わかる範囲で決まっていれば十分です。</small></p>
+        <div class="btns">
+          <a href="../index.html#contact" class="btn solid" data-cta="price_contact">無料で見積もりを相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 支援の流れ -->
+    <section class="sec" id="flow">
+      <div class="sec-head"><span class="en">Flow</span><h2>支援の流れ</h2></div>
+      <div class="flow"><div class="flow-item"><div><h3>ヒアリング（無料）</h3><p>採用の目標・課題・体制と、これまでの選考の数字を伺い、どこで止まっているかを確認します。</p></div></div><div class="flow-item"><div><h3>ご提案・お見積もり</h3><p>課題に合わせて、お任せいただく範囲と進め方、費用をご提案します。</p></div></div><div class="flow-item"><div><h3>合意</h3><p>役割分担と取り組む順番、目標を決めて、体制を確定します。</p></div></div><div class="flow-item"><div><h3>支援開始</h3><p>仕組みの導入と、スカウト・面接代行・日程調整などの実務を進めます。ご状況に合わせて、お任せいただく範囲は途中で見直せます。</p></div></div></div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="sec" id="faq">
+      <div class="sec-head"><span class="en">FAQ</span><h2>よくある質問</h2></div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>料金はどのくらいかかりますか？</summary>
+          <div class="a">採用代行は月額20万円〜で、お任せいただく業務の範囲と量に合わせて個別にお見積もりします。採用コンサルティングは3か月〜の期間契約です。初期費用は、お任せいただく内容をお伺いしたうえで、ご相談して決めます。ヒアリングとお見積もりは無料です。求人媒体の費用は別にかかります。</div>
+        </details>
+        <details class="faq">
+          <summary>一部の業務だけを依頼できますか？</summary>
+          <div class="a">はい。「一次面接の代行だけ」「スカウト運用だけ」といった部分的なご依頼も可能です。手が回っていない工程から依頼し、効果を見ながら範囲を広げる進め方をおすすめしています。</div>
+        </details>
+        <details class="faq">
+          <summary>どのくらいの期間から依頼できますか？</summary>
+          <div class="a">ご状況に合わせて決めます。繁忙期だけの短期のご依頼から、年間を通じたご支援まで対応しています。採用コンサルティングは3か月〜の期間契約です。</div>
+        </details>
+        <details class="faq">
+          <summary>新卒採用と中途採用のどちらに対応していますか？</summary>
+          <div class="a">どちらにも対応しています。これまでに、新卒採用のリクルーター業務（説明会・インターン運営から内定後フォローまで）や、中途採用の一次面接代行・母集団形成などをご支援してきました。</div>
+        </details>
+        <details class="faq">
+          <summary>大阪以外の企業でも依頼できますか？</summary>
+          <div class="a">はい。拠点は大阪・梅田ですが、対応エリアは日本国内全域です。打ち合わせや面接代行はオンラインでも対応しています。</div>
+        </details>
+        <details class="faq">
+          <summary>採用代行と人材紹介を組み合わせて利用できますか？</summary>
+          <div class="a">はい。採用代行（スプリングクルー）で選考の実務を担当しながら、人材紹介（スプリングキャリア）から候補者をご紹介することもできます。</div>
+        </details>
+      </div>
+      <p class="note"><a href="../faq.html" class="txt-link">よくある質問をすべて見る →</a></p>
     </section>
 
     <!-- CTA -->
-    <section class="svc-cta">
-      <h2 id="ctaTitle">まずはお気軽にご相談ください</h2>
-      <p id="ctaText">貴社の採用課題・キャリアのご希望に合わせて、最適なプランをご提案します。</p>
+    <section class="svc-cta" id="cta">
+      <h2>まずはお気軽にご相談ください</h2>
+      <p>採用の状況を伺ったうえで、お任せいただく範囲と費用をご提案します。<br />ヒアリングとお見積もりは無料です（2営業日以内にご返信します）。</p>
       <div class="cta-btns">
-        <a href="../index.html#contact" class="cta-btn primary" id="ctaPrimary">お問い合わせ</a>
-        <a href="../document.html" class="cta-btn ghost" id="ctaDoc">サービス資料（無料）</a>
-        <a href="../index.html#works" class="cta-btn ghost">他の事業を見る</a>
+        <a href="../index.html#contact" class="cta-btn primary" data-cta="bottom_contact">無料で相談する</a>
+        <a href="../document.html" class="cta-btn ghost" id="ctaDoc" data-cta="bottom_document">サービス資料（無料）</a>
       </div>
-      <div class="cta-sns" id="ctaSns" style="display:none;">
-        <span class="cta-sns-label">求職者の方は、公式SNSでもお気軽にご相談・情報収集いただけます</span>
-        <div class="cta-sns-btns">
-          <a href="#" class="sns-btn line" id="snsLine" target="_blank" rel="noopener" aria-label="公式LINEで相談">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>公式LINEで相談
-          </a>
-          <a href="#" class="sns-btn ig" id="snsIg" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>Instagram
-          </a>
-        </div>
-      </div>
+    </section>
+
+    <!-- 関連コラム -->
+    <section class="sec" id="column">
+      <div class="sec-head"><span class="en">Column</span><h2>採用代行に関するコラム</h2></div>
+      <ul class="rel-list">
+        <li><a href="../blog/saiyo-daiko-hiyou.html">採用代行（RPO）の費用相場は？料金体系・月額以外の費用・見積もりの比べ方</a></li>
+        <li><a href="../blog/rpo-toha.html">採用代行（RPO）とは？頼める業務・費用相場・人材紹介との違い</a></li>
+        <li><a href="../blog/eigyo-saiyo-daiko.html">営業職の採用が難しい理由は？採用代行に任せられることと費用</a></li>
+        <li><a href="../blog/shinsotsu-saiyo-daiko.html">新卒採用の代行は何を頼める？費用相場と、中小企業が失敗しない頼み方</a></li>
+      </ul>
     </section>
 
     <!-- 他サービス -->
     <section class="other">
       <div class="sec-head"><span class="en">Other Services</span><h2>その他の事業</h2></div>
-      <div class="other-grid" id="otherGrid"><a href="agent.html"><span class="oi"><small>Career</small><strong>スプリングキャリア（人材紹介）</strong></span><span class="oarrow">→</span></a></div>
+      <div class="other-grid"><a href="agent.html"><span class="oi"><small>Career</small><strong>スプリングキャリア（人材紹介）</strong></span><span class="oarrow">→</span></a></div>
     </section>
   </div>
 
@@ -314,34 +527,23 @@ a{color:inherit;text-decoration:none;}
   <footer class="site-footer">
     <div class="foot-inner">
       <a href="../index.html">← トップページに戻る</a>
-      <a href="../index.html#contact">お問い合わせ</a>
+      <nav class="foot-links">
+        <a href="../company.html">会社情報</a>
+        <a href="../blog/index.html">コラム</a>
+        <a href="../faq.html">よくある質問</a>
+        <a href="../recruitment.html">有料職業紹介事業に関する情報</a>
+        <a href="../index.html#contact">お問い合わせ</a>
+      </nav>
       <p class="foot-addr">株式会社SPRING　〒530-0001　大阪府大阪市北区梅田2-6-20 パシフィックマークス西梅田 4F</p>
     </div>
     <p class="copyright">© 2026 SPRING Inc. All Rights Reserved.</p>
   </footer>
 
   <script>
-  (function () {
-    'use strict';
-
-    // ▼▼ スプリングキャリア 公式SNSのURLをここに設定してください ▼▼
-    var SNS = {
-      line: '',        // 例: 'https://lin.ee/xxxxxxx'
-      instagram: ''    // 例: 'https://www.instagram.com/spring_career/'
-    };
-    (function(){
-      var l = document.getElementById('snsLine'), i = document.getElementById('snsIg');
-      if (l && SNS.line) l.href = SNS.line;
-      if (i && SNS.instagram) i.href = SNS.instagram;
-    })();
-
-  })();
-  </script>
-  <script>
-  /* GA4: LINEクリックをイベント計測 */
+  /* GA4: 相談・資料ボタンのクリックをイベント計測 */
   document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href*="lin.ee"]');
-    if(a&&typeof gtag==='function'){gtag('event','line_click',{link_url:a.href,page_path:location.pathname});}
+    var a=e.target.closest&&e.target.closest('a[data-cta]');
+    if(a&&typeof gtag==='function'){gtag('event','cta_click',{cta_name:a.getAttribute('data-cta'),page_path:location.pathname});}
   },true);
   </script>
 </body>
